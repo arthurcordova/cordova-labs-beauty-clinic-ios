@@ -14,6 +14,12 @@ class PrincipalController: UIViewController {
         
     }
     
+    @IBAction func backToPrincipal(segue:UIStoryboardSegue) {
+        print("Principal View")
+    }
+
+    
+    
 //    @IBAction func backView(segue:UIStoryboardSegue) {
 //        print("PRINCIPAL")
 //    }
