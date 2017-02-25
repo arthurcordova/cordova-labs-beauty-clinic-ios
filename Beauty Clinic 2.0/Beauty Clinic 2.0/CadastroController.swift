@@ -13,8 +13,12 @@ class CadastroController: UIViewController, UITextFieldDelegate {
     @IBOutlet var inputNome: UITextField!
     @IBOutlet var inputCpf: UITextField!
     @IBOutlet var inputSenha: UITextField!
+    @IBOutlet var viewOverlap: UIView!
+    var httpStatusCode = 0
     
     override func viewDidLoad() {
+        viewOverlap.layer.isHidden = true
+        
         inputNome.delegate = self
         inputNome.tag = 0
         inputCpf.delegate = self
@@ -55,8 +59,17 @@ class CadastroController: UIViewController, UITextFieldDelegate {
         // Do not add a line break
         return false
     }
+    @IBAction func btnEnviarAction(_ sender: UIBarButtonItem) {
+        enviar()
+    }
     
     func enviar() -> Void {
-        print("Enviando")
+        let service = UsuarioService(viewController: self)
+        let usuario = Usuario()
+        usuario.cpf = inputCpf.text!
+        usuario.senha = inputSenha.text!
+        usuario.nome = inputNome.text!
+        var httpStatus = service.novo(usuario: usuario)
+        print("HTTP STATUS \(httpStatus)")
     }
 }

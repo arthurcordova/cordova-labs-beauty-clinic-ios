@@ -231,6 +231,9 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Enviar" style="plain" id="OcU-ks-6sP">
                                             <color key="tintColor" red="0.91372549020000005" green="0.1529411765" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="btnEnviarAction:" destination="jEY-tX-omO" id="DMk-iH-6Nr"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -265,17 +268,35 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                     </textField>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k6r-yB-3Di">
+                                        <rect key="frame" x="0.0" y="-64" width="375" height="666"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WwO-D9-uAz">
+                                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                                <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="WwO-D9-uAz" firstAttribute="centerY" secondItem="k6r-yB-3Di" secondAttribute="centerY" id="5n0-Au-Jg9"/>
+                                            <constraint firstItem="WwO-D9-uAz" firstAttribute="centerX" secondItem="k6r-yB-3Di" secondAttribute="centerX" id="jOa-Gp-iae"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="k6r-yB-3Di" firstAttribute="leading" secondItem="343-Tv-wew" secondAttribute="leading" id="7GT-2I-ud6"/>
                                     <constraint firstItem="Kot-Vk-Ceg" firstAttribute="top" secondItem="aAg-vG-upG" secondAttribute="bottom" constant="48" id="AHn-kf-2xd"/>
+                                    <constraint firstAttribute="trailing" secondItem="k6r-yB-3Di" secondAttribute="trailing" id="BWG-JQ-c5N"/>
                                     <constraint firstAttribute="trailing" secondItem="aAg-vG-upG" secondAttribute="trailing" constant="16" id="Dj3-aY-0IY"/>
                                     <constraint firstItem="iyd-P3-x6A" firstAttribute="leading" secondItem="343-Tv-wew" secondAttribute="leading" constant="16" id="Qqn-3A-W9e"/>
+                                    <constraint firstItem="k6r-yB-3Di" firstAttribute="top" secondItem="343-Tv-wew" secondAttribute="top" id="XB5-Me-dl3"/>
                                     <constraint firstItem="Kot-Vk-Ceg" firstAttribute="leading" secondItem="343-Tv-wew" secondAttribute="leading" constant="16" id="cSg-wV-Yac"/>
                                     <constraint firstItem="iyd-P3-x6A" firstAttribute="top" secondItem="Kot-Vk-Ceg" secondAttribute="bottom" constant="48" id="de4-DC-LsX"/>
                                     <constraint firstAttribute="trailing" secondItem="iyd-P3-x6A" secondAttribute="trailing" constant="16" id="f5O-DG-Ke3"/>
                                     <constraint firstItem="aAg-vG-upG" firstAttribute="leading" secondItem="343-Tv-wew" secondAttribute="leading" constant="16" id="hrd-O6-VpH"/>
                                     <constraint firstAttribute="trailing" secondItem="Kot-Vk-Ceg" secondAttribute="trailing" constant="16" id="o4a-ud-OGG"/>
+                                    <constraint firstAttribute="bottom" secondItem="k6r-yB-3Di" secondAttribute="bottom" id="xTo-GD-034"/>
                                     <constraint firstItem="aAg-vG-upG" firstAttribute="top" secondItem="343-Tv-wew" secondAttribute="top" constant="48" id="zD1-uw-XTL"/>
                                 </constraints>
                             </view>
@@ -296,6 +317,7 @@
                         <outlet property="inputCpf" destination="Kot-Vk-Ceg" id="Y4r-wO-L74"/>
                         <outlet property="inputNome" destination="aAg-vG-upG" id="jKC-6c-jMp"/>
                         <outlet property="inputSenha" destination="iyd-P3-x6A" id="6tI-17-1rM"/>
+                        <outlet property="viewOverlap" destination="k6r-yB-3Di" id="kOn-mI-sfe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ahc-Ex-aYr" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		F469444C1E5BD27400AA9F2E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469444B1E5BD27400AA9F2E /* LoginController.swift */; };
 		F46944501E5BED1B00AA9F2E /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469444F1E5BED1B00AA9F2E /* CadastroController.swift */; };
+		F46944531E5D283200AA9F2E /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46944521E5D283200AA9F2E /* UsuarioService.swift */; };
+		F46944551E5D2BC900AA9F2E /* ServiceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46944541E5D2BC900AA9F2E /* ServiceConfig.swift */; };
+		F46944581E5D2F0400AA9F2E /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46944571E5D2F0400AA9F2E /* Usuario.swift */; };
+		F4B4593F1E5FCB130059C247 /* ic_check_circle.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */; };
 		F4F2A35D1E5BCD54009C1167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2A35C1E5BCD54009C1167 /* AppDelegate.swift */; };
 		F4F2A35F1E5BCD54009C1167 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2A35E1E5BCD54009C1167 /* FirstViewController.swift */; };
 		F4F2A3611E5BCD54009C1167 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2A3601E5BCD54009C1167 /* SecondViewController.swift */; };
@@ -20,6 +24,10 @@
 /* Begin PBXFileReference section */
 		F469444B1E5BD27400AA9F2E /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F469444F1E5BED1B00AA9F2E /* CadastroController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroController.swift; sourceTree = "<group>"; };
+		F46944521E5D283200AA9F2E /* UsuarioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioService.swift; sourceTree = "<group>"; };
+		F46944541E5D2BC900AA9F2E /* ServiceConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfig.swift; sourceTree = "<group>"; };
+		F46944571E5D2F0400AA9F2E /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_check_circle.imageset; sourceTree = "<group>"; };
 		F4F2A3591E5BCD54009C1167 /* Beauty Clinic 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beauty Clinic 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F2A35C1E5BCD54009C1167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4F2A35E1E5BCD54009C1167 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +49,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F46944511E5D280C00AA9F2E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F46944521E5D283200AA9F2E /* UsuarioService.swift */,
+				F46944541E5D2BC900AA9F2E /* ServiceConfig.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		F46944561E5D2EF600AA9F2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F46944571E5D2F0400AA9F2E /* Usuario.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		F4F2A3501E5BCD54009C1167 = {
 			isa = PBXGroup;
 			children = (
@@ -60,9 +85,12 @@
 		F4F2A35B1E5BCD54009C1167 /* Beauty Clinic 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				F46944561E5D2EF600AA9F2E /* Model */,
+				F46944511E5D280C00AA9F2E /* Service */,
 				F4F2A3711E5BCDB5009C1167 /* Controller */,
 				F4F2A3701E5BCDAE009C1167 /* View */,
 				F4F2A3651E5BCD54009C1167 /* Assets.xcassets */,
+				F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */,
 				F4F2A36A1E5BCD54009C1167 /* Info.plist */,
 			);
 			path = "Beauty Clinic 2.0";
@@ -152,6 +180,7 @@
 				F4F2A3691E5BCD54009C1167 /* LaunchScreen.storyboard in Resources */,
 				F4F2A3661E5BCD54009C1167 /* Assets.xcassets in Resources */,
 				F4F2A3641E5BCD54009C1167 /* Main.storyboard in Resources */,
+				F4B4593F1E5FCB130059C247 /* ic_check_circle.imageset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,10 +191,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F46944581E5D2F0400AA9F2E /* Usuario.swift in Sources */,
 				F4F2A3611E5BCD54009C1167 /* SecondViewController.swift in Sources */,
 				F469444C1E5BD27400AA9F2E /* LoginController.swift in Sources */,
 				F4F2A35D1E5BCD54009C1167 /* AppDelegate.swift in Sources */,
+				F46944551E5D2BC900AA9F2E /* ServiceConfig.swift in Sources */,
 				F4F2A35F1E5BCD54009C1167 /* FirstViewController.swift in Sources */,
+				F46944531E5D283200AA9F2E /* UsuarioService.swift in Sources */,
 				F46944501E5BED1B00AA9F2E /* CadastroController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
