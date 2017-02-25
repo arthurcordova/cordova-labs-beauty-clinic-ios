@@ -13,8 +13,9 @@ class DrawerMenuController: UIViewController {
     override func viewDidLoad() {
         
     }
+    
     @IBAction func closeAction(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: false, completion: nil)
     }
     
 }
