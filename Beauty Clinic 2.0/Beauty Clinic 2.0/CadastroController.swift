@@ -13,11 +13,15 @@ class CadastroController: UIViewController, UITextFieldDelegate {
     @IBOutlet var inputNome: UITextField!
     @IBOutlet var inputCpf: UITextField!
     @IBOutlet var inputSenha: UITextField!
-    @IBOutlet var viewOverlap: UIView!
+    @IBOutlet var viewMsg: UIView!
+    @IBOutlet var progress: UIActivityIndicatorView!
+    
+    
     var httpStatusCode = 0
     
     override func viewDidLoad() {
-        viewOverlap.layer.isHidden = true
+        progress.stopAnimating()
+        viewMsg.layer.isHidden = true
         
         inputNome.delegate = self
         inputNome.tag = 0
@@ -69,7 +73,7 @@ class CadastroController: UIViewController, UITextFieldDelegate {
         usuario.cpf = inputCpf.text!
         usuario.senha = inputSenha.text!
         usuario.nome = inputNome.text!
-        var httpStatus = service.novo(usuario: usuario)
+        let httpStatus = service.novo(usuario: usuario)
         print("HTTP STATUS \(httpStatus)")
     }
 }

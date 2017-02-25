@@ -268,35 +268,59 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k6r-yB-3Di">
-                                        <rect key="frame" x="0.0" y="-64" width="375" height="666"/>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ql3-2I-wkE">
+                                        <rect key="frame" x="177" y="229" width="20" height="20"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </activityIndicatorView>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Spe-JF-tWi">
+                                        <rect key="frame" x="0.0" y="-12" width="375" height="54"/>
                                         <subviews>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WwO-D9-uAz">
-                                                <rect key="frame" x="169" y="315" width="37" height="37"/>
-                                                <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </activityIndicatorView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_check" translatesAutoresizingMaskIntoConstraints="NO" id="BDS-ol-3Pd">
+                                                <rect key="frame" x="0.0" y="15" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="1t5-QA-tiZ"/>
+                                                    <constraint firstAttribute="height" constant="24" id="Onr-Gy-jJe"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cadastrado com sucesso!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkE-lo-mkH">
+                                                <rect key="frame" x="32" y="17" width="343" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="qnt-1O-T0E"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="WwO-D9-uAz" firstAttribute="centerY" secondItem="k6r-yB-3Di" secondAttribute="centerY" id="5n0-Au-Jg9"/>
-                                            <constraint firstItem="WwO-D9-uAz" firstAttribute="centerX" secondItem="k6r-yB-3Di" secondAttribute="centerX" id="jOa-Gp-iae"/>
+                                            <constraint firstAttribute="bottom" secondItem="EkE-lo-mkH" secondAttribute="bottom" constant="16" id="0K2-s5-pc1"/>
+                                            <constraint firstItem="BDS-ol-3Pd" firstAttribute="leading" secondItem="Spe-JF-tWi" secondAttribute="leading" constant="16" id="29N-Nm-2U9"/>
+                                            <constraint firstItem="EkE-lo-mkH" firstAttribute="leading" secondItem="BDS-ol-3Pd" secondAttribute="trailing" constant="8" id="81X-Zo-Bv4"/>
+                                            <constraint firstItem="BDS-ol-3Pd" firstAttribute="top" secondItem="Spe-JF-tWi" secondAttribute="top" constant="15" id="Gft-kO-qq9"/>
+                                            <constraint firstAttribute="height" constant="54" id="Iqy-Kr-4BQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="BDS-ol-3Pd" secondAttribute="bottom" constant="15" id="Qps-T8-tPM"/>
+                                            <constraint firstAttribute="trailing" secondItem="EkE-lo-mkH" secondAttribute="trailing" id="Qyi-sd-474"/>
+                                            <constraint firstItem="EkE-lo-mkH" firstAttribute="top" secondItem="Spe-JF-tWi" secondAttribute="top" constant="17" id="xoM-sL-ODl"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="k6r-yB-3Di" firstAttribute="leading" secondItem="343-Tv-wew" secondAttribute="leading" id="7GT-2I-ud6"/>
                                     <constraint firstItem="Kot-Vk-Ceg" firstAttribute="top" secondItem="aAg-vG-upG" secondAttribute="bottom" constant="48" id="AHn-kf-2xd"/>
-                                    <constraint firstAttribute="trailing" secondItem="k6r-yB-3Di" secondAttribute="trailing" id="BWG-JQ-c5N"/>
+                                    <constraint firstItem="Spe-JF-tWi" firstAttribute="leading" secondItem="343-Tv-wew" secondAttribute="leading" id="AiV-7B-8AT"/>
                                     <constraint firstAttribute="trailing" secondItem="aAg-vG-upG" secondAttribute="trailing" constant="16" id="Dj3-aY-0IY"/>
+                                    <constraint firstAttribute="trailing" secondItem="Spe-JF-tWi" secondAttribute="trailing" id="FRV-h7-0qX"/>
+                                    <constraint firstItem="Ql3-2I-wkE" firstAttribute="centerX" secondItem="343-Tv-wew" secondAttribute="centerX" id="KTq-hD-awE"/>
                                     <constraint firstItem="iyd-P3-x6A" firstAttribute="leading" secondItem="343-Tv-wew" secondAttribute="leading" constant="16" id="Qqn-3A-W9e"/>
-                                    <constraint firstItem="k6r-yB-3Di" firstAttribute="top" secondItem="343-Tv-wew" secondAttribute="top" id="XB5-Me-dl3"/>
                                     <constraint firstItem="Kot-Vk-Ceg" firstAttribute="leading" secondItem="343-Tv-wew" secondAttribute="leading" constant="16" id="cSg-wV-Yac"/>
                                     <constraint firstItem="iyd-P3-x6A" firstAttribute="top" secondItem="Kot-Vk-Ceg" secondAttribute="bottom" constant="48" id="de4-DC-LsX"/>
                                     <constraint firstAttribute="trailing" secondItem="iyd-P3-x6A" secondAttribute="trailing" constant="16" id="f5O-DG-Ke3"/>
+                                    <constraint firstItem="Ql3-2I-wkE" firstAttribute="centerY" secondItem="343-Tv-wew" secondAttribute="centerY" id="hWS-AH-ltr"/>
                                     <constraint firstItem="aAg-vG-upG" firstAttribute="leading" secondItem="343-Tv-wew" secondAttribute="leading" constant="16" id="hrd-O6-VpH"/>
                                     <constraint firstAttribute="trailing" secondItem="Kot-Vk-Ceg" secondAttribute="trailing" constant="16" id="o4a-ud-OGG"/>
-                                    <constraint firstAttribute="bottom" secondItem="k6r-yB-3Di" secondAttribute="bottom" id="xTo-GD-034"/>
+                                    <constraint firstItem="Spe-JF-tWi" firstAttribute="top" secondItem="343-Tv-wew" secondAttribute="top" id="sbw-7e-nAP"/>
                                     <constraint firstItem="aAg-vG-upG" firstAttribute="top" secondItem="343-Tv-wew" secondAttribute="top" constant="48" id="zD1-uw-XTL"/>
                                 </constraints>
                             </view>
@@ -317,7 +341,8 @@
                         <outlet property="inputCpf" destination="Kot-Vk-Ceg" id="Y4r-wO-L74"/>
                         <outlet property="inputNome" destination="aAg-vG-upG" id="jKC-6c-jMp"/>
                         <outlet property="inputSenha" destination="iyd-P3-x6A" id="6tI-17-1rM"/>
-                        <outlet property="viewOverlap" destination="k6r-yB-3Di" id="kOn-mI-sfe"/>
+                        <outlet property="progress" destination="Ql3-2I-wkE" id="fsc-Fu-TSS"/>
+                        <outlet property="viewMsg" destination="Spe-JF-tWi" id="I1o-aK-SGI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ahc-Ex-aYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -348,6 +373,7 @@
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="ic_arrow_back" width="24" height="24"/>
+        <image name="ic_check" width="24" height="24"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

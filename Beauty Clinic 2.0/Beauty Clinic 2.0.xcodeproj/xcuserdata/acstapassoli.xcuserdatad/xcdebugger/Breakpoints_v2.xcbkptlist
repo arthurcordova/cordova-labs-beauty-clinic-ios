@@ -65,6 +65,38 @@
             endingLineNumber = "39"
             landmarkName = "novo(usuario:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Beauty_Clinic_2_0.UsuarioService.(novo (usuario : Beauty_Clinic_2_0.Usuario) -&gt; ()).(closure #1)"
+                  moduleName = "Beauty Clinic 2.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acstapassoli/Mobile/IOS/cordova-labs-beauty-clinic-ios/Beauty%20Clinic%202.0/Beauty%20Clinic%202.0/UsuarioService.swift"
+                  timestampString = "509678640.532718"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "269">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Beauty_Clinic_2_0.UsuarioService.(novo (usuario : Beauty_Clinic_2_0.Usuario) -&gt; ()).(closure #1)"
+                  moduleName = "Beauty Clinic 2.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acstapassoli/Mobile/IOS/cordova-labs-beauty-clinic-ios/Beauty%20Clinic%202.0/Beauty%20Clinic%202.0/UsuarioService.swift"
+                  timestampString = "509678640.535258"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "458">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -89,13 +121,13 @@
                   symbolName = "Beauty_Clinic_2_0.UsuarioService.(novo (usuario : Beauty_Clinic_2_0.Usuario) -&gt; ()).(closure #1)"
                   moduleName = "Beauty Clinic 2.0"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acstapassoli/Mobile/IOS/Beauty%20Clinic%202.0/Beauty%20Clinic%202.0/UsuarioService.swift"
-                  timestampString = "509593926.167194"
+                  urlString = "file:///Users/acstapassoli/Mobile/IOS/cordova-labs-beauty-clinic-ios/Beauty%20Clinic%202.0/Beauty%20Clinic%202.0/UsuarioService.swift"
+                  timestampString = "509678490.955961"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "23">
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "28">
                </Location>
                <Location
                   shouldBeEnabled = "No"
@@ -104,13 +136,13 @@
                   symbolName = "Beauty_Clinic_2_0.UsuarioService.(novo (usuario : Beauty_Clinic_2_0.Usuario) -&gt; ()).(closure #1)"
                   moduleName = "Beauty Clinic 2.0"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acstapassoli/Mobile/IOS/Beauty%20Clinic%202.0/Beauty%20Clinic%202.0/UsuarioService.swift"
-                  timestampString = "509593926.169731"
+                  urlString = "file:///Users/acstapassoli/Mobile/IOS/cordova-labs-beauty-clinic-ios/Beauty%20Clinic%202.0/Beauty%20Clinic%202.0/UsuarioService.swift"
+                  timestampString = "509678490.958493"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "94">
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "106">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -122,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Beauty Clinic 2.0/UsuarioService.swift"
-            timestampString = "509595573.332809"
+            timestampString = "509678556.064074"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "novo(usuario:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -134,15 +166,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Beauty Clinic 2.0/UsuarioService.swift"
-            timestampString = "509595573.332809"
+            timestampString = "509678556.064074"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "novo(usuario:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Beauty Clinic 2.0/UsuarioService.swift"
+            timestampString = "509678602.181965"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "novo(usuario:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -14,7 +14,7 @@ class UsuarioService: ServiceConfig {
     
     init(viewController: CadastroController) {
         self.controller = viewController
-        self.controller?.viewOverlap.layer.isHidden = false
+        self.controller?.progress.startAnimating()
     }
     
 
@@ -32,7 +32,7 @@ class UsuarioService: ServiceConfig {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {                                                 // check for fundamental networking error
                 print("error=\(error)")
-                self.controller?.viewOverlap.layer.isHidden = true
+                self.controller?.progress.stopAnimating()
                 return
             }
             
@@ -40,14 +40,16 @@ class UsuarioService: ServiceConfig {
                 print("statusCode should be 200, but is \(httpStatus.statusCode)")
                 print("response = \(response)")
                 self.controller?.httpStatusCode = httpStatus.statusCode
-                self.controller?.viewOverlap.layer.isHidden = true
+                self.controller?.progress.stopAnimating()
+                self.controller?.viewMsg.layer.isHidden = true
                 return
             }
             
             let responseString = String(data: data, encoding: .utf8)
             print("responseString = \(responseString)")
             self.controller?.httpStatusCode = 200
-            self.controller?.viewOverlap.layer.isHidden = true
+            self.controller?.progress.stopAnimating()
+            
             return
         }
         task.resume()
