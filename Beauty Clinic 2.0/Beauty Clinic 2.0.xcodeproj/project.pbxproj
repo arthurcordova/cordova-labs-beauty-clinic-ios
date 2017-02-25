@@ -18,6 +18,10 @@
 		F4D7014D1E611F97006C47AB /* PrincipalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7014C1E611F97006C47AB /* PrincipalController.swift */; };
 		F4D7014F1E6123C0006C47AB /* ic_shopping_cart.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F4D7014E1E6123C0006C47AB /* ic_shopping_cart.imageset */; };
 		F4D701511E6126A6006C47AB /* ic_menu.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F4D701501E6126A6006C47AB /* ic_menu.imageset */; };
+		F4D701531E6128DA006C47AB /* DrawerMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D701521E6128DA006C47AB /* DrawerMenu.storyboard */; };
+		F4D701571E6129DF006C47AB /* ic_close.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F4D701561E6129DF006C47AB /* ic_close.imageset */; };
+		F4D701591E612D14006C47AB /* DrawerMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D701581E612D14006C47AB /* DrawerMenuController.swift */; };
+		F4D7015B1E613023006C47AB /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7015A1E613023006C47AB /* SegueFromLeft.swift */; };
 		F4F2A35D1E5BCD54009C1167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2A35C1E5BCD54009C1167 /* AppDelegate.swift */; };
 		F4F2A3641E5BCD54009C1167 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F2A3621E5BCD54009C1167 /* Main.storyboard */; };
 		F4F2A3661E5BCD54009C1167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F2A3651E5BCD54009C1167 /* Assets.xcassets */; };
@@ -36,6 +40,10 @@
 		F4D7014C1E611F97006C47AB /* PrincipalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalController.swift; sourceTree = "<group>"; };
 		F4D7014E1E6123C0006C47AB /* ic_shopping_cart.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_shopping_cart.imageset; sourceTree = "<group>"; };
 		F4D701501E6126A6006C47AB /* ic_menu.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_menu.imageset; sourceTree = "<group>"; };
+		F4D701521E6128DA006C47AB /* DrawerMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DrawerMenu.storyboard; sourceTree = "<group>"; };
+		F4D701561E6129DF006C47AB /* ic_close.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_close.imageset; sourceTree = "<group>"; };
+		F4D701581E612D14006C47AB /* DrawerMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerMenuController.swift; sourceTree = "<group>"; };
+		F4D7015A1E613023006C47AB /* SegueFromLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueFromLeft.swift; sourceTree = "<group>"; };
 		F4F2A3591E5BCD54009C1167 /* Beauty Clinic 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beauty Clinic 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F2A35C1E5BCD54009C1167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4F2A3631E5BCD54009C1167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +105,7 @@
 				F4F2A3711E5BCDB5009C1167 /* Controller */,
 				F4F2A3701E5BCDAE009C1167 /* View */,
 				F4F2A3651E5BCD54009C1167 /* Assets.xcassets */,
+				F4D701561E6129DF006C47AB /* ic_close.imageset */,
 				F4D701501E6126A6006C47AB /* ic_menu.imageset */,
 				F4D7014E1E6123C0006C47AB /* ic_shopping_cart.imageset */,
 				F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */,
@@ -111,6 +120,7 @@
 				F4F2A3621E5BCD54009C1167 /* Main.storyboard */,
 				F4F2A3671E5BCD54009C1167 /* LaunchScreen.storyboard */,
 				F4D7014A1E611ECC006C47AB /* Principal.storyboard */,
+				F4D701521E6128DA006C47AB /* DrawerMenu.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -122,6 +132,8 @@
 				F469444B1E5BD27400AA9F2E /* LoginController.swift */,
 				F469444F1E5BED1B00AA9F2E /* CadastroController.swift */,
 				F4D7014C1E611F97006C47AB /* PrincipalController.swift */,
+				F4D701581E612D14006C47AB /* DrawerMenuController.swift */,
+				F4D7015A1E613023006C47AB /* SegueFromLeft.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -188,10 +200,12 @@
 			files = (
 				F4F2A3691E5BCD54009C1167 /* LaunchScreen.storyboard in Resources */,
 				F4D701511E6126A6006C47AB /* ic_menu.imageset in Resources */,
+				F4D701571E6129DF006C47AB /* ic_close.imageset in Resources */,
 				F4F2A3661E5BCD54009C1167 /* Assets.xcassets in Resources */,
 				F4D7014B1E611ECC006C47AB /* Principal.storyboard in Resources */,
 				F4F2A3641E5BCD54009C1167 /* Main.storyboard in Resources */,
 				F4D7014F1E6123C0006C47AB /* ic_shopping_cart.imageset in Resources */,
+				F4D701531E6128DA006C47AB /* DrawerMenu.storyboard in Resources */,
 				F4B4593F1E5FCB130059C247 /* ic_check_circle.imageset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4D701591E612D14006C47AB /* DrawerMenuController.swift in Sources */,
 				F46944581E5D2F0400AA9F2E /* Usuario.swift in Sources */,
 				F469444C1E5BD27400AA9F2E /* LoginController.swift in Sources */,
 				F4D7014D1E611F97006C47AB /* PrincipalController.swift in Sources */,
@@ -210,6 +225,7 @@
 				F4D701491E6116E7006C47AB /* LoginService.swift in Sources */,
 				F46944551E5D2BC900AA9F2E /* ServiceConfig.swift in Sources */,
 				F46944531E5D283200AA9F2E /* UsuarioService.swift in Sources */,
+				F4D7015B1E613023006C47AB /* SegueFromLeft.swift in Sources */,
 				F46944501E5BED1B00AA9F2E /* CadastroController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6K8-bs-gfv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drawer Menu Controller-->
+        <scene sceneID="fgG-mO-bJz">
+            <objects>
+                <viewController id="6K8-bs-gfv" customClass="DrawerMenuController" customModule="Beauty_Clinic_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ICd-Wz-Kl3"/>
+                        <viewControllerLayoutGuide type="bottom" id="EEg-1G-3Km"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ufC-8R-GOv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JSR-TM-fNl">
+                                <rect key="frame" x="0.0" y="0.0" width="307" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UX-2B-PjP">
+                                        <rect key="frame" x="244" y="19" width="55" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="YZH-Sh-8GI"/>
+                                            <constraint firstAttribute="width" constant="55" id="rkS-9b-o95"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="ic_close"/>
+                                        <connections>
+                                            <action selector="closeAction:" destination="6K8-bs-gfv" eventType="touchUpInside" id="bz6-3D-zjJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="6UX-2B-PjP" firstAttribute="top" secondItem="JSR-TM-fNl" secondAttribute="top" constant="16" id="1cm-bv-wJG"/>
+                                    <constraint firstAttribute="trailing" secondItem="6UX-2B-PjP" secondAttribute="trailing" constant="16" id="WSI-Fi-Pur"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="JSR-TM-fNl" firstAttribute="top" secondItem="ufC-8R-GOv" secondAttribute="top" id="bId-Gx-Sz0"/>
+                            <constraint firstItem="JSR-TM-fNl" firstAttribute="leading" secondItem="ufC-8R-GOv" secondAttribute="leading" id="bl4-xL-bfr"/>
+                            <constraint firstAttribute="trailing" secondItem="JSR-TM-fNl" secondAttribute="trailing" constant="60" id="eZ6-MK-nT3"/>
+                            <constraint firstItem="EEg-1G-3Km" firstAttribute="top" secondItem="JSR-TM-fNl" secondAttribute="bottom" id="nPj-Cn-UJF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l8V-xc-8no" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152.80000000000001" y="49.925037481259373"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_close" width="24" height="24"/>
+    </resources>
+</document>
