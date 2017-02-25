@@ -62,6 +62,9 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="ic_shopping" id="0mA-30-N5r">
                                             <color key="tintColor" red="0.91372549020000005" green="0.1529411765" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="7GE-rn-5YN" kind="showDetail" id="s8Z-d5-AGX"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -86,6 +89,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H19-Pw-LEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="77.599999999999994" y="98.50074962518741"/>
+        </scene>
+        <!--Carrinho-->
+        <scene sceneID="zri-wK-ZRc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Carrinho" id="7GE-rn-5YN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSx-Ok-VKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="745" y="-130"/>
         </scene>
     </scenes>
     <resources>
