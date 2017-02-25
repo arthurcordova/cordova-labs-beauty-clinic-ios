@@ -14,6 +14,7 @@
 		F46944581E5D2F0400AA9F2E /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46944571E5D2F0400AA9F2E /* Usuario.swift */; };
 		F48150C21E621AE200CEE75B /* Mensagens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48150C11E621AE200CEE75B /* Mensagens.storyboard */; };
 		F48150C41E621FBF00CEE75B /* ic_keyboard_arrow_left.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F48150C31E621FBF00CEE75B /* ic_keyboard_arrow_left.imageset */; };
+		F48150C61E62211A00CEE75B /* Agendamentos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48150C51E62211A00CEE75B /* Agendamentos.storyboard */; };
 		F49B475D1E61C0D400D207AE /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49B475C1E61C0D400D207AE /* Image.xcassets */; };
 		F4B4593F1E5FCB130059C247 /* ic_check_circle.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */; };
 		F4D701491E6116E7006C47AB /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D701481E6116E7006C47AB /* LoginService.swift */; };
@@ -39,6 +40,7 @@
 		F46944571E5D2F0400AA9F2E /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		F48150C11E621AE200CEE75B /* Mensagens.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mensagens.storyboard; sourceTree = "<group>"; };
 		F48150C31E621FBF00CEE75B /* ic_keyboard_arrow_left.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ic_keyboard_arrow_left.imageset; path = ic_check_circle.imageset/ic_keyboard_arrow_left.imageset; sourceTree = "<group>"; };
+		F48150C51E62211A00CEE75B /* Agendamentos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Agendamentos.storyboard; sourceTree = "<group>"; };
 		F49B475C1E61C0D400D207AE /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_check_circle.imageset; sourceTree = "<group>"; };
 		F4D701481E6116E7006C47AB /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				F4D7014A1E611ECC006C47AB /* Principal.storyboard */,
 				F4D701521E6128DA006C47AB /* DrawerMenu.storyboard */,
 				F48150C11E621AE200CEE75B /* Mensagens.storyboard */,
+				F48150C51E62211A00CEE75B /* Agendamentos.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			files = (
 				F4FC549E1E61B28A00E1ED42 /* ic_message.imageset in Resources */,
 				F49B475D1E61C0D400D207AE /* Image.xcassets in Resources */,
+				F48150C61E62211A00CEE75B /* Agendamentos.storyboard in Resources */,
 				F4F2A3691E5BCD54009C1167 /* LaunchScreen.storyboard in Resources */,
 				F4D701511E6126A6006C47AB /* ic_menu.imageset in Resources */,
 				F48150C41E621FBF00CEE75B /* ic_keyboard_arrow_left.imageset in Resources */,

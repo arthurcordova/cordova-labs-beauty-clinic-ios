@@ -116,6 +116,9 @@
                                         <state key="normal" title="Agendamentos">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="FvY-eW-Qfu" kind="showDetail" id="B61-UM-4vO"/>
+                                        </connections>
                                     </button>
                                     <view alpha="0.11999999731779099" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K8v-wd-WkF">
                                         <rect key="frame" x="0.0" y="266" width="307" height="2"/>
@@ -178,6 +181,9 @@
                                         <state key="normal" title="Produtos">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="X0w-qK-xce" kind="showDetail" id="n2K-CD-5BC"/>
+                                        </connections>
                                     </button>
                                     <view alpha="0.11999999731779099" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JO7-u3-nmt">
                                         <rect key="frame" x="0.0" y="380" width="307" height="2"/>
@@ -209,6 +215,9 @@
                                         <state key="normal" title="Orçamentos">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="jrj-X4-sP1" kind="showDetail" id="4M3-Fs-f0Z"/>
+                                        </connections>
                                     </button>
                                     <view alpha="0.11999999731779099" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qN-dd-NRf">
                                         <rect key="frame" x="0.0" y="437" width="307" height="2"/>
@@ -237,6 +246,9 @@
                                             <constraint firstAttribute="height" constant="38" id="a0G-jF-8iW"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="ic_info"/>
+                                        <connections>
+                                            <segue destination="bgb-py-Hb3" kind="showDetail" id="Vt5-SD-ay6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -329,7 +341,39 @@
                 <viewControllerPlaceholder storyboardName="Mensagens" id="oQb-uG-58f" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kuw-hH-Op2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="783" y="-212"/>
+            <point key="canvasLocation" x="946" y="-254"/>
+        </scene>
+        <!--Agendamentos-->
+        <scene sceneID="NDL-iz-JIg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Agendamentos" id="FvY-eW-Qfu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kh5-Jl-k4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="-185"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="bwa-pC-9pH">
+            <objects>
+                <viewControllerPlaceholder id="X0w-qK-xce" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UwZ-YA-Y50" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="-120"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="PmN-QA-ogT">
+            <objects>
+                <viewControllerPlaceholder id="jrj-X4-sP1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qG6-Db-cMX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="-52"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="RCo-Zy-rtQ">
+            <objects>
+                <viewControllerPlaceholder id="bgb-py-Hb3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vbC-0h-DP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="17"/>
         </scene>
     </scenes>
     <resources>
