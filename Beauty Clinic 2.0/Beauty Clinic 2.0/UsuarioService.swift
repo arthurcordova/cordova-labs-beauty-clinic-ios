@@ -17,7 +17,6 @@ class UsuarioService: ServiceConfig {
         self.controller?.progress.startAnimating()
     }
     
-
     func novo(usuario: Usuario) -> Void {
         var request = URLRequest(url: URL(string: server.appending("/cadcliente"))!)
         request.httpMethod = "POST"

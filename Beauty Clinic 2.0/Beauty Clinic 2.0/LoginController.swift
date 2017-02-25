@@ -27,6 +27,22 @@ class LoginController: UIViewController, UITextFieldDelegate {
         inputSenha.delegate = self
     }
     
+    @IBAction func loginAction(_ sender: UIButton) {
+        callViewPrincipal()
+//        let service = LoginService()
+//        let usuario = Usuario()
+//        usuario.cpf = inputLogin.text!
+//        usuario.senha = inputSenha.text!
+//        service.doLogin(usuario: usuario, completionHander: { (dic, error) in
+//            print(dic)
+//            
+//           
+//
+//            
+//        })
+    }
+    
+    
     @IBAction func backView(segue:UIStoryboardSegue) {
         
     }
@@ -62,5 +78,11 @@ class LoginController: UIViewController, UITextFieldDelegate {
         button.layer.cornerRadius = 8
     }
     
+//    func callViewPrincipal() {
+//        let principal: UIStoryboard = UIStoryboard(name: "Principal", bundle: nil)
+//        let controller = principal.instantiateViewController(withIdentifier: "principalID") as! PrincipalController
+//        self.navigationController?.pushViewController(controller, animated: true);
+//        print("Chamando view")
+//    }
     
 }
