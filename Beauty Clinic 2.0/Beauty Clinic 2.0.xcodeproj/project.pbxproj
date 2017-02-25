@@ -16,6 +16,7 @@
 		F48150C41E621FBF00CEE75B /* ic_keyboard_arrow_left.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F48150C31E621FBF00CEE75B /* ic_keyboard_arrow_left.imageset */; };
 		F48150C61E62211A00CEE75B /* Agendamentos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48150C51E62211A00CEE75B /* Agendamentos.storyboard */; };
 		F48150C81E62241B00CEE75B /* Produtos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48150C71E62241B00CEE75B /* Produtos.storyboard */; };
+		F48150CA1E62254300CEE75B /* Orcamentos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48150C91E62254300CEE75B /* Orcamentos.storyboard */; };
 		F49B475D1E61C0D400D207AE /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49B475C1E61C0D400D207AE /* Image.xcassets */; };
 		F4B4593F1E5FCB130059C247 /* ic_check_circle.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */; };
 		F4D701491E6116E7006C47AB /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D701481E6116E7006C47AB /* LoginService.swift */; };
@@ -43,6 +44,7 @@
 		F48150C31E621FBF00CEE75B /* ic_keyboard_arrow_left.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ic_keyboard_arrow_left.imageset; path = ic_check_circle.imageset/ic_keyboard_arrow_left.imageset; sourceTree = "<group>"; };
 		F48150C51E62211A00CEE75B /* Agendamentos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Agendamentos.storyboard; sourceTree = "<group>"; };
 		F48150C71E62241B00CEE75B /* Produtos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Produtos.storyboard; sourceTree = "<group>"; };
+		F48150C91E62254300CEE75B /* Orcamentos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Orcamentos.storyboard; sourceTree = "<group>"; };
 		F49B475C1E61C0D400D207AE /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_check_circle.imageset; sourceTree = "<group>"; };
 		F4D701481E6116E7006C47AB /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				F48150C11E621AE200CEE75B /* Mensagens.storyboard */,
 				F48150C51E62211A00CEE75B /* Agendamentos.storyboard */,
 				F48150C71E62241B00CEE75B /* Produtos.storyboard */,
+				F48150C91E62254300CEE75B /* Orcamentos.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				F4D701511E6126A6006C47AB /* ic_menu.imageset in Resources */,
 				F48150C41E621FBF00CEE75B /* ic_keyboard_arrow_left.imageset in Resources */,
 				F4D701571E6129DF006C47AB /* ic_close.imageset in Resources */,
+				F48150CA1E62254300CEE75B /* Orcamentos.storyboard in Resources */,
 				F4D7014B1E611ECC006C47AB /* Principal.storyboard in Resources */,
 				F4F2A3641E5BCD54009C1167 /* Main.storyboard in Resources */,
 				F4FC54A11E61BF8000E1ED42 /* ic_info_outline.imageset in Resources */,
