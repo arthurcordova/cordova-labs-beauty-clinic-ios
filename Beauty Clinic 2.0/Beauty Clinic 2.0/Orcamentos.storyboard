@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HRT-Mr-4PE">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRT-Mr-4PE">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textAttributes key="titleTextAttributes">
@@ -30,6 +30,9 @@
                                     <navigationItem title="Orçamentos" id="UG9-Fd-gs1">
                                         <barButtonItem key="leftBarButtonItem" image="ic_arrow_left" id="vDb-dd-JDu">
                                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="Lvb-e1-RLi" kind="unwind" unwindAction="backToPrincipalWithSegue:" id="iNB-SC-79e"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -49,6 +52,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySn-B3-9ad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Lvb-e1-RLi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-55.200000000000003" y="42.728635682158924"/>
         </scene>

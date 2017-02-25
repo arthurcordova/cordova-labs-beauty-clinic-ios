@@ -367,13 +367,13 @@
             </objects>
             <point key="canvasLocation" x="950" y="-53"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Informacao-->
         <scene sceneID="RCo-Zy-rtQ">
             <objects>
-                <viewControllerPlaceholder id="bgb-py-Hb3" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Informacao" id="bgb-py-Hb3" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbC-0h-DP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="17"/>
+            <point key="canvasLocation" x="946" y="13"/>
         </scene>
     </scenes>
     <resources>
