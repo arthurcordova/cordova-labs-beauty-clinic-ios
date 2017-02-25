@@ -24,11 +24,11 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Beauty Clinic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1U9-VC-sKZ">
-                                        <rect key="frame" x="0.0" y="122" width="375" height="21"/>
+                                        <rect key="frame" x="0.0" y="122" width="375" height="35"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="bFV-fH-KiZ"/>
+                                            <constraint firstAttribute="height" constant="40" id="bFV-fH-KiZ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                         <color key="textColor" red="0.41176470588235292" green="0.41176470588235292" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -63,6 +63,7 @@
                                         </state>
                                         <connections>
                                             <action selector="loginAction:" destination="ieC-oB-doa" eventType="touchUpInside" id="tiE-NI-s1O"/>
+                                            <segue destination="TLA-ro-4zY" kind="show" id="fZH-g0-6qK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djo-Db-Cis">
@@ -272,6 +273,14 @@
                 <exit id="988-Z9-9sq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-674.39999999999998" y="757.87106446776613"/>
+        </scene>
+        <!--Principal-->
+        <scene sceneID="PhL-Tt-6G9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Principal" id="TLA-ro-4zY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WtH-Te-R1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-154" y="133"/>
         </scene>
     </scenes>
     <resources>
