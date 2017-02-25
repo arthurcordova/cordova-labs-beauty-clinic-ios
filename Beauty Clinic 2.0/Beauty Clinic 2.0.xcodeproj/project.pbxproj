@@ -12,6 +12,8 @@
 		F46944531E5D283200AA9F2E /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46944521E5D283200AA9F2E /* UsuarioService.swift */; };
 		F46944551E5D2BC900AA9F2E /* ServiceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46944541E5D2BC900AA9F2E /* ServiceConfig.swift */; };
 		F46944581E5D2F0400AA9F2E /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46944571E5D2F0400AA9F2E /* Usuario.swift */; };
+		F49B475B1E61BFF300D207AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49B475A1E61BFF300D207AE /* Assets.xcassets */; };
+		F49B475D1E61C0D400D207AE /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49B475C1E61C0D400D207AE /* Image.xcassets */; };
 		F4B4593F1E5FCB130059C247 /* ic_check_circle.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */; };
 		F4D701491E6116E7006C47AB /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D701481E6116E7006C47AB /* LoginService.swift */; };
 		F4D7014B1E611ECC006C47AB /* Principal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D7014A1E611ECC006C47AB /* Principal.storyboard */; };
@@ -21,11 +23,11 @@
 		F4D701531E6128DA006C47AB /* DrawerMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D701521E6128DA006C47AB /* DrawerMenu.storyboard */; };
 		F4D701571E6129DF006C47AB /* ic_close.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F4D701561E6129DF006C47AB /* ic_close.imageset */; };
 		F4D701591E612D14006C47AB /* DrawerMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D701581E612D14006C47AB /* DrawerMenuController.swift */; };
-		F4D7015B1E613023006C47AB /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7015A1E613023006C47AB /* SegueFromLeft.swift */; };
 		F4F2A35D1E5BCD54009C1167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2A35C1E5BCD54009C1167 /* AppDelegate.swift */; };
 		F4F2A3641E5BCD54009C1167 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F2A3621E5BCD54009C1167 /* Main.storyboard */; };
-		F4F2A3661E5BCD54009C1167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F2A3651E5BCD54009C1167 /* Assets.xcassets */; };
 		F4F2A3691E5BCD54009C1167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F2A3671E5BCD54009C1167 /* LaunchScreen.storyboard */; };
+		F4FC549E1E61B28A00E1ED42 /* ic_message.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F4FC549D1E61B28A00E1ED42 /* ic_message.imageset */; };
+		F4FC54A11E61BF8000E1ED42 /* ic_info_outline.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F4FC54A01E61BF8000E1ED42 /* ic_info_outline.imageset */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		F46944521E5D283200AA9F2E /* UsuarioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioService.swift; sourceTree = "<group>"; };
 		F46944541E5D2BC900AA9F2E /* ServiceConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfig.swift; sourceTree = "<group>"; };
 		F46944571E5D2F0400AA9F2E /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		F49B475A1E61BFF300D207AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F49B475C1E61C0D400D207AE /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_check_circle.imageset; sourceTree = "<group>"; };
 		F4D701481E6116E7006C47AB /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		F4D7014A1E611ECC006C47AB /* Principal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Principal.storyboard; sourceTree = "<group>"; };
@@ -43,13 +47,13 @@
 		F4D701521E6128DA006C47AB /* DrawerMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DrawerMenu.storyboard; sourceTree = "<group>"; };
 		F4D701561E6129DF006C47AB /* ic_close.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_close.imageset; sourceTree = "<group>"; };
 		F4D701581E612D14006C47AB /* DrawerMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerMenuController.swift; sourceTree = "<group>"; };
-		F4D7015A1E613023006C47AB /* SegueFromLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueFromLeft.swift; sourceTree = "<group>"; };
 		F4F2A3591E5BCD54009C1167 /* Beauty Clinic 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beauty Clinic 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F2A35C1E5BCD54009C1167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4F2A3631E5BCD54009C1167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F4F2A3651E5BCD54009C1167 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4F2A3681E5BCD54009C1167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4F2A36A1E5BCD54009C1167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4FC549D1E61B28A00E1ED42 /* ic_message.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_message.imageset; sourceTree = "<group>"; };
+		F4FC54A01E61BF8000E1ED42 /* ic_info_outline.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_info_outline.imageset; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +108,14 @@
 				F46944511E5D280C00AA9F2E /* Service */,
 				F4F2A3711E5BCDB5009C1167 /* Controller */,
 				F4F2A3701E5BCDAE009C1167 /* View */,
-				F4F2A3651E5BCD54009C1167 /* Assets.xcassets */,
+				F4FC54A01E61BF8000E1ED42 /* ic_info_outline.imageset */,
+				F4FC549D1E61B28A00E1ED42 /* ic_message.imageset */,
 				F4D701561E6129DF006C47AB /* ic_close.imageset */,
 				F4D701501E6126A6006C47AB /* ic_menu.imageset */,
 				F4D7014E1E6123C0006C47AB /* ic_shopping_cart.imageset */,
 				F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */,
 				F4F2A36A1E5BCD54009C1167 /* Info.plist */,
+				F49B475C1E61C0D400D207AE /* Image.xcassets */,
 			);
 			path = "Beauty Clinic 2.0";
 			sourceTree = "<group>";
@@ -117,6 +123,7 @@
 		F4F2A3701E5BCDAE009C1167 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F49B475A1E61BFF300D207AE /* Assets.xcassets */,
 				F4F2A3621E5BCD54009C1167 /* Main.storyboard */,
 				F4F2A3671E5BCD54009C1167 /* LaunchScreen.storyboard */,
 				F4D7014A1E611ECC006C47AB /* Principal.storyboard */,
@@ -133,7 +140,6 @@
 				F469444F1E5BED1B00AA9F2E /* CadastroController.swift */,
 				F4D7014C1E611F97006C47AB /* PrincipalController.swift */,
 				F4D701581E612D14006C47AB /* DrawerMenuController.swift */,
-				F4D7015A1E613023006C47AB /* SegueFromLeft.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -198,12 +204,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4FC549E1E61B28A00E1ED42 /* ic_message.imageset in Resources */,
+				F49B475D1E61C0D400D207AE /* Image.xcassets in Resources */,
 				F4F2A3691E5BCD54009C1167 /* LaunchScreen.storyboard in Resources */,
+				F49B475B1E61BFF300D207AE /* Assets.xcassets in Resources */,
 				F4D701511E6126A6006C47AB /* ic_menu.imageset in Resources */,
 				F4D701571E6129DF006C47AB /* ic_close.imageset in Resources */,
-				F4F2A3661E5BCD54009C1167 /* Assets.xcassets in Resources */,
 				F4D7014B1E611ECC006C47AB /* Principal.storyboard in Resources */,
 				F4F2A3641E5BCD54009C1167 /* Main.storyboard in Resources */,
+				F4FC54A11E61BF8000E1ED42 /* ic_info_outline.imageset in Resources */,
 				F4D7014F1E6123C0006C47AB /* ic_shopping_cart.imageset in Resources */,
 				F4D701531E6128DA006C47AB /* DrawerMenu.storyboard in Resources */,
 				F4B4593F1E5FCB130059C247 /* ic_check_circle.imageset in Resources */,
@@ -225,7 +234,6 @@
 				F4D701491E6116E7006C47AB /* LoginService.swift in Sources */,
 				F46944551E5D2BC900AA9F2E /* ServiceConfig.swift in Sources */,
 				F46944531E5D283200AA9F2E /* UsuarioService.swift in Sources */,
-				F4D7015B1E613023006C47AB /* SegueFromLeft.swift in Sources */,
 				F46944501E5BED1B00AA9F2E /* CadastroController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +355,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = T4H78CRT5T;
 				INFOPLIST_FILE = "Beauty Clinic 2.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -361,6 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = T4H78CRT5T;
 				INFOPLIST_FILE = "Beauty Clinic 2.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

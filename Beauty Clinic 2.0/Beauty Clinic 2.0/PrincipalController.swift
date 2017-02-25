@@ -13,4 +13,10 @@ class PrincipalController: UIViewController {
     override func viewDidLoad() {
         
     }
+    
+//    @IBAction func backView(segue:UIStoryboardSegue) {
+//        print("PRINCIPAL")
+//    }
+    
+
 }

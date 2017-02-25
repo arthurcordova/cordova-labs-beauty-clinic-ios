@@ -44,7 +44,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func backView(segue:UIStoryboardSegue) {
-        
+            print("LOGIN")
     }
     
     //Hide keyboard when user touches outside key
