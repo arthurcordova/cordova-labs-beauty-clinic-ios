@@ -9,6 +9,10 @@
 import UIKit
 
 class MensagemCellTableViewCell: UITableViewCell {
+    
+    @IBOutlet var labelTitulo: UILabel!
+    @IBOutlet var labelMensagem: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
