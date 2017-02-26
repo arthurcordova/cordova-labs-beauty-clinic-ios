@@ -19,6 +19,11 @@
 		F48150CA1E62254300CEE75B /* Orcamentos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48150C91E62254300CEE75B /* Orcamentos.storyboard */; };
 		F48150CC1E62269100CEE75B /* Informacao.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48150CB1E62269100CEE75B /* Informacao.storyboard */; };
 		F48150CE1E62281800CEE75B /* Carrinho.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48150CD1E62281800CEE75B /* Carrinho.storyboard */; };
+		F48150D01E62F85A00CEE75B /* ic_keyboard_arrow_down.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F48150CF1E62F85A00CEE75B /* ic_keyboard_arrow_down.imageset */; };
+		F48150D21E62FF1B00CEE75B /* MensagensController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48150D11E62FF1B00CEE75B /* MensagensController.swift */; };
+		F48150D41E62FF5B00CEE75B /* MensagensService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48150D31E62FF5B00CEE75B /* MensagensService.swift */; };
+		F48150DA1E63042E00CEE75B /* MensagemCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48150D81E63042E00CEE75B /* MensagemCellTableViewCell.swift */; };
+		F48150DB1E63042E00CEE75B /* MensagemCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48150D91E63042E00CEE75B /* MensagemCellTableViewCell.xib */; };
 		F49B475D1E61C0D400D207AE /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49B475C1E61C0D400D207AE /* Image.xcassets */; };
 		F4B4593F1E5FCB130059C247 /* ic_check_circle.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */; };
 		F4D701491E6116E7006C47AB /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D701481E6116E7006C47AB /* LoginService.swift */; };
@@ -49,6 +54,11 @@
 		F48150C91E62254300CEE75B /* Orcamentos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Orcamentos.storyboard; sourceTree = "<group>"; };
 		F48150CB1E62269100CEE75B /* Informacao.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Informacao.storyboard; sourceTree = "<group>"; };
 		F48150CD1E62281800CEE75B /* Carrinho.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Carrinho.storyboard; sourceTree = "<group>"; };
+		F48150CF1E62F85A00CEE75B /* ic_keyboard_arrow_down.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_keyboard_arrow_down.imageset; sourceTree = "<group>"; };
+		F48150D11E62FF1B00CEE75B /* MensagensController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MensagensController.swift; sourceTree = "<group>"; };
+		F48150D31E62FF5B00CEE75B /* MensagensService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MensagensService.swift; sourceTree = "<group>"; };
+		F48150D81E63042E00CEE75B /* MensagemCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MensagemCellTableViewCell.swift; sourceTree = "<group>"; };
+		F48150D91E63042E00CEE75B /* MensagemCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MensagemCellTableViewCell.xib; sourceTree = "<group>"; };
 		F49B475C1E61C0D400D207AE /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_check_circle.imageset; sourceTree = "<group>"; };
 		F4D701481E6116E7006C47AB /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -85,6 +95,7 @@
 				F46944521E5D283200AA9F2E /* UsuarioService.swift */,
 				F46944541E5D2BC900AA9F2E /* ServiceConfig.swift */,
 				F4D701481E6116E7006C47AB /* LoginService.swift */,
+				F48150D31E62FF5B00CEE75B /* MensagensService.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -95,6 +106,15 @@
 				F46944571E5D2F0400AA9F2E /* Usuario.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		F48150D51E63018300CEE75B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F48150D81E63042E00CEE75B /* MensagemCellTableViewCell.swift */,
+				F48150D91E63042E00CEE75B /* MensagemCellTableViewCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		F4F2A3501E5BCD54009C1167 = {
@@ -116,6 +136,7 @@
 		F4F2A35B1E5BCD54009C1167 /* Beauty Clinic 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				F48150D51E63018300CEE75B /* Cell */,
 				F46944561E5D2EF600AA9F2E /* Model */,
 				F46944511E5D280C00AA9F2E /* Service */,
 				F4F2A3711E5BCDB5009C1167 /* Controller */,
@@ -125,6 +146,7 @@
 				F4FC549D1E61B28A00E1ED42 /* ic_message.imageset */,
 				F4D701561E6129DF006C47AB /* ic_close.imageset */,
 				F4D701501E6126A6006C47AB /* ic_menu.imageset */,
+				F48150CF1E62F85A00CEE75B /* ic_keyboard_arrow_down.imageset */,
 				F4D7014E1E6123C0006C47AB /* ic_shopping_cart.imageset */,
 				F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */,
 				F4F2A36A1E5BCD54009C1167 /* Info.plist */,
@@ -158,6 +180,7 @@
 				F469444F1E5BED1B00AA9F2E /* CadastroController.swift */,
 				F4D7014C1E611F97006C47AB /* PrincipalController.swift */,
 				F4D701581E612D14006C47AB /* DrawerMenuController.swift */,
+				F48150D11E62FF1B00CEE75B /* MensagensController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -228,11 +251,13 @@
 				F4F2A3691E5BCD54009C1167 /* LaunchScreen.storyboard in Resources */,
 				F4D701511E6126A6006C47AB /* ic_menu.imageset in Resources */,
 				F48150C41E621FBF00CEE75B /* ic_keyboard_arrow_left.imageset in Resources */,
+				F48150DB1E63042E00CEE75B /* MensagemCellTableViewCell.xib in Resources */,
 				F4D701571E6129DF006C47AB /* ic_close.imageset in Resources */,
 				F48150CA1E62254300CEE75B /* Orcamentos.storyboard in Resources */,
 				F48150CE1E62281800CEE75B /* Carrinho.storyboard in Resources */,
 				F4D7014B1E611ECC006C47AB /* Principal.storyboard in Resources */,
 				F4F2A3641E5BCD54009C1167 /* Main.storyboard in Resources */,
+				F48150D01E62F85A00CEE75B /* ic_keyboard_arrow_down.imageset in Resources */,
 				F48150CC1E62269100CEE75B /* Informacao.storyboard in Resources */,
 				F4FC54A11E61BF8000E1ED42 /* ic_info_outline.imageset in Resources */,
 				F48150C21E621AE200CEE75B /* Mensagens.storyboard in Resources */,
@@ -253,11 +278,14 @@
 				F4D701591E612D14006C47AB /* DrawerMenuController.swift in Sources */,
 				F46944581E5D2F0400AA9F2E /* Usuario.swift in Sources */,
 				F469444C1E5BD27400AA9F2E /* LoginController.swift in Sources */,
+				F48150D21E62FF1B00CEE75B /* MensagensController.swift in Sources */,
 				F4D7014D1E611F97006C47AB /* PrincipalController.swift in Sources */,
 				F4F2A35D1E5BCD54009C1167 /* AppDelegate.swift in Sources */,
 				F4D701491E6116E7006C47AB /* LoginService.swift in Sources */,
 				F46944551E5D2BC900AA9F2E /* ServiceConfig.swift in Sources */,
 				F46944531E5D283200AA9F2E /* UsuarioService.swift in Sources */,
+				F48150D41E62FF5B00CEE75B /* MensagensService.swift in Sources */,
+				F48150DA1E63042E00CEE75B /* MensagemCellTableViewCell.swift in Sources */,
 				F46944501E5BED1B00AA9F2E /* CadastroController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
