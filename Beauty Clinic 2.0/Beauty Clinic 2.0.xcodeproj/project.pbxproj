@@ -23,13 +23,11 @@
 		F48150CE1E62281800CEE75B /* Carrinho.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48150CD1E62281800CEE75B /* Carrinho.storyboard */; };
 		F48150D01E62F85A00CEE75B /* ic_keyboard_arrow_down.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F48150CF1E62F85A00CEE75B /* ic_keyboard_arrow_down.imageset */; };
 		F48150D21E62FF1B00CEE75B /* MensagensController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48150D11E62FF1B00CEE75B /* MensagensController.swift */; };
-		F48150D41E62FF5B00CEE75B /* MensagensService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48150D31E62FF5B00CEE75B /* MensagensService.swift */; };
 		F48150DA1E63042E00CEE75B /* MensagemCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48150D81E63042E00CEE75B /* MensagemCellTableViewCell.swift */; };
 		F48150DB1E63042E00CEE75B /* MensagemCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48150D91E63042E00CEE75B /* MensagemCellTableViewCell.xib */; };
 		F48150DD1E6314AB00CEE75B /* Mensagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48150DC1E6314AB00CEE75B /* Mensagem.swift */; };
 		F49B475D1E61C0D400D207AE /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49B475C1E61C0D400D207AE /* Image.xcassets */; };
 		F4B4593F1E5FCB130059C247 /* ic_check_circle.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */; };
-		F4D701491E6116E7006C47AB /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D701481E6116E7006C47AB /* LoginService.swift */; };
 		F4D7014B1E611ECC006C47AB /* Principal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D7014A1E611ECC006C47AB /* Principal.storyboard */; };
 		F4D7014D1E611F97006C47AB /* PrincipalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7014C1E611F97006C47AB /* PrincipalController.swift */; };
 		F4D7014F1E6123C0006C47AB /* ic_shopping_cart.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F4D7014E1E6123C0006C47AB /* ic_shopping_cart.imageset */; };
@@ -61,13 +59,11 @@
 		F48150CD1E62281800CEE75B /* Carrinho.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Carrinho.storyboard; sourceTree = "<group>"; };
 		F48150CF1E62F85A00CEE75B /* ic_keyboard_arrow_down.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_keyboard_arrow_down.imageset; sourceTree = "<group>"; };
 		F48150D11E62FF1B00CEE75B /* MensagensController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MensagensController.swift; sourceTree = "<group>"; };
-		F48150D31E62FF5B00CEE75B /* MensagensService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MensagensService.swift; sourceTree = "<group>"; };
 		F48150D81E63042E00CEE75B /* MensagemCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MensagemCellTableViewCell.swift; sourceTree = "<group>"; };
 		F48150D91E63042E00CEE75B /* MensagemCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MensagemCellTableViewCell.xib; sourceTree = "<group>"; };
 		F48150DC1E6314AB00CEE75B /* Mensagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mensagem.swift; sourceTree = "<group>"; };
 		F49B475C1E61C0D400D207AE /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_check_circle.imageset; sourceTree = "<group>"; };
-		F4D701481E6116E7006C47AB /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		F4D7014A1E611ECC006C47AB /* Principal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Principal.storyboard; sourceTree = "<group>"; };
 		F4D7014C1E611F97006C47AB /* PrincipalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalController.swift; sourceTree = "<group>"; };
 		F4D7014E1E6123C0006C47AB /* ic_shopping_cart.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_shopping_cart.imageset; sourceTree = "<group>"; };
@@ -100,8 +96,6 @@
 			children = (
 				F46944521E5D283200AA9F2E /* UsuarioService.swift */,
 				F46944541E5D2BC900AA9F2E /* ServiceConfig.swift */,
-				F4D701481E6116E7006C47AB /* LoginService.swift */,
-				F48150D31E62FF5B00CEE75B /* MensagensService.swift */,
 				F450E8CC1E66222700C6E47B /* WS.swift */,
 			);
 			name = Service;
@@ -290,10 +284,8 @@
 				F48150D21E62FF1B00CEE75B /* MensagensController.swift in Sources */,
 				F4D7014D1E611F97006C47AB /* PrincipalController.swift in Sources */,
 				F4F2A35D1E5BCD54009C1167 /* AppDelegate.swift in Sources */,
-				F4D701491E6116E7006C47AB /* LoginService.swift in Sources */,
 				F46944551E5D2BC900AA9F2E /* ServiceConfig.swift in Sources */,
 				F46944531E5D283200AA9F2E /* UsuarioService.swift in Sources */,
-				F48150D41E62FF5B00CEE75B /* MensagensService.swift in Sources */,
 				F450E8D11E664F0900C6E47B /* Pessoa.swift in Sources */,
 				F48150DA1E63042E00CEE75B /* MensagemCellTableViewCell.swift in Sources */,
 				F46944501E5BED1B00AA9F2E /* CadastroController.swift in Sources */,

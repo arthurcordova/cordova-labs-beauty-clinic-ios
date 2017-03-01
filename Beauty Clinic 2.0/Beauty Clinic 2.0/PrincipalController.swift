@@ -13,15 +13,7 @@ class PrincipalController: UIViewController  {
     var pessoa : Pessoa? = nil
     
     override func viewDidLoad() {
-        
-//        segueIN
-//        
-//        prepare(for: "", sender: <#T##Any?#>)
-//        
-//        performSegue(withIdentifier: "segueDrawer", sender: "Teste")
-        
-        
-      //        self.performSegueWithIdentifier("detailSegue", sender: model)
+ 
     }
     
     @IBAction func backToPrincipal(segue:UIStoryboardSegue) {
@@ -39,7 +31,7 @@ class PrincipalController: UIViewController  {
     }
 
     @IBAction func drawerMenu(_ sender: UIBarButtonItem) {
-            print("Chama Action")
+        
         
      }
   

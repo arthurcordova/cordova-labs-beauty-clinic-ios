@@ -83,7 +83,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="oQb-uG-58f" kind="showDetail" id="PJh-KA-v5V"/>
+                                            <segue destination="oQb-uG-58f" kind="showDetail" identifier="segueMensagens" id="PJh-KA-v5V"/>
                                         </connections>
                                     </button>
                                     <view alpha="0.11999999731779099" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zY-ZG-V6s">
@@ -117,7 +117,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="FvY-eW-Qfu" kind="showDetail" id="B61-UM-4vO"/>
+                                            <segue destination="FvY-eW-Qfu" kind="showDetail" identifier="segueAgendamentos" id="B61-UM-4vO"/>
                                         </connections>
                                     </button>
                                     <view alpha="0.11999999731779099" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K8v-wd-WkF">
@@ -182,7 +182,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="X0w-qK-xce" kind="showDetail" id="n2K-CD-5BC"/>
+                                            <segue destination="X0w-qK-xce" kind="showDetail" identifier="segueProdutos" id="n2K-CD-5BC"/>
                                         </connections>
                                     </button>
                                     <view alpha="0.11999999731779099" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JO7-u3-nmt">
@@ -216,7 +216,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="jrj-X4-sP1" kind="showDetail" id="4M3-Fs-f0Z"/>
+                                            <segue destination="jrj-X4-sP1" kind="showDetail" identifier="segueOrcamentos" id="4M3-Fs-f0Z"/>
                                         </connections>
                                     </button>
                                     <view alpha="0.11999999731779099" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qN-dd-NRf">
@@ -247,7 +247,7 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="ic_info"/>
                                         <connections>
-                                            <segue destination="bgb-py-Hb3" kind="showDetail" id="Vt5-SD-ay6"/>
+                                            <segue destination="bgb-py-Hb3" kind="showDetail" identifier="segueInfo" id="Vt5-SD-ay6"/>
                                         </connections>
                                     </button>
                                 </subviews>
