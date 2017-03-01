@@ -10,12 +10,12 @@ import UIKit
 
 class DrawerMenuController: UIViewController {
     
+    @IBOutlet var labelNome: UILabel!
+    var pessoa : Pessoa? = nil
+    
     override func viewDidLoad() {
         
-    }
-    
-    @IBAction func closeAction(_ sender: UIButton) {
-        dismiss(animated: false, completion: nil)
+        labelNome.text = pessoa?.nome
     }
     
 }

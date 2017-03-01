@@ -11,7 +11,7 @@
         <!--Drawer Menu Controller-->
         <scene sceneID="fgG-mO-bJz">
             <objects>
-                <viewController id="6K8-bs-gfv" customClass="DrawerMenuController" customModule="Beauty_Clinic_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="drawerMenuID" id="6K8-bs-gfv" customClass="DrawerMenuController" customModule="Beauty_Clinic_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ICd-Wz-Kl3"/>
                         <viewControllerLayoutGuide type="bottom" id="EEg-1G-3Km"/>
@@ -31,7 +31,7 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="ic_close"/>
                                         <connections>
-                                            <action selector="closeAction:" destination="6K8-bs-gfv" eventType="touchUpInside" id="cFx-Yg-HOR"/>
+                                            <segue destination="kDp-3O-tz7" kind="unwind" animates="NO" unwindAction="backToPrincipalWithSegue:" id="Tj2-Mp-4O2"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Olá," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkQ-db-h6Z">
@@ -321,7 +321,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="JSR-TM-fNl" firstAttribute="leading" secondItem="ufC-8R-GOv" secondAttribute="leading" id="1nD-Ag-Db9"/>
                             <constraint firstItem="JSR-TM-fNl" firstAttribute="top" secondItem="ufC-8R-GOv" secondAttribute="top" id="bzo-Xd-rQN"/>
@@ -329,6 +329,9 @@
                             <constraint firstItem="EEg-1G-3Km" firstAttribute="top" secondItem="JSR-TM-fNl" secondAttribute="bottom" id="jc9-hG-82t"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelNome" destination="uWi-kJ-31j" id="uOm-nM-xAd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l8V-xc-8no" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="kDp-3O-tz7" userLabel="Exit" sceneMemberID="exit"/>
