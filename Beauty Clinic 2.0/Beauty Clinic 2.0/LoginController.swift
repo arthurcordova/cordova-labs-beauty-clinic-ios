@@ -27,24 +27,46 @@ class LoginController: UIViewController, UITextFieldDelegate {
         inputSenha.delegate = self
     }
     
-    @IBAction func loginAction(_ sender: UIButton) {
-//        callViewPrincipal()
-//        let service = LoginService()
-//        let usuario = Usuario()
-//        usuario.cpf = inputLogin.text!
-//        usuario.senha = inputSenha.text!
-//        service.doLogin(usuario: usuario, completionHander: { (dic, error) in
-//            print(dic)
-//            
-//           
-//
-//            
-//        })
+    @IBAction func doLogin(_ sender: UIButton) {
+        
+        let usuario = Usuario()
+        usuario.cpf = inputLogin.text!
+        usuario.senha = inputSenha.text!
+        
+        
+        WS.getRequestLogin(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/login", user: usuario, completionHander: { (dic, error) in
+            if error != nil {
+                print(dic)
+            } else {
+                
+                let pessoa = Pessoa()
+                pessoa.nome = dic["fantasia"] as! String
+                pessoa.cpf = dic["cpfcnpj"] as! String
+                pessoa.code = dic["codcliente"] as! Int
+                
+                OperationQueue.main.addOperation {
+                    let mainNavigator = UINavigationController()
+                    
+                    let principal: UIStoryboard = UIStoryboard(name: "Principal", bundle: nil)
+                    let controller = principal.instantiateViewController(withIdentifier: "principalID") as! PrincipalController
+                    controller.pessoa = pessoa
+                    
+                    mainNavigator.setNavigationBarHidden(true, animated: false)
+                    
+                    mainNavigator.pushViewController(controller, animated: true)
+                    
+                    let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+                    appDelegate.window!.rootViewController = mainNavigator
+                    
+                    
+                }
+            }
+        })
+        
     }
     
-    
     @IBAction func backView(segue:UIStoryboardSegue) {
-            print("LOGIN")
+        print("LOGIN")
     }
     
     //Hide keyboard when user touches outside key
@@ -78,11 +100,8 @@ class LoginController: UIViewController, UITextFieldDelegate {
         button.layer.cornerRadius = 8
     }
     
-//    func callViewPrincipal() {
-//        let principal: UIStoryboard = UIStoryboard(name: "Principal", bundle: nil)
-//        let controller = principal.instantiateViewController(withIdentifier: "principalID") as! PrincipalController
-//        self.navigationController?.pushViewController(controller, animated: true);
-//        print("Chamando view")
-//    }
+    func callViewPrincipal() {
+        
+    }
     
 }

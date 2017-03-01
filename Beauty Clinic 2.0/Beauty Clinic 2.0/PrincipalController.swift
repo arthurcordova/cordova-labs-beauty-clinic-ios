@@ -8,10 +8,11 @@
 
 import UIKit
 
-class PrincipalController: UIViewController {
+class PrincipalController: UIViewController  {
+    
+    var pessoa : Pessoa? = nil
     
     override func viewDidLoad() {
-        
     }
     
     @IBAction func backToPrincipal(segue:UIStoryboardSegue) {

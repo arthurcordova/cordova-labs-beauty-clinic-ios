@@ -62,8 +62,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="loginAction:" destination="ieC-oB-doa" eventType="touchUpInside" id="tiE-NI-s1O"/>
-                                            <segue destination="TLA-ro-4zY" kind="show" id="fZH-g0-6qK"/>
+                                            <action selector="doLogin:" destination="ieC-oB-doa" eventType="touchUpInside" id="LPG-nY-phS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djo-Db-Cis">
@@ -277,10 +276,12 @@
         <!--Principal-->
         <scene sceneID="PhL-Tt-6G9">
             <objects>
-                <viewControllerPlaceholder storyboardName="Principal" id="TLA-ro-4zY" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="loginOKSegue" storyboardName="Principal" id="TLA-ro-4zY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aka-zb-jws"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WtH-Te-R1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-154" y="133"/>
+            <point key="canvasLocation" x="-82" y="-38"/>
         </scene>
     </scenes>
     <resources>

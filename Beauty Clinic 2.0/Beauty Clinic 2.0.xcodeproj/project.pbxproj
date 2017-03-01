@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F450E8CD1E66222700C6E47B /* WS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450E8CC1E66222700C6E47B /* WS.swift */; };
+		F450E8D11E664F0900C6E47B /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450E8D01E664F0900C6E47B /* Pessoa.swift */; };
 		F469444C1E5BD27400AA9F2E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469444B1E5BD27400AA9F2E /* LoginController.swift */; };
 		F46944501E5BED1B00AA9F2E /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469444F1E5BED1B00AA9F2E /* CadastroController.swift */; };
 		F46944531E5D283200AA9F2E /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46944521E5D283200AA9F2E /* UsuarioService.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F450E8CC1E66222700C6E47B /* WS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WS.swift; sourceTree = "<group>"; };
+		F450E8D01E664F0900C6E47B /* Pessoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
 		F469444B1E5BD27400AA9F2E /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F469444F1E5BED1B00AA9F2E /* CadastroController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroController.swift; sourceTree = "<group>"; };
 		F46944521E5D283200AA9F2E /* UsuarioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioService.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				F46944541E5D2BC900AA9F2E /* ServiceConfig.swift */,
 				F4D701481E6116E7006C47AB /* LoginService.swift */,
 				F48150D31E62FF5B00CEE75B /* MensagensService.swift */,
+				F450E8CC1E66222700C6E47B /* WS.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 			children = (
 				F46944571E5D2F0400AA9F2E /* Usuario.swift */,
 				F48150DC1E6314AB00CEE75B /* Mensagem.swift */,
+				F450E8D01E664F0900C6E47B /* Pessoa.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -288,9 +294,11 @@
 				F46944551E5D2BC900AA9F2E /* ServiceConfig.swift in Sources */,
 				F46944531E5D283200AA9F2E /* UsuarioService.swift in Sources */,
 				F48150D41E62FF5B00CEE75B /* MensagensService.swift in Sources */,
+				F450E8D11E664F0900C6E47B /* Pessoa.swift in Sources */,
 				F48150DA1E63042E00CEE75B /* MensagemCellTableViewCell.swift in Sources */,
 				F46944501E5BED1B00AA9F2E /* CadastroController.swift in Sources */,
 				F48150DD1E6314AB00CEE75B /* Mensagem.swift in Sources */,
+				F450E8CD1E66222700C6E47B /* WS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
