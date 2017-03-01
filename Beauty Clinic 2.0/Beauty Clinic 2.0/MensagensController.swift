@@ -12,6 +12,7 @@ class MensagensController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet var tableMensagens: UITableView!
     @IBOutlet var buttonFiltro: UIButton!
+    @IBOutlet var buttonEdit: UIBarButtonItem!
     
     var list : Array<String> = ["Tuesday","Monday", "Saturday"]
     var mensagens : Array<Mensagem> = []
@@ -49,8 +50,30 @@ class MensagensController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.mensagens.remove(at: indexPath.row)
+            self.tableMensagens.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    @IBAction func editTableAction(_ sender: UIBarButtonItem) {
+        if(self.tableMensagens.isEditing == true)
+        {
+            self.tableMensagens.isEditing = false
+            self.buttonEdit.title = "Editar"
+        }
+        else
+        {
+            self.buttonEdit.title = "Concluído"
+            self.tableMensagens.isEditing = true
+            
+        }
         
     }
     
@@ -70,7 +93,7 @@ class MensagensController: UIViewController, UITableViewDelegate, UITableViewDat
                 }
                 OperationQueue.main.addOperation {
                     self.tableMensagens.reloadData()
-                
+                    
                 }
                 
             }
