@@ -17,6 +17,7 @@ class MensagensController: UIViewController, UITableViewDelegate, UITableViewDat
     var list : Array<String> = ["Tuesday","Monday", "Saturday"]
     var mensagens : Array<Mensagem> = []
     var pessoa : Pessoa? = nil
+    var model: Mensagem?
     
     override func viewDidLoad() {
         tableMensagens.delegate = self
@@ -52,14 +53,28 @@ class MensagensController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            WS.deleteMensagem(id: self.mensagens[indexPath.row].id)
             self.mensagens.remove(at: indexPath.row)
             self.tableMensagens.deleteRows(at: [indexPath], with: .automatic)
+            
         }
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        self.model = self.mensagens[indexPath.row]
+        self.performSegue(withIdentifier: "segueDetalheMensagem", sender: self.model)
         
+    }
+    
+    // This function is called before the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "segueDetalheMensagem" {
+            let detalheMensagem = segue.destination as! DetalheMensagemController
+            detalheMensagem.mensagem = self.model
+        }
     }
     
     @IBAction func editTableAction(_ sender: UIBarButtonItem) {

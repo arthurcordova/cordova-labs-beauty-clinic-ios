@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F450E8CD1E66222700C6E47B /* WS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450E8CC1E66222700C6E47B /* WS.swift */; };
 		F450E8D11E664F0900C6E47B /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450E8D01E664F0900C6E47B /* Pessoa.swift */; };
+		F460E3C61E678367007924C5 /* DetalheMensagemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E3C51E678367007924C5 /* DetalheMensagemController.swift */; };
 		F469444C1E5BD27400AA9F2E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469444B1E5BD27400AA9F2E /* LoginController.swift */; };
 		F46944501E5BED1B00AA9F2E /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469444F1E5BED1B00AA9F2E /* CadastroController.swift */; };
 		F46944531E5D283200AA9F2E /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46944521E5D283200AA9F2E /* UsuarioService.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		F450E8CC1E66222700C6E47B /* WS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WS.swift; sourceTree = "<group>"; };
 		F450E8D01E664F0900C6E47B /* Pessoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
+		F460E3C51E678367007924C5 /* DetalheMensagemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalheMensagemController.swift; sourceTree = "<group>"; };
 		F469444B1E5BD27400AA9F2E /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F469444F1E5BED1B00AA9F2E /* CadastroController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroController.swift; sourceTree = "<group>"; };
 		F46944521E5D283200AA9F2E /* UsuarioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioService.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				F4D7014C1E611F97006C47AB /* PrincipalController.swift */,
 				F4D701581E612D14006C47AB /* DrawerMenuController.swift */,
 				F48150D11E62FF1B00CEE75B /* MensagensController.swift */,
+				F460E3C51E678367007924C5 /* DetalheMensagemController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				F48150D21E62FF1B00CEE75B /* MensagensController.swift in Sources */,
 				F4D7014D1E611F97006C47AB /* PrincipalController.swift in Sources */,
 				F4F2A35D1E5BCD54009C1167 /* AppDelegate.swift in Sources */,
+				F460E3C61E678367007924C5 /* DetalheMensagemController.swift in Sources */,
 				F46944551E5D2BC900AA9F2E /* ServiceConfig.swift in Sources */,
 				F46944531E5D283200AA9F2E /* UsuarioService.swift in Sources */,
 				F450E8D11E664F0900C6E47B /* Pessoa.swift in Sources */,
