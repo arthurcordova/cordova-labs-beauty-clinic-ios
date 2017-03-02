@@ -28,7 +28,7 @@ class ProdutosController: UIViewController,  UITableViewDelegate, UITableViewDat
         tableProdutos.register(xib, forCellReuseIdentifier: "cellProduto")
         
         loadProdutos()
-
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,7 +44,7 @@ class ProdutosController: UIViewController,  UITableViewDelegate, UITableViewDat
         formatter.locale = NSLocale(localeIdentifier: "pt_BR") as Locale!
         
         cell.labelTitulo.text = produto.descricao
-        cell.labelMensagem.text = "R$ " + formatter.string(from: produto.valorProduto)!
+        cell.labelMensagem.text = formatter.string(from: produto.valorProduto)!
         return cell
     }
     
@@ -71,24 +71,8 @@ class ProdutosController: UIViewController,  UITableViewDelegate, UITableViewDat
             self.present(addAlerta, animated: true, completion: nil)
             self.tableProdutos.deselectRow(at: indexPath, animated:true)
         }
-
-       
-
-        
-        
-//        self.model = self.mensagens[indexPath.row]
-//        self.performSegue(withIdentifier: "segueDetalheMensagem", sender: self.model)
-        
     }
     
-    // This function is called before the segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-//        if segue.identifier == "segueDetalheMensagem" {
-//            let detalheMensagem = segue.destination as! DetalheMensagemController
-//            detalheMensagem.mensagem = self.model
-//        }
-    }
     
     func loadProdutos(){
         WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/procedimentos/3") { (dic, error) in

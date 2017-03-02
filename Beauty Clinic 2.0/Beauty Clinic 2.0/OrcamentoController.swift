@@ -45,19 +45,18 @@ class OrcamentoController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-//        self.model = self.mensagens[indexPath.row]
-//        self.performSegue(withIdentifier: "segueDetalheMensagem", sender: self.model)
+        self.model = self.orcamentos[indexPath.row]
+        self.performSegue(withIdentifier: "segueDetalheOrcamento", sender: self.model)
         
     }
     
-//    // This function is called before the segue
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//        if segue.identifier == "segueDetalheMensagem" {
-//            let detalheMensagem = segue.destination as! DetalheMensagemController
-//            detalheMensagem.mensagem = self.model
-//        }
-//    }
+    // This function is called before the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueDetalheOrcamento" {
+            let detalheOrcamento = segue.destination as! DetalheOrcamentoController
+            detalheOrcamento.orcamento = self.model
+        }
+    }
 
     func loadOrcamentos(){
         

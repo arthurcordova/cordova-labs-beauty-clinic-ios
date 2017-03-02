@@ -16,6 +16,7 @@
 		F460E3D21E67AF9A007924C5 /* Orcamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E3D11E67AF9A007924C5 /* Orcamento.swift */; };
 		F460E3D51E67B2B7007924C5 /* OrcamentoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E3D31E67B2B7007924C5 /* OrcamentoTableViewCell.swift */; };
 		F460E3D61E67B2B7007924C5 /* OrcamentoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F460E3D41E67B2B7007924C5 /* OrcamentoTableViewCell.xib */; };
+		F460E3D81E67C33B007924C5 /* DetalheOrcamentoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E3D71E67C33B007924C5 /* DetalheOrcamentoController.swift */; };
 		F469444C1E5BD27400AA9F2E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469444B1E5BD27400AA9F2E /* LoginController.swift */; };
 		F46944501E5BED1B00AA9F2E /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469444F1E5BED1B00AA9F2E /* CadastroController.swift */; };
 		F46944531E5D283200AA9F2E /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46944521E5D283200AA9F2E /* UsuarioService.swift */; };
@@ -59,6 +60,7 @@
 		F460E3D11E67AF9A007924C5 /* Orcamento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Orcamento.swift; sourceTree = "<group>"; };
 		F460E3D31E67B2B7007924C5 /* OrcamentoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrcamentoTableViewCell.swift; sourceTree = "<group>"; };
 		F460E3D41E67B2B7007924C5 /* OrcamentoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrcamentoTableViewCell.xib; sourceTree = "<group>"; };
+		F460E3D71E67C33B007924C5 /* DetalheOrcamentoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalheOrcamentoController.swift; sourceTree = "<group>"; };
 		F469444B1E5BD27400AA9F2E /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F469444F1E5BED1B00AA9F2E /* CadastroController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroController.swift; sourceTree = "<group>"; };
 		F46944521E5D283200AA9F2E /* UsuarioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioService.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				F460E3CF1E67AE36007924C5 /* OrcamentoController.swift */,
 				F460E3C91E679623007924C5 /* ProdutosController.swift */,
 				F460E3C51E678367007924C5 /* DetalheMensagemController.swift */,
+				F460E3D71E67C33B007924C5 /* DetalheOrcamentoController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F460E3D81E67C33B007924C5 /* DetalheOrcamentoController.swift in Sources */,
 				F460E3D51E67B2B7007924C5 /* OrcamentoTableViewCell.swift in Sources */,
 				F460E3D21E67AF9A007924C5 /* Orcamento.swift in Sources */,
 				F4D701591E612D14006C47AB /* DrawerMenuController.swift in Sources */,
