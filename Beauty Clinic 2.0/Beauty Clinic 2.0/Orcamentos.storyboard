@@ -11,7 +11,7 @@
         <!--Orcamento Controller-->
         <scene sceneID="CMM-iF-B7J">
             <objects>
-                <viewController id="yF4-0H-IQV" customClass="OrcamentoController" customModule="Beauty_Clinic_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="orcamentosID" id="yF4-0H-IQV" customClass="OrcamentoController" customModule="Beauty_Clinic_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lj0-YQ-IpD"/>
                         <viewControllerLayoutGuide type="bottom" id="xAS-e9-nKy"/>

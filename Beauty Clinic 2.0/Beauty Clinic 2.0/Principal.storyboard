@@ -91,6 +91,9 @@
                                         <state key="normal" title="Ver mais...">
                                             <color key="titleColor" red="0.91372549020000005" green="0.1529411765" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="callMensagens:" destination="xsb-q0-uVw" eventType="touchUpInside" id="lF6-VI-lZ7"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Você possui 32 mensagens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bS-4c-KUR">
                                         <rect key="frame" x="8" y="38" width="223" height="21"/>
@@ -132,6 +135,9 @@
                                         <state key="normal" title="Ver mais...">
                                             <color key="titleColor" red="0.91372549020000005" green="0.1529411765" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="callOrcamentos:" destination="xsb-q0-uVw" eventType="touchUpInside" id="6eW-b4-V0m"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Você possui 3 orçamentos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeU-Bh-98H">
                                         <rect key="frame" x="1" y="38" width="223" height="21"/>

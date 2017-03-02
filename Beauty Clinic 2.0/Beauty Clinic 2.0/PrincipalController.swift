@@ -35,6 +35,21 @@ class PrincipalController: UIViewController  {
         }
     }
     
+    @IBAction func callMensagens(_ sender: Any) {
+        let story: UIStoryboard = UIStoryboard(name: "Mensagens", bundle: nil)
+        let control = story.instantiateViewController(withIdentifier: "mensagensID") as! MensagensController
+        control.pessoa = pessoa
+        self.navigationController?.pushViewController(control, animated: true);
+    }
+    
+    @IBAction func callOrcamentos(_ sender: Any) {
+        let story: UIStoryboard = UIStoryboard(name: "Orcamentos", bundle: nil)
+        let control = story.instantiateViewController(withIdentifier: "orcamentosID") as! OrcamentoController
+        control.pessoa = pessoa
+        self.navigationController?.pushViewController(control, animated: true);
+    }
+    
+    
     @IBAction func drawerMenu(_ sender: UIBarButtonItem) {
         
         

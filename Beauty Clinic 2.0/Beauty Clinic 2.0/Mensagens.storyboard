@@ -11,7 +11,7 @@
         <!--Mensagens Controller-->
         <scene sceneID="eeZ-4u-hMw">
             <objects>
-                <viewController id="YNH-Ky-sPc" customClass="MensagensController" customModule="Beauty_Clinic_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mensagensID" id="YNH-Ky-sPc" customClass="MensagensController" customModule="Beauty_Clinic_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lb7-Cj-TpI"/>
                         <viewControllerLayoutGuide type="bottom" id="GxB-gP-JmA"/>
