@@ -14,8 +14,7 @@ class MensagensController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet var buttonFiltro: UIButton!
     @IBOutlet var buttonEdit: UIBarButtonItem!
     
-    var list : Array<String> = ["Tuesday","Monday", "Saturday"]
-    var mensagens : Array<Mensagem> = []
+        var mensagens : Array<Mensagem> = []
     var pessoa : Pessoa? = nil
     var model: Mensagem?
     

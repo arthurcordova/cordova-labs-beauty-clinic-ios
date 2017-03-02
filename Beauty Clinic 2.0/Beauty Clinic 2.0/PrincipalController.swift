@@ -11,6 +11,7 @@ import UIKit
 class PrincipalController: UIViewController  {
     
     var pessoa : Pessoa? = nil
+    var produtosCarrinho: Array<Produto> = []
     
     override func viewDidLoad() {
  
