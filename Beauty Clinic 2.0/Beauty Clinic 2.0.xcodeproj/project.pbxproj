@@ -17,6 +17,10 @@
 		F460E3D51E67B2B7007924C5 /* OrcamentoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E3D31E67B2B7007924C5 /* OrcamentoTableViewCell.swift */; };
 		F460E3D61E67B2B7007924C5 /* OrcamentoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F460E3D41E67B2B7007924C5 /* OrcamentoTableViewCell.xib */; };
 		F460E3D81E67C33B007924C5 /* DetalheOrcamentoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E3D71E67C33B007924C5 /* DetalheOrcamentoController.swift */; };
+		F460E3DA1E67C943007924C5 /* ic_event.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F460E3D91E67C943007924C5 /* ic_event.imageset */; };
+		F460E3DC1E67CA15007924C5 /* ic_local_offer.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F460E3DB1E67CA15007924C5 /* ic_local_offer.imageset */; };
+		F460E3DE1E67CA69007924C5 /* ic_local_atm.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F460E3DD1E67CA69007924C5 /* ic_local_atm.imageset */; };
+		F460E3E01E67CAFF007924C5 /* ic_assignment.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F460E3DF1E67CAFF007924C5 /* ic_assignment.imageset */; };
 		F469444C1E5BD27400AA9F2E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469444B1E5BD27400AA9F2E /* LoginController.swift */; };
 		F46944501E5BED1B00AA9F2E /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469444F1E5BED1B00AA9F2E /* CadastroController.swift */; };
 		F46944531E5D283200AA9F2E /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46944521E5D283200AA9F2E /* UsuarioService.swift */; };
@@ -61,6 +65,10 @@
 		F460E3D31E67B2B7007924C5 /* OrcamentoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrcamentoTableViewCell.swift; sourceTree = "<group>"; };
 		F460E3D41E67B2B7007924C5 /* OrcamentoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrcamentoTableViewCell.xib; sourceTree = "<group>"; };
 		F460E3D71E67C33B007924C5 /* DetalheOrcamentoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalheOrcamentoController.swift; sourceTree = "<group>"; };
+		F460E3D91E67C943007924C5 /* ic_event.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_event.imageset; sourceTree = "<group>"; };
+		F460E3DB1E67CA15007924C5 /* ic_local_offer.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_local_offer.imageset; sourceTree = "<group>"; };
+		F460E3DD1E67CA69007924C5 /* ic_local_atm.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_local_atm.imageset; sourceTree = "<group>"; };
+		F460E3DF1E67CAFF007924C5 /* ic_assignment.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_assignment.imageset; sourceTree = "<group>"; };
 		F469444B1E5BD27400AA9F2E /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F469444F1E5BED1B00AA9F2E /* CadastroController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroController.swift; sourceTree = "<group>"; };
 		F46944521E5D283200AA9F2E /* UsuarioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioService.swift; sourceTree = "<group>"; };
@@ -164,6 +172,10 @@
 				F46944511E5D280C00AA9F2E /* Service */,
 				F4F2A3711E5BCDB5009C1167 /* Controller */,
 				F4F2A3701E5BCDAE009C1167 /* View */,
+				F460E3DF1E67CAFF007924C5 /* ic_assignment.imageset */,
+				F460E3DD1E67CA69007924C5 /* ic_local_atm.imageset */,
+				F460E3DB1E67CA15007924C5 /* ic_local_offer.imageset */,
+				F460E3D91E67C943007924C5 /* ic_event.imageset */,
 				F48150C31E621FBF00CEE75B /* ic_keyboard_arrow_left.imageset */,
 				F4FC54A01E61BF8000E1ED42 /* ic_info_outline.imageset */,
 				F4FC549D1E61B28A00E1ED42 /* ic_message.imageset */,
@@ -276,17 +288,21 @@
 				F49B475D1E61C0D400D207AE /* Image.xcassets in Resources */,
 				F48150C61E62211A00CEE75B /* Agendamentos.storyboard in Resources */,
 				F4F2A3691E5BCD54009C1167 /* LaunchScreen.storyboard in Resources */,
+				F460E3DC1E67CA15007924C5 /* ic_local_offer.imageset in Resources */,
 				F4D701511E6126A6006C47AB /* ic_menu.imageset in Resources */,
 				F48150C41E621FBF00CEE75B /* ic_keyboard_arrow_left.imageset in Resources */,
 				F48150DB1E63042E00CEE75B /* MensagemCellTableViewCell.xib in Resources */,
 				F4D701571E6129DF006C47AB /* ic_close.imageset in Resources */,
 				F48150CA1E62254300CEE75B /* Orcamentos.storyboard in Resources */,
 				F48150CE1E62281800CEE75B /* Carrinho.storyboard in Resources */,
+				F460E3E01E67CAFF007924C5 /* ic_assignment.imageset in Resources */,
 				F4D7014B1E611ECC006C47AB /* Principal.storyboard in Resources */,
 				F4F2A3641E5BCD54009C1167 /* Main.storyboard in Resources */,
 				F48150D01E62F85A00CEE75B /* ic_keyboard_arrow_down.imageset in Resources */,
+				F460E3DA1E67C943007924C5 /* ic_event.imageset in Resources */,
 				F48150CC1E62269100CEE75B /* Informacao.storyboard in Resources */,
 				F4FC54A11E61BF8000E1ED42 /* ic_info_outline.imageset in Resources */,
+				F460E3DE1E67CA69007924C5 /* ic_local_atm.imageset in Resources */,
 				F48150C21E621AE200CEE75B /* Mensagens.storyboard in Resources */,
 				F4D7014F1E6123C0006C47AB /* ic_shopping_cart.imageset in Resources */,
 				F460E3D61E67B2B7007924C5 /* OrcamentoTableViewCell.xib in Resources */,

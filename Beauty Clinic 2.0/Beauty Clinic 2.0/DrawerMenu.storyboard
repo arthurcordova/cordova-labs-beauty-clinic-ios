@@ -100,7 +100,7 @@
                                             <constraint firstAttribute="width" constant="7" id="gkd-KU-iLI"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_message" translatesAutoresizingMaskIntoConstraints="NO" id="0Ge-hX-36m">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_event" translatesAutoresizingMaskIntoConstraints="NO" id="0Ge-hX-36m">
                                         <rect key="frame" x="8" y="226" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="Kiu-RU-5kj"/>
@@ -134,7 +134,7 @@
                                             <constraint firstAttribute="width" constant="7" id="b6a-zX-Rxo"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_message" translatesAutoresizingMaskIntoConstraints="NO" id="Cb7-hK-mfK">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_assignment" translatesAutoresizingMaskIntoConstraints="NO" id="Cb7-hK-mfK">
                                         <rect key="frame" x="8" y="283" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="nep-Gb-b10"/>
@@ -165,7 +165,7 @@
                                             <constraint firstAttribute="width" constant="7" id="yf9-7k-1JI"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_message" translatesAutoresizingMaskIntoConstraints="NO" id="x5W-JE-DV2">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_product" translatesAutoresizingMaskIntoConstraints="NO" id="x5W-JE-DV2">
                                         <rect key="frame" x="8" y="340" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="Dqh-Ye-SdC"/>
@@ -199,7 +199,7 @@
                                             <constraint firstAttribute="width" constant="7" id="z3B-c6-iS9"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_message" translatesAutoresizingMaskIntoConstraints="NO" id="uhW-7n-v8m">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_budget" translatesAutoresizingMaskIntoConstraints="NO" id="uhW-7n-v8m">
                                         <rect key="frame" x="8" y="397" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="8do-YC-uyg"/>
@@ -381,8 +381,12 @@
     </scenes>
     <resources>
         <image name="ic_arrow_right" width="8" height="13"/>
+        <image name="ic_assignment" width="24" height="24"/>
+        <image name="ic_budget" width="24" height="24"/>
         <image name="ic_close" width="24" height="24"/>
+        <image name="ic_event" width="24" height="24"/>
         <image name="ic_info" width="24" height="24"/>
         <image name="ic_message" width="24" height="24"/>
+        <image name="ic_product" width="24" height="24"/>
     </resources>
 </document>
