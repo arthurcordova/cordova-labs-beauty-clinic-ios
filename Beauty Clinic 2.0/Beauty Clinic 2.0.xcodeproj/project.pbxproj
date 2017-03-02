@@ -12,6 +12,10 @@
 		F460E3C61E678367007924C5 /* DetalheMensagemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E3C51E678367007924C5 /* DetalheMensagemController.swift */; };
 		F460E3C81E679590007924C5 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E3C71E679590007924C5 /* Produto.swift */; };
 		F460E3CA1E679623007924C5 /* ProdutosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E3C91E679623007924C5 /* ProdutosController.swift */; };
+		F460E3D01E67AE36007924C5 /* OrcamentoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E3CF1E67AE36007924C5 /* OrcamentoController.swift */; };
+		F460E3D21E67AF9A007924C5 /* Orcamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E3D11E67AF9A007924C5 /* Orcamento.swift */; };
+		F460E3D51E67B2B7007924C5 /* OrcamentoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E3D31E67B2B7007924C5 /* OrcamentoTableViewCell.swift */; };
+		F460E3D61E67B2B7007924C5 /* OrcamentoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F460E3D41E67B2B7007924C5 /* OrcamentoTableViewCell.xib */; };
 		F469444C1E5BD27400AA9F2E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469444B1E5BD27400AA9F2E /* LoginController.swift */; };
 		F46944501E5BED1B00AA9F2E /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469444F1E5BED1B00AA9F2E /* CadastroController.swift */; };
 		F46944531E5D283200AA9F2E /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46944521E5D283200AA9F2E /* UsuarioService.swift */; };
@@ -51,6 +55,10 @@
 		F460E3C51E678367007924C5 /* DetalheMensagemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalheMensagemController.swift; sourceTree = "<group>"; };
 		F460E3C71E679590007924C5 /* Produto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
 		F460E3C91E679623007924C5 /* ProdutosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdutosController.swift; sourceTree = "<group>"; };
+		F460E3CF1E67AE36007924C5 /* OrcamentoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrcamentoController.swift; sourceTree = "<group>"; };
+		F460E3D11E67AF9A007924C5 /* Orcamento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Orcamento.swift; sourceTree = "<group>"; };
+		F460E3D31E67B2B7007924C5 /* OrcamentoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrcamentoTableViewCell.swift; sourceTree = "<group>"; };
+		F460E3D41E67B2B7007924C5 /* OrcamentoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrcamentoTableViewCell.xib; sourceTree = "<group>"; };
 		F469444B1E5BD27400AA9F2E /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F469444F1E5BED1B00AA9F2E /* CadastroController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroController.swift; sourceTree = "<group>"; };
 		F46944521E5D283200AA9F2E /* UsuarioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioService.swift; sourceTree = "<group>"; };
@@ -114,6 +122,7 @@
 				F48150DC1E6314AB00CEE75B /* Mensagem.swift */,
 				F450E8D01E664F0900C6E47B /* Pessoa.swift */,
 				F460E3C71E679590007924C5 /* Produto.swift */,
+				F460E3D11E67AF9A007924C5 /* Orcamento.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -123,6 +132,8 @@
 			children = (
 				F48150D81E63042E00CEE75B /* MensagemCellTableViewCell.swift */,
 				F48150D91E63042E00CEE75B /* MensagemCellTableViewCell.xib */,
+				F460E3D31E67B2B7007924C5 /* OrcamentoTableViewCell.swift */,
+				F460E3D41E67B2B7007924C5 /* OrcamentoTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -191,8 +202,9 @@
 				F4D7014C1E611F97006C47AB /* PrincipalController.swift */,
 				F4D701581E612D14006C47AB /* DrawerMenuController.swift */,
 				F48150D11E62FF1B00CEE75B /* MensagensController.swift */,
-				F460E3C51E678367007924C5 /* DetalheMensagemController.swift */,
+				F460E3CF1E67AE36007924C5 /* OrcamentoController.swift */,
 				F460E3C91E679623007924C5 /* ProdutosController.swift */,
+				F460E3C51E678367007924C5 /* DetalheMensagemController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -274,6 +286,7 @@
 				F4FC54A11E61BF8000E1ED42 /* ic_info_outline.imageset in Resources */,
 				F48150C21E621AE200CEE75B /* Mensagens.storyboard in Resources */,
 				F4D7014F1E6123C0006C47AB /* ic_shopping_cart.imageset in Resources */,
+				F460E3D61E67B2B7007924C5 /* OrcamentoTableViewCell.xib in Resources */,
 				F4D701531E6128DA006C47AB /* DrawerMenu.storyboard in Resources */,
 				F48150C81E62241B00CEE75B /* Produtos.storyboard in Resources */,
 				F4B4593F1E5FCB130059C247 /* ic_check_circle.imageset in Resources */,
@@ -287,7 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F460E3D51E67B2B7007924C5 /* OrcamentoTableViewCell.swift in Sources */,
+				F460E3D21E67AF9A007924C5 /* Orcamento.swift in Sources */,
 				F4D701591E612D14006C47AB /* DrawerMenuController.swift in Sources */,
+				F460E3D01E67AE36007924C5 /* OrcamentoController.swift in Sources */,
 				F46944581E5D2F0400AA9F2E /* Usuario.swift in Sources */,
 				F469444C1E5BD27400AA9F2E /* LoginController.swift in Sources */,
 				F48150D21E62FF1B00CEE75B /* MensagensController.swift in Sources */,

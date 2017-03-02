@@ -27,6 +27,13 @@ class DrawerMenuController: UIViewController {
                 toViewController.pessoa = pessoa
             }
         }
+        
+        if segue.identifier == "segueOrcamentos" {
+            
+            if let toViewController = segue.destination as? OrcamentoController {
+                toViewController.pessoa = pessoa
+            }
+        }
     }
     
 }

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Orcamento Controller-->
         <scene sceneID="CMM-iF-B7J">
             <objects>
-                <viewController id="yF4-0H-IQV" sceneMemberID="viewController">
+                <viewController id="yF4-0H-IQV" customClass="OrcamentoController" customModule="Beauty_Clinic_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lj0-YQ-IpD"/>
                         <viewControllerLayoutGuide type="bottom" id="xAS-e9-nKy"/>
@@ -20,9 +20,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRT-Mr-4PE">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRT-Mr-4PE">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="obg-pe-tVH"/>
+                                </constraints>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
                                 </textAttributes>
@@ -34,22 +36,51 @@
                                                 <segue destination="Lvb-e1-RLi" kind="unwind" unwindAction="backToPrincipalWithSegue:" id="iNB-SC-79e"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aJz-VW-Ekc">
+                                            <color key="tintColor" red="1" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hD0-KS-EN1">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hD0-KS-EN1">
                                 <rect key="frame" x="0.0" y="65" width="375" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="QgA-7V-Lm7"/>
+                                </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8EU-k0-c6y">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8EU-k0-c6y">
                                 <rect key="frame" x="0.0" y="113" width="375" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellOrcamento" rowHeight="80" id="Mte-7s-nVK" customClass="OrcamentoTableViewCell" customModule="Beauty_Clinic_2_0" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mte-7s-nVK" id="rhG-e2-ZGU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hD0-KS-EN1" firstAttribute="leading" secondItem="wW8-Lt-Msa" secondAttribute="leading" id="39z-eD-HLC"/>
+                            <constraint firstItem="xAS-e9-nKy" firstAttribute="top" secondItem="8EU-k0-c6y" secondAttribute="bottom" id="4K4-e5-qYG"/>
+                            <constraint firstItem="HRT-Mr-4PE" firstAttribute="leading" secondItem="wW8-Lt-Msa" secondAttribute="leading" id="G3k-jG-YIF"/>
+                            <constraint firstItem="HRT-Mr-4PE" firstAttribute="top" secondItem="lj0-YQ-IpD" secondAttribute="bottom" id="J0z-tK-dmS"/>
+                            <constraint firstItem="8EU-k0-c6y" firstAttribute="leading" secondItem="wW8-Lt-Msa" secondAttribute="leading" id="WPV-ga-hgQ"/>
+                            <constraint firstItem="8EU-k0-c6y" firstAttribute="top" secondItem="hD0-KS-EN1" secondAttribute="bottom" constant="1" id="fdo-3a-qnX"/>
+                            <constraint firstItem="hD0-KS-EN1" firstAttribute="top" secondItem="HRT-Mr-4PE" secondAttribute="bottom" constant="1" id="hOo-z6-cSN"/>
+                            <constraint firstAttribute="trailing" secondItem="HRT-Mr-4PE" secondAttribute="trailing" id="laH-ql-Cff"/>
+                            <constraint firstAttribute="trailing" secondItem="hD0-KS-EN1" secondAttribute="trailing" id="xoO-u8-5Qe"/>
+                            <constraint firstAttribute="trailing" secondItem="8EU-k0-c6y" secondAttribute="trailing" id="yXX-qI-xbv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableOrcamentos" destination="8EU-k0-c6y" id="fEo-a5-qpL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySn-B3-9ad" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Lvb-e1-RLi" userLabel="Exit" sceneMemberID="exit"/>
