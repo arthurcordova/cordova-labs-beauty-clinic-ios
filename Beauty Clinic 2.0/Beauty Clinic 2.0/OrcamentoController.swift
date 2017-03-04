@@ -38,6 +38,10 @@ class OrcamentoController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell:OrcamentoTableViewCell = self.tableOrcamentos.dequeueReusableCell(withIdentifier: "cellOrcamento") as! OrcamentoTableViewCell
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         
+        var code : NSNumber!
+        code = orcamentos[indexPath.row].codOrcamento!
+        
+        cell.labelCodigo.text = String(describing: code!)
         cell.labelStatus.text = orcamentos[indexPath.row].status
         cell.labelData.text = orcamentos[indexPath.row].dataOrcamento
         return cell

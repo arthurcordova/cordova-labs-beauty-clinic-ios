@@ -24,10 +24,10 @@ class DetalheOrcamentoController: UIViewController {
         formatter.numberStyle = .currency
         formatter.locale = NSLocale(localeIdentifier: "pt_BR") as Locale!
         var code : NSNumber!
-        code = orcamento!.codOrcamento
+        code = orcamento?.codOrcamento!
         
         labelStatus.text = orcamento!.status
-        labelCode.text = String(describing: code)
+        labelCode.text = String(describing: code!)
         labelDate.text = orcamento!.dataOrcamento
         labelValor.text = formatter.string(from: (orcamento!.valorOrcamento)!)!
         labelDesconto.text = formatter.string(from: (orcamento!.valorDesconto)!)!
