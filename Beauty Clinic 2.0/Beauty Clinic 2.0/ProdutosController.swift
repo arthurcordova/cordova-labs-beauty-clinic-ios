@@ -17,6 +17,7 @@ class ProdutosController: UIViewController,  UITableViewDelegate, UITableViewDat
     var produtos : Array<Produto> = []
     var pessoa : Pessoa? = nil
     var model: Produto?
+    var principalController: PrincipalController?
     
     override func viewDidLoad() {
         tableProdutos.delegate = self
@@ -54,17 +55,7 @@ class ProdutosController: UIViewController,  UITableViewDelegate, UITableViewDat
             let addAlerta = UIAlertController(title: "Carrinho", message: "Deseja adicionar o item \(self.produtos[indexPath.row].descricao!) ao carrinho ?", preferredStyle: UIAlertControllerStyle.alert)
             
             addAlerta.addAction(UIAlertAction(title: "Sim", style: .default, handler: { (action: UIAlertAction!) in
-                //                       let valor :String = String(format:"%.2f", produto.preco)
-                //            let product = "\(produto.codigo)" + ";" + "\(produto.descricao)" + ";" + "1" + ";"+valor
-                //            self.dashboard?.list.append(product)
-                //            //                self.carrinhoStruct.
-                //            //
-                //            //
-                //            //                var array = Array<String>()
-                //            //                array.append(product)
-                //            //                self.dao.saveProducts(array)
-                
-                
+                self.principalController?.produtosCarrinho.append(self.produtos[indexPath.row])
             }))
             
             addAlerta.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))

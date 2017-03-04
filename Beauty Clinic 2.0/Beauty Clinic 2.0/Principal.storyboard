@@ -65,7 +65,7 @@
                                         <barButtonItem key="rightBarButtonItem" image="ic_shopping" id="0mA-30-N5r">
                                             <color key="tintColor" red="0.91372549020000005" green="0.1529411765" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
-                                                <segue destination="7GE-rn-5YN" kind="presentation" modalPresentationStyle="overCurrentContext" id="s8Z-d5-AGX"/>
+                                                <segue destination="7GE-rn-5YN" kind="presentation" identifier="segueCarrinho" modalPresentationStyle="overCurrentContext" id="s8Z-d5-AGX"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

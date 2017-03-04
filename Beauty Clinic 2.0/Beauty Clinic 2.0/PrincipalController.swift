@@ -31,8 +31,17 @@ class PrincipalController: UIViewController  {
             
             if let toViewController = segue.destination as? DrawerMenuController {
                 toViewController.pessoa = pessoa
+                toViewController.principalController = self
             }
         }
+        
+        if segue.identifier == "segueCarrinho" {
+            
+            if let toViewController = segue.destination as? CarrinhoController {
+                toViewController.produtosCarrinho = self.produtosCarrinho
+            }
+        }
+        
     }
     
     @IBAction func callMensagens(_ sender: Any) {
@@ -63,7 +72,8 @@ class PrincipalController: UIViewController  {
         view.layer.shadowColor = UIColor.lightGray.cgColor
         view.layer.shadowRadius =  4
         view.layer.shadowOpacity = 0.4
-        view.layer.shadowOffset =  CGSize(width: 2, height: 2)    }
+        view.layer.shadowOffset =  CGSize(width: 2, height: 2)
+    }
     
     
 }

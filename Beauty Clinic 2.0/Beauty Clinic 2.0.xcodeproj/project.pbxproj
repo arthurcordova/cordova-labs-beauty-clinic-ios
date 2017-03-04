@@ -47,6 +47,7 @@
 		F4D701531E6128DA006C47AB /* DrawerMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D701521E6128DA006C47AB /* DrawerMenu.storyboard */; };
 		F4D701571E6129DF006C47AB /* ic_close.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F4D701561E6129DF006C47AB /* ic_close.imageset */; };
 		F4D701591E612D14006C47AB /* DrawerMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D701581E612D14006C47AB /* DrawerMenuController.swift */; };
+		F4ECCB7F1E6A1EEE00CE97BE /* CarrinhoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ECCB7E1E6A1EEE00CE97BE /* CarrinhoController.swift */; };
 		F4F2A35D1E5BCD54009C1167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2A35C1E5BCD54009C1167 /* AppDelegate.swift */; };
 		F4F2A3641E5BCD54009C1167 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F2A3621E5BCD54009C1167 /* Main.storyboard */; };
 		F4F2A3691E5BCD54009C1167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F2A3671E5BCD54009C1167 /* LaunchScreen.storyboard */; };
@@ -95,6 +96,7 @@
 		F4D701521E6128DA006C47AB /* DrawerMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DrawerMenu.storyboard; sourceTree = "<group>"; };
 		F4D701561E6129DF006C47AB /* ic_close.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_close.imageset; sourceTree = "<group>"; };
 		F4D701581E612D14006C47AB /* DrawerMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerMenuController.swift; sourceTree = "<group>"; };
+		F4ECCB7E1E6A1EEE00CE97BE /* CarrinhoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrinhoController.swift; sourceTree = "<group>"; };
 		F4F2A3591E5BCD54009C1167 /* Beauty Clinic 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beauty Clinic 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F2A35C1E5BCD54009C1167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4F2A3631E5BCD54009C1167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				F460E3C91E679623007924C5 /* ProdutosController.swift */,
 				F460E3C51E678367007924C5 /* DetalheMensagemController.swift */,
 				F460E3D71E67C33B007924C5 /* DetalheOrcamentoController.swift */,
+				F4ECCB7E1E6A1EEE00CE97BE /* CarrinhoController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				F48150D21E62FF1B00CEE75B /* MensagensController.swift in Sources */,
 				F4D7014D1E611F97006C47AB /* PrincipalController.swift in Sources */,
 				F4F2A35D1E5BCD54009C1167 /* AppDelegate.swift in Sources */,
+				F4ECCB7F1E6A1EEE00CE97BE /* CarrinhoController.swift in Sources */,
 				F460E3C61E678367007924C5 /* DetalheMensagemController.swift in Sources */,
 				F460E3CA1E679623007924C5 /* ProdutosController.swift in Sources */,
 				F46944551E5D2BC900AA9F2E /* ServiceConfig.swift in Sources */,

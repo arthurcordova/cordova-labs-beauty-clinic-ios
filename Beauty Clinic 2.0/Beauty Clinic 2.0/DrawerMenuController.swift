@@ -13,6 +13,7 @@ class DrawerMenuController: UIViewController {
     @IBOutlet var labelNome: UILabel!
     
     var pessoa : Pessoa? = nil
+    var principalController: PrincipalController?
     
     override func viewDidLoad() {
         
@@ -32,6 +33,14 @@ class DrawerMenuController: UIViewController {
             
             if let toViewController = segue.destination as? OrcamentoController {
                 toViewController.pessoa = pessoa
+            }
+        }
+        
+        if segue.identifier == "segueProdutos" {
+            
+            if let toViewController = segue.destination as? ProdutosController {
+                toViewController.principalController = self.principalController
+                
             }
         }
     }
