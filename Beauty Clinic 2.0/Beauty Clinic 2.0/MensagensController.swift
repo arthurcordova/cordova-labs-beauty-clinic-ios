@@ -26,7 +26,7 @@ class MensagensController: UIViewController, UITableViewDelegate, UITableViewDat
         tableMensagens.register(UITableViewCell.self, forCellReuseIdentifier: "cellMensagem")
         let xib = UINib(nibName: "MensagemCellTableViewCell", bundle: nil)
         tableMensagens.register(xib, forCellReuseIdentifier: "cellMensagem")
-        
+     
         loadMensagens()
         
     }
@@ -74,6 +74,13 @@ class MensagensController: UIViewController, UITableViewDelegate, UITableViewDat
             let detalheMensagem = segue.destination as! DetalheMensagemController
             detalheMensagem.mensagem = self.model
         }
+        
+        
+        if segue.identifier == "segueFiltroMensagem" {
+            let filtro = segue.destination as! FiltroMensagemController
+            filtro.mensagemController = self
+        }
+        
     }
     
     @IBAction func editTableAction(_ sender: UIBarButtonItem) {
@@ -109,11 +116,8 @@ class MensagensController: UIViewController, UITableViewDelegate, UITableViewDat
                     self.tableMensagens.reloadData()
                     
                 }
-                
             }
         }
-        
     }
-    
     
 }

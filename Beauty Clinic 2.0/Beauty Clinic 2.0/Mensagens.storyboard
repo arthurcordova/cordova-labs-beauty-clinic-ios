@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YNH-Ky-sPc">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,11 +17,11 @@
                         <viewControllerLayoutGuide type="bottom" id="GxB-gP-JmA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Pcu-bD-lhv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUg-ff-QLh">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="FtQ-DA-7O1"/>
                                 </constraints>
@@ -33,14 +33,14 @@
                                         <barButtonItem key="leftBarButtonItem" image="ic_arrow_left" id="w96-zM-ssU">
                                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <segue destination="t7c-pZ-usw" kind="unwind" unwindAction="backToPrincipalWithSegue:" id="D89-iN-mDN"/>
+                                                <segue destination="t7c-pZ-usw" kind="unwind" unwindAction="backToPrincipalWithSegue:" id="1vj-2o-tSO"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6z8-8j-iim">
-                                <rect key="frame" x="0.0" y="65" width="320" height="47"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="47"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3I-EC-VDs">
                                         <rect key="frame" x="159" y="9" width="53" height="30"/>
@@ -51,6 +51,9 @@
                                         <state key="normal" title="Todos status">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="UuK-Ls-1Vg" kind="show" identifier="segueFilterMensagem" id="Tcg-Y4-1Wl"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_arrow_down" translatesAutoresizingMaskIntoConstraints="NO" id="6GT-bV-cn7">
                                         <rect key="frame" x="216" y="15" width="16" height="16"/>
@@ -121,11 +124,11 @@
                         <viewControllerLayoutGuide type="bottom" id="OS2-Qp-CVf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2OK-g2-igO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wze-ql-eB0">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="W7h-Zt-w5P"/>
                                 </constraints>
@@ -144,7 +147,7 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRt-B4-xQj">
-                                <rect key="frame" x="0.0" y="65" width="320" height="415"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJt-Yv-p5i">
                                         <rect key="frame" x="0.0" y="20" width="375" height="21"/>
@@ -243,67 +246,74 @@
             </objects>
             <point key="canvasLocation" x="776.25" y="-75"/>
         </scene>
-        <!--View Controller-->
+        <!--Filtro Mensagem Controller-->
         <scene sceneID="zks-l6-7ha">
             <objects>
-                <viewController id="UuK-Ls-1Vg" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="UuK-Ls-1Vg" customClass="FiltroMensagemController" customModule="Beauty_Clinic_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LWP-zv-gXM"/>
-                        <viewControllerLayoutGuide type="bottom" id="vxA-AS-yaI"/>
+                        <viewControllerLayoutGuide type="top" id="q5A-rK-1wP"/>
+                        <viewControllerLayoutGuide type="bottom" id="dma-Ig-wHW"/>
                     </layoutGuides>
-                    <view key="view" alpha="0.40000000000000002" contentMode="scaleToFill" id="4CC-hj-9Kq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="OGu-Rf-lRc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpv-5s-ls1">
-                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZIB-Y6-Qfl">
+                                <rect key="frame" x="0.0" y="418" width="375" height="249"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zPO-pB-1hK">
-                                        <rect key="frame" x="0.0" y="380" width="375" height="267"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OW2-FS-4E5">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                                <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="43" id="il7-pt-O1P"/>
-                                                </constraints>
-                                            </view>
-                                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KBB-61-Wg1">
-                                                <rect key="frame" x="0.0" y="51" width="375" height="216"/>
-                                            </pickerView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCs-fZ-Wh4">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="270" id="A3z-Tm-yni"/>
-                                            <constraint firstAttribute="trailing" secondItem="OW2-FS-4E5" secondAttribute="trailing" id="Jzb-6T-sZY"/>
-                                            <constraint firstItem="KBB-61-Wg1" firstAttribute="leading" secondItem="zPO-pB-1hK" secondAttribute="leading" id="MwF-oQ-iLP"/>
-                                            <constraint firstItem="OW2-FS-4E5" firstAttribute="top" secondItem="zPO-pB-1hK" secondAttribute="top" id="SOY-yS-ET1"/>
-                                            <constraint firstItem="KBB-61-Wg1" firstAttribute="top" secondItem="OW2-FS-4E5" secondAttribute="bottom" id="U7w-Os-17o"/>
-                                            <constraint firstAttribute="trailing" secondItem="KBB-61-Wg1" secondAttribute="trailing" id="kES-VF-57Q"/>
-                                            <constraint firstAttribute="bottom" secondItem="KBB-61-Wg1" secondAttribute="bottom" id="rjZ-mV-lJb"/>
-                                            <constraint firstItem="OW2-FS-4E5" firstAttribute="leading" secondItem="zPO-pB-1hK" secondAttribute="leading" id="y3o-9D-qge"/>
+                                            <constraint firstAttribute="height" constant="44" id="LVV-W2-adC"/>
                                         </constraints>
-                                    </view>
+                                        <items>
+                                            <navigationItem title="Status" id="38U-LC-m8C">
+                                                <barButtonItem key="leftBarButtonItem" title="Cancelar" id="Vi7-yK-vcw">
+                                                    <connections>
+                                                        <action selector="cancelAction:" destination="UuK-Ls-1Vg" id="6ui-kq-Zsa"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" title="Aplicar" id="qhv-Dg-jdM">
+                                                    <connections>
+                                                        <action selector="applyAction:" destination="UuK-Ls-1Vg" id="U2b-cE-2pG"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rHb-lq-efR">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="216"/>
+                                    </pickerView>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="zPO-pB-1hK" firstAttribute="leading" secondItem="gpv-5s-ls1" secondAttribute="leading" id="bF2-pb-0Ys"/>
-                                    <constraint firstAttribute="trailing" secondItem="zPO-pB-1hK" secondAttribute="trailing" id="uwn-JN-ozH"/>
-                                    <constraint firstAttribute="bottom" secondItem="zPO-pB-1hK" secondAttribute="bottom" id="wha-p6-Bmy"/>
+                                    <constraint firstItem="YCs-fZ-Wh4" firstAttribute="top" secondItem="ZIB-Y6-Qfl" secondAttribute="top" id="A86-lM-2JZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="rHb-lq-efR" secondAttribute="bottom" constant="1" id="HNK-qJ-a35"/>
+                                    <constraint firstAttribute="trailing" secondItem="YCs-fZ-Wh4" secondAttribute="trailing" id="Idn-MZ-eVF"/>
+                                    <constraint firstItem="YCs-fZ-Wh4" firstAttribute="leading" secondItem="ZIB-Y6-Qfl" secondAttribute="leading" id="KSO-xt-ibc"/>
+                                    <constraint firstItem="rHb-lq-efR" firstAttribute="leading" secondItem="ZIB-Y6-Qfl" secondAttribute="leading" id="Qge-50-IK5"/>
+                                    <constraint firstAttribute="trailing" secondItem="rHb-lq-efR" secondAttribute="trailing" id="RDH-lZ-i3B"/>
+                                    <constraint firstItem="rHb-lq-efR" firstAttribute="top" secondItem="YCs-fZ-Wh4" secondAttribute="bottom" constant="1" id="abP-CS-HOt"/>
+                                    <constraint firstAttribute="height" constant="250" id="h6Z-Dn-gD3"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.91372549020000005" green="0.1529411765" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gpv-5s-ls1" firstAttribute="leading" secondItem="4CC-hj-9Kq" secondAttribute="leading" id="OTG-RE-jml"/>
-                            <constraint firstItem="gpv-5s-ls1" firstAttribute="top" secondItem="LWP-zv-gXM" secondAttribute="bottom" id="bn8-eA-kVf"/>
-                            <constraint firstAttribute="trailing" secondItem="gpv-5s-ls1" secondAttribute="trailing" id="haN-KM-2Uf"/>
-                            <constraint firstItem="vxA-AS-yaI" firstAttribute="top" secondItem="gpv-5s-ls1" secondAttribute="bottom" id="q8F-qr-Jfw"/>
+                            <constraint firstAttribute="trailing" secondItem="ZIB-Y6-Qfl" secondAttribute="trailing" id="I4f-Y7-64q"/>
+                            <constraint firstItem="dma-Ig-wHW" firstAttribute="top" secondItem="ZIB-Y6-Qfl" secondAttribute="bottom" id="RQs-Pj-kfj"/>
+                            <constraint firstItem="ZIB-Y6-Qfl" firstAttribute="leading" secondItem="OGu-Rf-lRc" secondAttribute="leading" id="UnP-3b-e8E"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="navFilter" destination="YCs-fZ-Wh4" id="mrg-SB-0lT"/>
+                        <outlet property="pickerFiltro" destination="rHb-lq-efR" id="9Ea-na-fke"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gul-xG-UeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-234" y="-868"/>
+            <point key="canvasLocation" x="-234.40000000000001" y="-868.51574212893559"/>
         </scene>
     </scenes>
     <resources>
