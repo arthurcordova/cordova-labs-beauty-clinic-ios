@@ -49,6 +49,11 @@
 		F4D701591E612D14006C47AB /* DrawerMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D701581E612D14006C47AB /* DrawerMenuController.swift */; };
 		F4ECCB7F1E6A1EEE00CE97BE /* CarrinhoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ECCB7E1E6A1EEE00CE97BE /* CarrinhoController.swift */; };
 		F4ECCB811E6B58CD00CE97BE /* FilltroMensagemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ECCB801E6B58CD00CE97BE /* FilltroMensagemController.swift */; };
+		F4ECCB831E6C744500CE97BE /* AgendamentosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ECCB821E6C744500CE97BE /* AgendamentosController.swift */; };
+		F4ECCB851E6C787400CE97BE /* Agendamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ECCB841E6C787400CE97BE /* Agendamento.swift */; };
+		F4ECCB881E6C7AEF00CE97BE /* AgendamentoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ECCB861E6C7AEF00CE97BE /* AgendamentoTableViewCell.swift */; };
+		F4ECCB891E6C7AEF00CE97BE /* AgendamentoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4ECCB871E6C7AEF00CE97BE /* AgendamentoTableViewCell.xib */; };
+		F4ECCB8B1E6C8BE200CE97BE /* DetalheAgendamentoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ECCB8A1E6C8BE200CE97BE /* DetalheAgendamentoController.swift */; };
 		F4F2A35D1E5BCD54009C1167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2A35C1E5BCD54009C1167 /* AppDelegate.swift */; };
 		F4F2A3641E5BCD54009C1167 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F2A3621E5BCD54009C1167 /* Main.storyboard */; };
 		F4F2A3691E5BCD54009C1167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F2A3671E5BCD54009C1167 /* LaunchScreen.storyboard */; };
@@ -99,6 +104,11 @@
 		F4D701581E612D14006C47AB /* DrawerMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerMenuController.swift; sourceTree = "<group>"; };
 		F4ECCB7E1E6A1EEE00CE97BE /* CarrinhoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrinhoController.swift; sourceTree = "<group>"; };
 		F4ECCB801E6B58CD00CE97BE /* FilltroMensagemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilltroMensagemController.swift; sourceTree = "<group>"; };
+		F4ECCB821E6C744500CE97BE /* AgendamentosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendamentosController.swift; sourceTree = "<group>"; };
+		F4ECCB841E6C787400CE97BE /* Agendamento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agendamento.swift; sourceTree = "<group>"; };
+		F4ECCB861E6C7AEF00CE97BE /* AgendamentoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendamentoTableViewCell.swift; sourceTree = "<group>"; };
+		F4ECCB871E6C7AEF00CE97BE /* AgendamentoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgendamentoTableViewCell.xib; sourceTree = "<group>"; };
+		F4ECCB8A1E6C8BE200CE97BE /* DetalheAgendamentoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalheAgendamentoController.swift; sourceTree = "<group>"; };
 		F4F2A3591E5BCD54009C1167 /* Beauty Clinic 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beauty Clinic 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F2A35C1E5BCD54009C1167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4F2A3631E5BCD54009C1167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +147,7 @@
 				F450E8D01E664F0900C6E47B /* Pessoa.swift */,
 				F460E3C71E679590007924C5 /* Produto.swift */,
 				F460E3D11E67AF9A007924C5 /* Orcamento.swift */,
+				F4ECCB841E6C787400CE97BE /* Agendamento.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -148,6 +159,8 @@
 				F48150D91E63042E00CEE75B /* MensagemCellTableViewCell.xib */,
 				F460E3D31E67B2B7007924C5 /* OrcamentoTableViewCell.swift */,
 				F460E3D41E67B2B7007924C5 /* OrcamentoTableViewCell.xib */,
+				F4ECCB861E6C7AEF00CE97BE /* AgendamentoTableViewCell.swift */,
+				F4ECCB871E6C7AEF00CE97BE /* AgendamentoTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -226,6 +239,8 @@
 				F460E3D71E67C33B007924C5 /* DetalheOrcamentoController.swift */,
 				F4ECCB7E1E6A1EEE00CE97BE /* CarrinhoController.swift */,
 				F4ECCB801E6B58CD00CE97BE /* FilltroMensagemController.swift */,
+				F4ECCB821E6C744500CE97BE /* AgendamentosController.swift */,
+				F4ECCB8A1E6C8BE200CE97BE /* DetalheAgendamentoController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -299,6 +314,7 @@
 				F48150C41E621FBF00CEE75B /* ic_keyboard_arrow_left.imageset in Resources */,
 				F48150DB1E63042E00CEE75B /* MensagemCellTableViewCell.xib in Resources */,
 				F4D701571E6129DF006C47AB /* ic_close.imageset in Resources */,
+				F4ECCB891E6C7AEF00CE97BE /* AgendamentoTableViewCell.xib in Resources */,
 				F48150CA1E62254300CEE75B /* Orcamentos.storyboard in Resources */,
 				F48150CE1E62281800CEE75B /* Carrinho.storyboard in Resources */,
 				F460E3E01E67CAFF007924C5 /* ic_assignment.imageset in Resources */,
@@ -326,12 +342,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F460E3D81E67C33B007924C5 /* DetalheOrcamentoController.swift in Sources */,
+				F4ECCB8B1E6C8BE200CE97BE /* DetalheAgendamentoController.swift in Sources */,
 				F460E3D51E67B2B7007924C5 /* OrcamentoTableViewCell.swift in Sources */,
 				F460E3D21E67AF9A007924C5 /* Orcamento.swift in Sources */,
 				F4D701591E612D14006C47AB /* DrawerMenuController.swift in Sources */,
 				F460E3D01E67AE36007924C5 /* OrcamentoController.swift in Sources */,
+				F4ECCB881E6C7AEF00CE97BE /* AgendamentoTableViewCell.swift in Sources */,
 				F46944581E5D2F0400AA9F2E /* Usuario.swift in Sources */,
 				F469444C1E5BD27400AA9F2E /* LoginController.swift in Sources */,
+				F4ECCB851E6C787400CE97BE /* Agendamento.swift in Sources */,
 				F48150D21E62FF1B00CEE75B /* MensagensController.swift in Sources */,
 				F4D7014D1E611F97006C47AB /* PrincipalController.swift in Sources */,
 				F4F2A35D1E5BCD54009C1167 /* AppDelegate.swift in Sources */,
@@ -342,6 +361,7 @@
 				F460E3C81E679590007924C5 /* Produto.swift in Sources */,
 				F4ECCB811E6B58CD00CE97BE /* FilltroMensagemController.swift in Sources */,
 				F46944531E5D283200AA9F2E /* UsuarioService.swift in Sources */,
+				F4ECCB831E6C744500CE97BE /* AgendamentosController.swift in Sources */,
 				F450E8D11E664F0900C6E47B /* Pessoa.swift in Sources */,
 				F48150DA1E63042E00CEE75B /* MensagemCellTableViewCell.swift in Sources */,
 				F46944501E5BED1B00AA9F2E /* CadastroController.swift in Sources */,
