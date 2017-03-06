@@ -12,17 +12,30 @@ class PrincipalController: UIViewController  {
     
     @IBOutlet var viewCard1: UIView!
     @IBOutlet var viewCard2: UIView!
+    @IBOutlet var labelBadge: UILabel!
     
     var pessoa : Pessoa? = nil
     var produtosCarrinho: Array<Produto> = []
     
     override func viewDidLoad() {
+        labelBadge.layer.cornerRadius = labelBadge.bounds.size.width / 2.0
+        labelBadge.layer.borderColor = UIColor.lightGray.cgColor
+        labelBadge.layer.borderWidth = CGFloat(0)
+        labelBadge.clipsToBounds = true
+        
         createCardEffect(view: viewCard1)
         createCardEffect(view: viewCard2)
+        updateBadge()
+        
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        updateBadge()
+    }
+    
+    
     @IBAction func backToPrincipal(segue:UIStoryboardSegue) {
-        
+        updateBadge()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -73,6 +86,15 @@ class PrincipalController: UIViewController  {
         view.layer.shadowRadius =  4
         view.layer.shadowOpacity = 0.4
         view.layer.shadowOffset =  CGSize(width: 2, height: 2)
+    }
+    
+    func updateBadge(){
+        if produtosCarrinho.count > 0 {
+            labelBadge.isHidden = false
+            labelBadge.text = String(produtosCarrinho.count)
+        } else {
+            labelBadge.isHidden = true
+        }
     }
     
     
