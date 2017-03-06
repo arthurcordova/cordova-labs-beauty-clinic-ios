@@ -1,23 +1,20 @@
 //
-//  ProdutosController.swift
+//  NovoAgendamentoProcedimentoController.swift
 //  Beauty Clinic 2.0
 //
-//  Created by Arthur on 01/03/17.
+//  Created by Arthur on 05/03/17.
 //  Copyright © 2017 Cordova labs. All rights reserved.
 //
 
 import UIKit
 
-class ProdutosController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NovoAgendamentoProcedimentoController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet var buttonSearch: UIBarButtonItem!
     @IBOutlet var tableProdutos: UITableView!
     
-    var mainController: PrincipalController?
     var produtos : Array<Produto> = []
-    var pessoa : Pessoa? = nil
-    var model: Produto?
-    var principalController: PrincipalController?
+    var novoAgendamento : NovoAgendamento!
+    var codCli : NSNumber!
     
     override func viewDidLoad() {
         tableProdutos.delegate = self
@@ -31,7 +28,7 @@ class ProdutosController: UIViewController, UITableViewDelegate, UITableViewData
         loadProdutos()
         
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return produtos.count
     }
@@ -50,20 +47,26 @@ class ProdutosController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.novoAgendamento = NovoAgendamento()
+        self.novoAgendamento.codCli = self.codCli
+        self.novoAgendamento.produto = self.produtos[indexPath.row]
+        self.performSegue(withIdentifier: "segueAgendamentoHorario", sender: self.novoAgendamento)
         
-        OperationQueue.main.addOperation {
-            let addAlerta = UIAlertController(title: "Carrinho", message: "Deseja adicionar o item \(self.produtos[indexPath.row].descricao!) ao carrinho ?", preferredStyle: UIAlertControllerStyle.alert)
-            
-            addAlerta.addAction(UIAlertAction(title: "Sim", style: .default, handler: { (action: UIAlertAction!) in
-                self.principalController?.produtosCarrinho.append(self.produtos[indexPath.row])
-            }))
-            
-            addAlerta.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
-            self.present(addAlerta, animated: true, completion: nil)
-            self.tableProdutos.deselectRow(at: indexPath, animated:true)
-        }
     }
     
+    // This function is called before the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueAgendamentoHorario" {
+            let novoAgendamentoData = segue.destination as! NovoAgendamentoDataController
+            novoAgendamentoData.novoAgendamento = self.novoAgendamento
+        }
+    }
+
+    
+    
+    @IBAction func backAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     func loadProdutos(){
         WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/procedimentos/3") { (dic, error) in

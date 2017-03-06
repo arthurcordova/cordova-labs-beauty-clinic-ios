@@ -58,6 +58,10 @@ class AgendamentosController: UIViewController, UITableViewDelegate, UITableView
             let detalheAgendamento = segue.destination as! DetalheAgendamentoController
             detalheAgendamento.agendamento = self.model
         }
+        if segue.identifier == "segueNovoAgendamento" {
+            let novoAgendamento = segue.destination as! NovoAgendamentoProcedimentoController
+            novoAgendamento.codCli = self.pessoa?.code as NSNumber!
+        }
     }
     
     func loadAgendamentos(){

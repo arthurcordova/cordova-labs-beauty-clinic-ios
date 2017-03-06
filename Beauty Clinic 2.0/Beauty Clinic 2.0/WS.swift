@@ -54,6 +54,47 @@ class WS: NSObject {
         task.resume()
     }
     
+    static func newScheduling(urlBase:String, novo : NovoAgendamento, completionHander: @escaping (Dictionary<String,AnyObject>, Error?) -> Void) {
+        
+        let url     = URL(string: urlBase)
+        var request = URLRequest(url:url!)
+        
+        let params = ["codCliente": novo.codCli as AnyObject, "data": novo.data as AnyObject, "horario": novo.hora as AnyObject, "codFilial":3 as AnyObject, "codProcedimento": novo.produto.codProduto as AnyObject] as Dictionary<String, AnyObject>
+        
+        do {
+            request.httpMethod = "POST"
+            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        } catch let error as NSError {
+            print("erro ao inicializar json: \(error.localizedDescription)")
+        }
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
+            
+            if let urlContent = data {
+                
+                do {
+                    
+//                    let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options:.allowFragments) as! Dictionary<String,AnyObject>
+//                    
+//                    print(jsonResult)
+//                    
+//                    completionHander(jsonResult as Dictionary<String,AnyObject >,nil)
+                    
+                    
+                } catch {
+                    if let httpResponse = response as? HTTPURLResponse {
+                        print(httpResponse.statusCode)
+                    }
+                }
+                
+            } else {
+                print("Connection Error")
+            }
+            
+        }
+        task.resume()
+    }
     
     static func jsonToArrayObjects (urlBase:String, completionHander: @escaping (Array<NSDictionary>?, Error?) -> Void) {
         
