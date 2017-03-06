@@ -13,6 +13,7 @@ class MensagensController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet var tableMensagens: UITableView!
     @IBOutlet var buttonFiltro: UIButton!
     @IBOutlet var buttonEdit: UIBarButtonItem!
+    @IBOutlet var segmentControl: UISegmentedControl!
     
     var mensagens : Array<Mensagem> = []
     var pessoa : Pessoa? = nil
@@ -27,8 +28,18 @@ class MensagensController: UIViewController, UITableViewDelegate, UITableViewDat
         let xib = UINib(nibName: "MensagemCellTableViewCell", bundle: nil)
         tableMensagens.register(xib, forCellReuseIdentifier: "cellMensagem")
      
-        loadMensagens()
+        loadMensagens(index: 0)
         
+    }
+    
+    @IBAction func segmentControleAction(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            loadMensagens(index: 0)
+        } else if sender.selectedSegmentIndex == 1 {
+            loadMensagens(index: 1)
+        } else if sender.selectedSegmentIndex == 2 {
+            loadMensagens(index: 2)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -98,18 +109,28 @@ class MensagensController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
-    func loadMensagens(){
-        
+    func loadMensagens(index: Int){
+        self.mensagens.removeAll()
         let code = String(describing: pessoa!.code)
         WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/msgsporcliente/\(code)") { (dic, error) in
             if (error != nil){
                 
             } else {
+                
                 for dictionary:NSDictionary in dic! {
-                    
                     let msg =  Mensagem(json: dictionary)
-                    self.mensagens.append(msg)
-                    print(msg.titulo)
+                    if index == 1 {// Não lidas
+                        if msg.visualizada == 0 {
+                            self.mensagens.append(msg)
+                        }
+                    } else if index == 2 {//Lidas
+                        if msg.visualizada == 1 {
+                            self.mensagens.append(msg)
+                        }
+                    } else {
+                        self.mensagens.append(msg)
+                    }
+                    print(msg)
                     
                 }
                 OperationQueue.main.addOperation {

@@ -12,6 +12,7 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
     
     @IBOutlet var labelTotal: UILabel!
     @IBOutlet var tableCarrinho: UITableView!
+    @IBOutlet var buttonFinalizar: UIBarButtonItem!
     
     var produtosCarrinho: Array<Produto> = []
     
@@ -24,6 +25,7 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
         let xib = UINib(nibName: "MensagemCellTableViewCell", bundle: nil)
         tableCarrinho.register(xib, forCellReuseIdentifier: "cellCarrinho")
         
+        self.loadTotal()
     }
     
     
@@ -59,5 +61,35 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
 //            self.produtosCarrinho.deselectRow(at: indexPath, animated:true)
 //        }
     }
-
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.produtosCarrinho.remove(at: indexPath.row)
+            self.tableCarrinho.deleteRows(at: [indexPath], with: .automatic)
+            OperationQueue.main.addOperation {
+                self.loadTotal()
+            }
+        }
+    }
+    
+    func loadTotal(){
+       
+        var value :Float = 0
+        for var i in 0..<produtosCarrinho.count {
+            value += produtosCarrinho[i].valorProduto as Float!
+        }
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = NSLocale(localeIdentifier: "pt_BR") as Locale!
+        
+        let testNSNumber: NSNumber = NSNumber(value: value)
+        labelTotal.text = formatter.string(from: (testNSNumber))!
+        
+        if produtosCarrinho.count > 0 {
+            buttonFinalizar.isEnabled = true
+        } else {
+            buttonFinalizar.isEnabled = false
+        }
+    }
 }

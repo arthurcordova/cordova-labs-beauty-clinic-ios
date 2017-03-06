@@ -36,7 +36,7 @@
                                                 <segue destination="frF-Ui-OFw" kind="unwind" unwindAction="backToPrincipalWithSegue:" id="HKP-Wh-8Z8"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="FInalizar" style="done" id="ajS-Rm-QYO">
+                                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Finalizar" style="done" id="ajS-Rm-QYO">
                                             <color key="tintColor" red="0.91372549020000005" green="0.1529411765" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
@@ -105,6 +105,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonFinalizar" destination="ajS-Rm-QYO" id="a9j-3M-fIQ"/>
                         <outlet property="labelTotal" destination="EGb-1S-3Dd" id="seH-BQ-4ET"/>
                         <outlet property="tableCarrinho" destination="Ddu-Lg-qJZ" id="qGc-Ai-RIL"/>
                     </connections>
