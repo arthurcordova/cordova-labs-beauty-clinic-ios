@@ -111,6 +111,8 @@ class MensagensController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func loadMensagens(index: Int){
         self.mensagens.removeAll()
+        self.tableMensagens.reloadData()
+        
         let code = String(describing: pessoa!.code)
         WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/msgsporcliente/\(code)") { (dic, error) in
             if (error != nil){

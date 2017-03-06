@@ -25,8 +25,17 @@ class OrcamentoController: UIViewController, UITableViewDelegate, UITableViewDat
         let xib = UINib(nibName: "OrcamentoTableViewCell", bundle: nil)
         tableOrcamentos.register(xib, forCellReuseIdentifier: "cellOrcamento")
         
-        loadOrcamentos()
-        
+        loadOrcamentos(index: 0)
+    }
+    
+    @IBAction func controlFilterAction(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            loadOrcamentos(index: 0)
+        } else if sender.selectedSegmentIndex == 1 {
+            loadOrcamentos(index: 1)
+        } else if sender.selectedSegmentIndex == 2 {
+            loadOrcamentos(index: 2)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,7 +71,9 @@ class OrcamentoController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
 
-    func loadOrcamentos(){
+    func loadOrcamentos(index: Int){
+        self.orcamentos.removeAll()
+        self.tableOrcamentos.reloadData()
         
         let code = String(describing: pessoa!.code)
         WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/orcporcliente/\(code)") { (dic, error) in
@@ -72,8 +83,18 @@ class OrcamentoController: UIViewController, UITableViewDelegate, UITableViewDat
                 for dictionary:NSDictionary in dic! {
                     
                     let orc =  Orcamento(json: dictionary)
-                    self.orcamentos.append(orc)
                     
+                    if index == 1 {
+                        if orc.status == "CONFIRMADO" {
+                            self.orcamentos.append(orc)
+                        }
+                    } else if index == 2 {
+                        if orc.status == "CANCELADO" {
+                            self.orcamentos.append(orc)
+                        }
+                    } else {
+                        self.orcamentos.append(orc)
+                    }
                 }
                 OperationQueue.main.addOperation {
                     self.tableOrcamentos.reloadData()
