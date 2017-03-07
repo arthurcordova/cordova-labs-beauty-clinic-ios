@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F42136C81E6E354300A636DC /* InformacaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42136C71E6E354300A636DC /* InformacaoController.swift */; };
 		F450E8CD1E66222700C6E47B /* WS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450E8CC1E66222700C6E47B /* WS.swift */; };
 		F450E8D11E664F0900C6E47B /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450E8D01E664F0900C6E47B /* Pessoa.swift */; };
 		F460E3C61E678367007924C5 /* DetalheMensagemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E3C51E678367007924C5 /* DetalheMensagemController.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F42136C71E6E354300A636DC /* InformacaoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacaoController.swift; sourceTree = "<group>"; };
 		F450E8CC1E66222700C6E47B /* WS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WS.swift; sourceTree = "<group>"; };
 		F450E8D01E664F0900C6E47B /* Pessoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
 		F460E3C51E678367007924C5 /* DetalheMensagemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalheMensagemController.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				F4ECCB8C1E6C95D900CE97BE /* NovoAgendamentoProcedimentoController.swift */,
 				F4ECCB901E6C9A9E00CE97BE /* NovoAgendamentoDataController.swift */,
 				F4ECCB941E6D0E2000CE97BE /* NovoAgendamentoConcluirController.swift */,
+				F42136C71E6E354300A636DC /* InformacaoController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				F460E3C81E679590007924C5 /* Produto.swift in Sources */,
 				F4ECCB811E6B58CD00CE97BE /* FilltroMensagemController.swift in Sources */,
 				F46944531E5D283200AA9F2E /* UsuarioService.swift in Sources */,
+				F42136C81E6E354300A636DC /* InformacaoController.swift in Sources */,
 				F4ECCB831E6C744500CE97BE /* AgendamentosController.swift in Sources */,
 				F450E8D11E664F0900C6E47B /* Pessoa.swift in Sources */,
 				F48150DA1E63042E00CEE75B /* MensagemCellTableViewCell.swift in Sources */,
