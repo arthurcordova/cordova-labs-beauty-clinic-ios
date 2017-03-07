@@ -342,7 +342,7 @@
         <!--Agendamentos Controller-->
         <scene sceneID="K4J-U2-eVt">
             <objects>
-                <viewController id="fZm-of-icu" customClass="AgendamentosController" customModule="Beauty_Clinic_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="agendamentosID" id="fZm-of-icu" customClass="AgendamentosController" customModule="Beauty_Clinic_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0se-br-Bj3"/>
                         <viewControllerLayoutGuide type="bottom" id="J8V-a9-dTx"/>

@@ -38,7 +38,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Beauty Clinic 2.0/WS.swift"
@@ -51,29 +51,29 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "static Beauty_Clinic_2_0.WS.newScheduling (urlBase : Swift.String, novo : Beauty_Clinic_2_0.NovoAgendamento, completionHander : (Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Beauty Clinic 2.0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/acstapassoli/Mobile/IOS/cordova-labs-beauty-clinic-ios/Beauty%20Clinic%202.0/Beauty%20Clinic%202.0/WS.swift"
-                  timestampString = "510540594.496566"
+                  timestampString = "510541500.765122"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "72"
                   endingLineNumber = "72"
-                  offsetFromSymbolStart = "1820">
+                  offsetFromSymbolStart = "1932">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "static Beauty_Clinic_2_0.WS.(newScheduling (urlBase : Swift.String, novo : Beauty_Clinic_2_0.NovoAgendamento, completionHander : (Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()).(closure #1)"
                   moduleName = "Beauty Clinic 2.0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/acstapassoli/Mobile/IOS/cordova-labs-beauty-clinic-ios/Beauty%20Clinic%202.0/Beauty%20Clinic%202.0/WS.swift"
-                  timestampString = "510540594.498991"
+                  timestampString = "510541500.770204"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "74"
@@ -86,15 +86,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Beauty Clinic 2.0/WS.swift"
-            timestampString = "510466254.091096"
+            timestampString = "510542221.986103"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "newScheduling(urlBase:novo:completionHander:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -144,6 +144,86 @@
             startingLineNumber = "135"
             endingLineNumber = "135"
             landmarkName = "loadMensagens(index:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Beauty Clinic 2.0/WS.swift"
+            timestampString = "510541552.455434"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "newScheduling(urlBase:novo:completionHander:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Beauty Clinic 2.0/WS.swift"
+            timestampString = "510542221.986103"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "newScheduling(urlBase:novo:completionHander:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Beauty_Clinic_2_0.WS.newScheduling (urlBase : Swift.String, novo : Beauty_Clinic_2_0.NovoAgendamento, completionHander : (Swift.Int, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Beauty Clinic 2.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acstapassoli/Mobile/IOS/cordova-labs-beauty-clinic-ios/Beauty%20Clinic%202.0/Beauty%20Clinic%202.0/WS.swift"
+                  timestampString = "510542223.152914"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "2176">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Beauty_Clinic_2_0.WS.(newScheduling (urlBase : Swift.String, novo : Beauty_Clinic_2_0.NovoAgendamento, completionHander : (Swift.Int, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Beauty Clinic 2.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acstapassoli/Mobile/IOS/cordova-labs-beauty-clinic-ios/Beauty%20Clinic%202.0/Beauty%20Clinic%202.0/WS.swift"
+                  timestampString = "510542223.155599"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "440">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Beauty Clinic 2.0/WS.swift"
+            timestampString = "510542221.986103"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "newScheduling(urlBase:novo:completionHander:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

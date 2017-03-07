@@ -27,6 +27,10 @@ class LoginController: UIViewController, UITextFieldDelegate {
         inputSenha.delegate = self
     }
     
+    @IBAction func backToLogin(segue:UIStoryboardSegue) {
+    
+    }
+    
     @IBAction func doLogin(_ sender: UIButton) {
         
         let usuario = Usuario()

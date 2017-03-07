@@ -31,7 +31,7 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="ic_close"/>
                                         <connections>
-                                            <segue destination="kDp-3O-tz7" kind="unwind" animates="NO" unwindAction="backToPrincipalWithSegue:" id="Tj2-Mp-4O2"/>
+                                            <segue destination="kDp-3O-tz7" kind="unwind" unwindAction="backToPrincipalWithSegue:" id="Lvm-1A-f83"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Olá," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkQ-db-h6Z">
@@ -235,9 +235,6 @@
                                         <state key="normal" title="Sair">
                                             <color key="titleColor" red="1" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="kDp-3O-tz7" kind="unwind" unwindAction="backViewWithSegue:" id="Gse-pT-Gde"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9l-wx-4k8">
                                         <rect key="frame" x="198" y="441" width="54" height="38"/>

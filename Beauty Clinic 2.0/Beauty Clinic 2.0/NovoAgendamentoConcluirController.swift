@@ -24,16 +24,36 @@ class NovoAgendamentoConcluirController: UIViewController {
     
     @IBAction func doneAction(_ sender: Any) {
         
-      WS.newScheduling(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/realizaragendamento", novo: novoAgendamento, completionHander: { (dic, error) in
+      WS.newScheduling(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/realizaragendamento", novo: novoAgendamento, completionHander: { (httpCode, error) in
             if error != nil {
-                print(dic)
+                print(httpCode)
             } else {
+                if httpCode == 2010 {
+                    OperationQueue.main.addOperation {
+                        let addAlerta = UIAlertController(title: "Agendamento", message: "Agendamento realizado com sucesso!", preferredStyle: UIAlertControllerStyle.alert)
+                        
+                        addAlerta.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+                           
+                            
+                            
+                        }))
+                        self.present(addAlerta, animated: true, completion: nil)
+                    }
+                    
+                } else {
+                    OperationQueue.main.addOperation {
+                        let addAlerta = UIAlertController(title: "Agendamento", message: "Erro. Não foi possível realizar o agendamento!", preferredStyle: UIAlertControllerStyle.alert)
+                        
+                        addAlerta.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+                        self.present(addAlerta, animated: true, completion: nil)
+                    }
+                }
                 
 //                let pessoa = Pessoa()
 //                pessoa.nome = dic["fantasia"] as! String
 //                pessoa.cpf = dic["cpfcnpj"] as! String
 //                pessoa.code = dic["codcliente"] as! Int
-//                
+//
 //                OperationQueue.main.addOperation {
 //                    let mainNavigator = UINavigationController()
 //                    
