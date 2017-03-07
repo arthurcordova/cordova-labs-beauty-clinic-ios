@@ -14,8 +14,13 @@ class PrincipalController: UIViewController  {
     @IBOutlet var viewCard2: UIView!
     @IBOutlet var labelBadge: UILabel!
     
+    @IBOutlet var labelMessage: UILabel!
+    @IBOutlet var labelTxtOrcamento: UILabel!
+    
     var pessoa : Pessoa? = nil
     var produtosCarrinho: Array<Produto> = []
+    var mensagens : Array<Mensagem> = []
+    var orcamentos : Array<Orcamento> = []
     
     override func viewDidLoad() {
         labelBadge.layer.cornerRadius = labelBadge.bounds.size.width / 2.0
@@ -31,6 +36,9 @@ class PrincipalController: UIViewController  {
     
     override func viewDidAppear(_ animated: Bool) {
         updateBadge()
+        loadMensagens(index: 0)
+        loadOrcamentos(index: 0)
+        
     }
     
     
@@ -97,5 +105,62 @@ class PrincipalController: UIViewController  {
         }
     }
     
+    func loadMensagens(index: Int){
+        let code = String(describing: pessoa!.code)
+        WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/msgsporcliente/\(code)") { (dic, error) in
+            if (error != nil){
+                
+            } else {
+                
+                for dictionary:NSDictionary in dic! {
+                    let msg =  Mensagem(json: dictionary)
+                    if index == 1 {// Não lidas
+                        if msg.visualizada == 0 {
+                            self.mensagens.append(msg)
+                        }
+                    } else if index == 2 {//Lidas
+                        if msg.visualizada == 1 {
+                            self.mensagens.append(msg)
+                        }
+                    } else {
+                        self.mensagens.append(msg)
+                    }
+                    print(msg)
+                    
+                }
+                OperationQueue.main.addOperation {
+                    self.labelMessage.text = "Você possui " + String(self.mensagens.count) + " mensagens"
+                }
+            }
+        }
+    }
     
+    func loadOrcamentos(index: Int){
+        let code = String(describing: pessoa!.code)
+        WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/orcporcliente/\(code)") { (dic, error) in
+            if (error != nil){
+                
+            } else {
+                for dictionary:NSDictionary in dic! {
+                    
+                    let orc =  Orcamento(json: dictionary)
+                    
+                    if index == 1 {
+                        if orc.status == "CONFIRMADO" {
+                            self.orcamentos.append(orc)
+                        }
+                    } else if index == 2 {
+                        if orc.status == "CANCELADO" {
+                            self.orcamentos.append(orc)
+                        }
+                    } else {
+                        self.orcamentos.append(orc)
+                    }
+                }
+                OperationQueue.main.addOperation {
+                    self.labelTxtOrcamento.text = "Você possui " + String(self.orcamentos.count) + " orçamentos"
+                }
+            }
+        }
+    }
 }

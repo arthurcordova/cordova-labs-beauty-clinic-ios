@@ -28,7 +28,7 @@ class NovoAgendamentoConcluirController: UIViewController {
             if error != nil {
                 print(httpCode)
             } else {
-                if httpCode == 2010 {
+                if httpCode == 200 {
                     OperationQueue.main.addOperation {
                         let addAlerta = UIAlertController(title: "Agendamento", message: "Agendamento realizado com sucesso!", preferredStyle: UIAlertControllerStyle.alert)
                         

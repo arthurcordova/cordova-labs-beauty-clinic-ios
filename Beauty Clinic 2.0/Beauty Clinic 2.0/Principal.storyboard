@@ -95,7 +95,7 @@
                                             <action selector="callMensagens:" destination="xsb-q0-uVw" eventType="touchUpInside" id="lF6-VI-lZ7"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Você possui 32 mensagens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bS-4c-KUR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bS-4c-KUR">
                                         <rect key="frame" x="8" y="38" width="223" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                         <nil key="textColor"/>
@@ -139,7 +139,7 @@
                                             <action selector="callOrcamentos:" destination="xsb-q0-uVw" eventType="touchUpInside" id="6eW-b4-V0m"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Você possui 3 orçamentos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeU-Bh-98H">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeU-Bh-98H">
                                         <rect key="frame" x="1" y="38" width="223" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                         <nil key="textColor"/>
@@ -197,6 +197,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="labelBadge" destination="zoX-R0-eY1" id="Akg-qv-Qsn"/>
+                        <outlet property="labelMessage" destination="3bS-4c-KUR" id="wh0-r4-pZX"/>
+                        <outlet property="labelTxtOrcamento" destination="KeU-Bh-98H" id="UfJ-Bd-oed"/>
                         <outlet property="viewCard1" destination="1Hk-yL-Qkg" id="ZzU-jF-rob"/>
                         <outlet property="viewCard2" destination="iot-UL-pga" id="6Ma-9E-tz2"/>
                     </connections>
