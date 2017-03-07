@@ -38,6 +38,9 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Finalizar" style="done" id="ajS-Rm-QYO">
                                             <color key="tintColor" red="0.91372549020000005" green="0.1529411765" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="finalizarAction:" destination="Uc0-t4-sjk" id="5Kh-aD-KUA"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>

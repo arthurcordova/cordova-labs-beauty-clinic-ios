@@ -24,7 +24,7 @@ class NovoAgendamentoConcluirController: UIViewController {
     
     @IBAction func doneAction(_ sender: Any) {
         
-      WS.newScheduling(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/realizaragendamento", novo: novoAgendamento, completionHander: { (httpCode, error) in
+        WS.newScheduling(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/realizaragendamento", novo: novoAgendamento, completionHander: { (httpCode, error) in
             if error != nil {
                 print(httpCode)
             } else {
@@ -33,7 +33,7 @@ class NovoAgendamentoConcluirController: UIViewController {
                         let addAlerta = UIAlertController(title: "Agendamento", message: "Agendamento realizado com sucesso!", preferredStyle: UIAlertControllerStyle.alert)
                         
                         addAlerta.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
-                           
+                            
                             
                             
                         }))
@@ -48,31 +48,9 @@ class NovoAgendamentoConcluirController: UIViewController {
                         self.present(addAlerta, animated: true, completion: nil)
                     }
                 }
-                
-//                let pessoa = Pessoa()
-//                pessoa.nome = dic["fantasia"] as! String
-//                pessoa.cpf = dic["cpfcnpj"] as! String
-//                pessoa.code = dic["codcliente"] as! Int
-//
-//                OperationQueue.main.addOperation {
-//                    let mainNavigator = UINavigationController()
-//                    
-//                    let principal: UIStoryboard = UIStoryboard(name: "Principal", bundle: nil)
-//                    let controller = principal.instantiateViewController(withIdentifier: "principalID") as! PrincipalController
-//                    controller.pessoa = pessoa
-//                    
-//                    mainNavigator.setNavigationBarHidden(true, animated: false)
-//                    
-//                    mainNavigator.pushViewController(controller, animated: true)
-//                    
-//                    let appDelegate = UIApplication.shared.delegate! as! AppDelegate
-//                    appDelegate.window!.rootViewController = mainNavigator
-//                    
-//                    
-//                }
             }
         })
-
+        
         
     }
     

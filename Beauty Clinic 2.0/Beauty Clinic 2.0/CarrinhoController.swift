@@ -15,6 +15,9 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
     @IBOutlet var buttonFinalizar: UIBarButtonItem!
     
     var produtosCarrinho: Array<Produto> = []
+    var pessoa : Pessoa!
+    var totalValue: NSNumber!
+    var principalController: PrincipalController!
     
     override func viewDidLoad() {
         tableCarrinho.delegate = self
@@ -65,11 +68,45 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             self.produtosCarrinho.remove(at: indexPath.row)
+            self.principalController.produtosCarrinho.remove(at: indexPath.row)
             self.tableCarrinho.deleteRows(at: [indexPath], with: .automatic)
             OperationQueue.main.addOperation {
                 self.loadTotal()
             }
         }
+    }
+    
+    @IBAction func finalizarAction(_ sender: Any) {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        let dateFormated = formatter.string(from: date)
+        
+        WS.newOrcamento(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/cadorcamento", client: self.pessoa.code, date: dateFormated, value: self.totalValue, completionHander: { (codOrc, error) in
+            if error != nil {
+                print("Erro")
+            } else {
+                
+                for var i in 0..<self.produtosCarrinho.count {
+                    WS.newOrcamentoProdutos(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/cadprodorcamento".appending(codOrc), produto: self.produtosCarrinho[i].codProduto as Int, value: self.produtosCarrinho[i].valorProduto,  completionHander: { (httpCode, error) in
+                        if error != nil {
+                            print("Erro")
+                        } else {
+                            httpCode
+                            
+                        }
+                    })
+                }
+                OperationQueue.main.addOperation {
+                    let addAlerta = UIAlertController(title: "Carrinho", message: "Um novo orçamento foi gerado com sucesso!", preferredStyle: UIAlertControllerStyle.alert)
+                    
+                    addAlerta.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    
+                    self.present(addAlerta, animated: true, completion: nil)
+                }
+            }
+        })
+
     }
     
     func loadTotal(){
@@ -78,6 +115,7 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
         for var i in 0..<produtosCarrinho.count {
             value += produtosCarrinho[i].valorProduto as Float!
         }
+        self.totalValue = value as NSNumber!
         
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency

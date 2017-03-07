@@ -75,32 +75,94 @@ class WS: NSObject {
                 print(httpResponse.statusCode)
                 completionHander(httpResponse.statusCode as Int, nil)
             }
+        }
+        task.resume()
+    }
 
-//            if let urlContent = data {
-//                
-//                do {
-//                    
-////                    let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options:.allowFragments) as! Dictionary<String,AnyObject>
-////                    
-////                    print(jsonResult)
-////                    
-////                    completionHander(jsonResult as Dictionary<String,AnyObject >,nil)
-//                    
-//                    
-//                } catch {
-//                    if let httpResponse = response as? HTTPURLResponse {
-//                        print(httpResponse.statusCode)
-//                    }
-//                }
+    static func newOrcamento(urlBase:String, client : Int, date: String, value : NSNumber, completionHander: @escaping (_ codOrc: String , Error?) -> Void) {
+        
+        let url     = URL(string: urlBase)
+        var request = URLRequest(url:url!)
+        
+        let params = ["codAngariador": 42 as AnyObject,
+                      "codCliente": client as AnyObject,
+                      "codFilial": 3 as AnyObject,
+                      "codVendedor":42 as AnyObject,
+                      "dataOrcamento": date as AnyObject,
+                      "opcad":42 as AnyObject,
+                      "status":"P" as AnyObject,
+                      "valorDesconto":0.0 as AnyObject,
+                      "valorOrcamento": value as AnyObject,
+                      "valorTotal": value as AnyObject] as Dictionary<String, AnyObject>
+        
+        do {
+            request.httpMethod = "POST"
+            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        } catch let error as NSError {
+            print("erro ao inicializar json: \(error.localizedDescription)")
+        }
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
             
-//            } else {
-//                print("Connection Error")
-//            }
-            
+            let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
+                
+                if let urlContent = data {
+                    
+                    do {
+                        
+                        let codeOrc = try NSString(data: data!, encoding: String.Encoding.utf8.rawValue) as! String
+                        print(codeOrc)
+                        completionHander(codeOrc, nil)
+                        
+                    } catch {
+                        if let httpResponse = response as? HTTPURLResponse {
+                            print(httpResponse.statusCode)
+                        }
+                    }
+                    
+                } else {
+                    print("Connection Error")
+                }
+
+            }
         }
         task.resume()
     }
     
+//    {"codAngariador":42,"codIndicador":0,"codProduto":111,"duracao":0,"opcad":42,"valorProduto":2500.0}
+    
+    static func newOrcamentoProdutos(urlBase:String, produto : Int, value : NSNumber, completionHander: @escaping (_ httpCode: Int , Error?) -> Void) {
+        
+        let url     = URL(string: urlBase)
+        var request = URLRequest(url:url!)
+        
+        let params = ["codAngariador": 24 as AnyObject,
+                      "codIndicador": 0 as AnyObject,
+                      "codProduto": produto as AnyObject,
+                      "duracao": 0 as AnyObject,
+                      "opcad":42 as AnyObject,
+                      "valorProduto": value as AnyObject] as Dictionary<String, AnyObject>
+        
+        do {
+            request.httpMethod = "POST"
+            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        } catch let error as NSError {
+            print("erro ao inicializar json: \(error.localizedDescription)")
+        }
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
+            
+            
+            if let httpResponse = response as? HTTPURLResponse {
+                print(httpResponse.statusCode)
+                completionHander(httpResponse.statusCode as Int, nil)
+            }
+        }
+        task.resume()
+    }
+
     static func jsonToArrayObjects (urlBase:String, completionHander: @escaping (Array<NSDictionary>?, Error?) -> Void) {
         
         let url     = URL(string: urlBase)
@@ -140,4 +202,4 @@ class WS: NSObject {
     }
     
 }
- 
+

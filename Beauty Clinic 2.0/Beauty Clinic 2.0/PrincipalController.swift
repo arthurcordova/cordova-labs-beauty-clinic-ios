@@ -60,6 +60,8 @@ class PrincipalController: UIViewController  {
             
             if let toViewController = segue.destination as? CarrinhoController {
                 toViewController.produtosCarrinho = self.produtosCarrinho
+                toViewController.pessoa = self.pessoa
+                toViewController.principalController = self
             }
         }
         
