@@ -403,5 +403,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Beauty Clinic 2.0/DetalheAgendamentoController.swift"
+            timestampString = "510630817.153211"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "cancelAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Beauty Clinic 2.0/WS.swift"
+            timestampString = "510632348.872642"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "cancelAgendamento(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Beauty_Clinic_2_0.WS.(cancelAgendamento (id : __ObjC.NSNumber) -&gt; ()).(closure #1)"
+                  moduleName = "Beauty Clinic 2.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acstapassoli/Mobile/IOS/cordova-labs-beauty-clinic-ios/Beauty%20Clinic%202.0/Beauty%20Clinic%202.0/WS.swift"
+                  timestampString = "510632348.988564"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "213"
+                  endingLineNumber = "213"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Beauty_Clinic_2_0.WS.(cancelAgendamento (id : __ObjC.NSNumber) -&gt; ()).(closure #1)"
+                  moduleName = "Beauty Clinic 2.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acstapassoli/Mobile/IOS/cordova-labs-beauty-clinic-ios/Beauty%20Clinic%202.0/Beauty%20Clinic%202.0/WS.swift"
+                  timestampString = "510632348.990756"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "213"
+                  endingLineNumber = "213"
+                  offsetFromSymbolStart = "196">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

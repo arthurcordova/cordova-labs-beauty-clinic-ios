@@ -199,10 +199,22 @@ class WS: NSObject {
     }
     
     static func cancelAgendamento(id: NSNumber){
-        let http = URLSession.shared
-        let url = NSURL(string: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/cancelaragendamento/"+"\(id)")!
-        let task = http.dataTask(with: url as URL)
-        print("cancel from server \(id)")
+        let url = NSURL(string: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/cancelaragendamento")!
+        var request = URLRequest(url:url as URL)
+        let params = ["codAgenda": id as AnyObject] as Dictionary<String, AnyObject>
+        do {
+            request.httpMethod = "POST"
+            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        } catch let error as NSError {
+            print("erro ao inicializar json: \(error.localizedDescription)")
+        }
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
+            if let httpResponse = response as? HTTPURLResponse {
+                print(httpResponse.statusCode)
+            }
+            print("cancel from server \(id)")
+        }
         task.resume()
     }
     
