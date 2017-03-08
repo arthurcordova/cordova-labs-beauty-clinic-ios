@@ -108,6 +108,9 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
                         
                         let viewController = UIStoryboard(name: "Principal", bundle: nil).instantiateViewController(withIdentifier: "principalID") as! PrincipalController
                         
+                        viewController.pessoa = self.principalController.pessoa
+                        viewController.produtosCarrinho = self.principalController.produtosCarrinho
+                        
                         appDelegate.window?.rootViewController = viewController
                         appDelegate.window?.makeKeyAndVisible()
                         

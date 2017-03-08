@@ -105,23 +105,23 @@ class WS: NSObject {
         
         let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
             
-            if let urlContent = data {
-                
-                do {
-                    
-                    let codeOrc = try NSString(data: data!, encoding: String.Encoding.utf8.rawValue) as! String
+//            if let urlContent = data {
+//                
+//                do {
+            
+                    let codeOrc = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) as! String
                     print(codeOrc)
                     completionHander(codeOrc, nil)
                     
-                } catch {
-                    if let httpResponse = response as? HTTPURLResponse {
-                        print(httpResponse.statusCode)
-                    }
-                }
+//                } catch {
+//                    if let httpResponse = response as? HTTPURLResponse {
+//                        print(httpResponse.statusCode)
+//                    }
+//                }
                 
-            } else {
-                print("Connection Error")
-            }
+//            } else {
+//                print("Connection Error")
+//            }
         }
         
         task.resume()
