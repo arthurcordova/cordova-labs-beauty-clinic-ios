@@ -15,6 +15,7 @@ class NovoAgendamentoDataController: UIViewController, UITableViewDelegate, UITa
     
     var novoAgendamento : NovoAgendamento!
     var horarios: Array<Horario> = []
+    var mainController : AgendamentosController!
     
     override func viewDidLoad() {
         tableHorarios.delegate = self
@@ -72,6 +73,7 @@ class NovoAgendamentoDataController: UIViewController, UITableViewDelegate, UITa
         if segue.identifier == "segueAgendamentoFinal" {
             let novoAgendamentoConcluir = segue.destination as! NovoAgendamentoConcluirController
             novoAgendamentoConcluir.novoAgendamento = self.novoAgendamento
+            novoAgendamentoConcluir.mainController = self.mainController
         }
     }
    

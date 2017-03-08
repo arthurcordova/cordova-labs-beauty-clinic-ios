@@ -15,6 +15,7 @@ class NovoAgendamentoProcedimentoController: UIViewController, UITableViewDelega
     var produtos : Array<Produto> = []
     var novoAgendamento : NovoAgendamento!
     var codCli : NSNumber!
+    var mainController : AgendamentosController!
     
     override func viewDidLoad() {
         tableProdutos.delegate = self
@@ -59,6 +60,8 @@ class NovoAgendamentoProcedimentoController: UIViewController, UITableViewDelega
         if segue.identifier == "segueAgendamentoHorario" {
             let novoAgendamentoData = segue.destination as! NovoAgendamentoDataController
             novoAgendamentoData.novoAgendamento = self.novoAgendamento
+            novoAgendamentoData.mainController = self.mainController
+
         }
     }
 

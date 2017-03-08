@@ -13,7 +13,7 @@ class AgendamentosController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var tableAgendamentos: UITableView!
     
     var agendamentos : Array<Agendamento> = []
-    var pessoa : Pessoa? = nil
+    var pessoa : Pessoa!
     var model: Agendamento!
     
     override func viewDidLoad() {
@@ -61,6 +61,7 @@ class AgendamentosController: UIViewController, UITableViewDelegate, UITableView
         if segue.identifier == "segueNovoAgendamento" {
             let novoAgendamento = segue.destination as! NovoAgendamentoProcedimentoController
             novoAgendamento.codCli = self.pessoa?.code as NSNumber!
+            novoAgendamento.mainController = self
         }
     }
     
