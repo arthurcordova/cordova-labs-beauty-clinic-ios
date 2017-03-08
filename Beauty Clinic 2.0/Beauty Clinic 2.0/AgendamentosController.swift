@@ -25,8 +25,13 @@ class AgendamentosController: UIViewController, UITableViewDelegate, UITableView
         let xib = UINib(nibName: "AgendamentoTableViewCell", bundle: nil)
         tableAgendamentos.register(xib, forCellReuseIdentifier: "cellAgendamento")
         
-        loadAgendamentos()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadAgendamentos()
+        print("viewDidAppear loading....")
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return agendamentos.count
@@ -57,6 +62,7 @@ class AgendamentosController: UIViewController, UITableViewDelegate, UITableView
         if segue.identifier == "segueDetalheAgendamento" {
             let detalheAgendamento = segue.destination as! DetalheAgendamentoController
             detalheAgendamento.agendamento = self.model
+            detalheAgendamento.mainController = self
         }
         if segue.identifier == "segueNovoAgendamento" {
             let novoAgendamento = segue.destination as! NovoAgendamentoProcedimentoController
@@ -66,6 +72,8 @@ class AgendamentosController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func loadAgendamentos(){
+        agendamentos.removeAll()
+        tableAgendamentos.reloadData()
         
         let code = String(describing: pessoa!.code)
         WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/agendamentos/\(code)") { (dic, error) in

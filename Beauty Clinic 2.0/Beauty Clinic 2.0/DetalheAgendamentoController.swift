@@ -16,6 +16,7 @@ class DetalheAgendamentoController: UIViewController {
     @IBOutlet var buttonCancel: UIBarButtonItem!
     
     var agendamento : Agendamento!
+    var mainController : AgendamentosController!
     
     override func viewDidLoad() {
         if (agendamento.status == "CANCELADO") {
@@ -34,6 +35,16 @@ class DetalheAgendamentoController: UIViewController {
     }
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
+        WS.cancelAgendamento(id: self.agendamento.codAgenda )
+        OperationQueue.main.addOperation {
+            let addAlerta = UIAlertController(title: "Cancelado", message: "Agendamento cancelado com sucesso!", preferredStyle: UIAlertControllerStyle.alert)
+            
+            addAlerta.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+                self.dismiss(animated: true, completion: nil)
+            }))
+            self.present(addAlerta, animated: true, completion: nil)
+        }
+
         
     }
 }

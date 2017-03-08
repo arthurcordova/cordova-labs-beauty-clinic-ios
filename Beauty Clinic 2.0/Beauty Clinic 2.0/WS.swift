@@ -198,5 +198,12 @@ class WS: NSObject {
         task.resume()
     }
     
+    static func cancelAgendamento(id: NSNumber){
+        let http = URLSession.shared
+        let url = NSURL(string: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/cancelaragendamento/"+"\(id)")!
+        let task = http.dataTask(with: url as URL)
+        print("cancel from server \(id)")
+        task.resume()
+    }
+    
 }
-
