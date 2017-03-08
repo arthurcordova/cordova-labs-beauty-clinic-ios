@@ -36,14 +36,11 @@
                                                 <segue destination="ANC-JU-aYo" kind="unwind" unwindAction="backToPrincipalWithSegue:" id="9ks-oh-ld0"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="Mhj-wT-C62">
-                                            <color key="tintColor" red="0.91372549020000005" green="0.1529411765" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X3B-h2-bBH">
-                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X3B-h2-bBH">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellProduto" rowHeight="80" id="reT-0R-hRD" customClass="ProdutoCellTableView" customModule="Beauty_Clinic_2_0" customModuleProvider="target">
@@ -59,22 +56,30 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="X3B-h2-bBH" firstAttribute="leading" secondItem="xfT-w0-zBZ" secondAttribute="leading" id="R5p-CG-WdV"/>
+                            <constraint firstAttribute="trailing" secondItem="X3B-h2-bBH" secondAttribute="trailing" id="6Oz-38-56f"/>
+                            <constraint firstItem="EWZ-PG-Oby" firstAttribute="top" secondItem="X3B-h2-bBH" secondAttribute="bottom" id="BhH-dg-PqC"/>
                             <constraint firstItem="XuE-qo-Vb9" firstAttribute="leading" secondItem="xfT-w0-zBZ" secondAttribute="leading" id="V9c-Yk-cDw"/>
                             <constraint firstItem="XuE-qo-Vb9" firstAttribute="top" secondItem="c3X-91-63H" secondAttribute="bottom" id="WCD-cv-D8s"/>
-                            <constraint firstItem="EWZ-PG-Oby" firstAttribute="top" secondItem="X3B-h2-bBH" secondAttribute="bottom" id="ds9-oQ-ERB"/>
-                            <constraint firstItem="X3B-h2-bBH" firstAttribute="top" secondItem="XuE-qo-Vb9" secondAttribute="bottom" constant="1" id="lA6-kJ-WFe"/>
-                            <constraint firstAttribute="trailing" secondItem="X3B-h2-bBH" secondAttribute="trailing" id="o1B-1c-eNW"/>
+                            <constraint firstItem="X3B-h2-bBH" firstAttribute="leading" secondItem="xfT-w0-zBZ" secondAttribute="leading" id="q9l-xR-hLC"/>
+                            <constraint firstItem="X3B-h2-bBH" firstAttribute="top" secondItem="XuE-qo-Vb9" secondAttribute="bottom" constant="1" id="wkB-EL-4QC"/>
                             <constraint firstAttribute="trailing" secondItem="XuE-qo-Vb9" secondAttribute="trailing" id="zsZ-Pc-E4V"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttonSearch" destination="Mhj-wT-C62" id="kKC-E1-niC"/>
+                        <outlet property="searchDisplayController" destination="nRH-tl-Vfw" id="jAM-tZ-v66"/>
                         <outlet property="tableProdutos" destination="X3B-h2-bBH" id="w96-k5-2lT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1L-XP-T9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ANC-JU-aYo" userLabel="Exit" sceneMemberID="exit"/>
+                <searchDisplayController id="nRH-tl-Vfw">
+                    <connections>
+                        <outlet property="delegate" destination="gRD-yG-QzU" id="rDq-Qe-x3J"/>
+                        <outlet property="searchContentsController" destination="gRD-yG-QzU" id="zha-3f-xky"/>
+                        <outlet property="searchResultsDataSource" destination="gRD-yG-QzU" id="5qH-4W-WJV"/>
+                        <outlet property="searchResultsDelegate" destination="gRD-yG-QzU" id="TuA-lj-ddN"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-82.400000000000006" y="145.27736131934034"/>
         </scene>
