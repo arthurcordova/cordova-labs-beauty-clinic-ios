@@ -78,7 +78,7 @@ class WS: NSObject {
         }
         task.resume()
     }
-
+    
     static func newOrcamento(urlBase:String, client : Int, date: String, value : NSNumber, completionHander: @escaping (_ codOrc: String , Error?) -> Void) {
         
         let url     = URL(string: urlBase)
@@ -105,32 +105,29 @@ class WS: NSObject {
         
         let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
             
-            let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
+            if let urlContent = data {
                 
-                if let urlContent = data {
+                do {
                     
-                    do {
-                        
-                        let codeOrc = try NSString(data: data!, encoding: String.Encoding.utf8.rawValue) as! String
-                        print(codeOrc)
-                        completionHander(codeOrc, nil)
-                        
-                    } catch {
-                        if let httpResponse = response as? HTTPURLResponse {
-                            print(httpResponse.statusCode)
-                        }
+                    let codeOrc = try NSString(data: data!, encoding: String.Encoding.utf8.rawValue) as! String
+                    print(codeOrc)
+                    completionHander(codeOrc, nil)
+                    
+                } catch {
+                    if let httpResponse = response as? HTTPURLResponse {
+                        print(httpResponse.statusCode)
                     }
-                    
-                } else {
-                    print("Connection Error")
                 }
-
+                
+            } else {
+                print("Connection Error")
             }
         }
+        
         task.resume()
     }
     
-//    {"codAngariador":42,"codIndicador":0,"codProduto":111,"duracao":0,"opcad":42,"valorProduto":2500.0}
+    //    {"codAngariador":42,"codIndicador":0,"codProduto":111,"duracao":0,"opcad":42,"valorProduto":2500.0}
     
     static func newOrcamentoProdutos(urlBase:String, produto : Int, value : NSNumber, completionHander: @escaping (_ httpCode: Int , Error?) -> Void) {
         
@@ -162,7 +159,7 @@ class WS: NSObject {
         }
         task.resume()
     }
-
+    
     static func jsonToArrayObjects (urlBase:String, completionHander: @escaping (Array<NSDictionary>?, Error?) -> Void) {
         
         let url     = URL(string: urlBase)

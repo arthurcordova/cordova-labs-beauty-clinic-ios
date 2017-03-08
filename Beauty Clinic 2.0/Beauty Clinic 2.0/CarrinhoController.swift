@@ -88,11 +88,10 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
             } else {
                 
                 for var i in 0..<self.produtosCarrinho.count {
-                    WS.newOrcamentoProdutos(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/cadprodorcamento".appending(codOrc), produto: self.produtosCarrinho[i].codProduto as Int, value: self.produtosCarrinho[i].valorProduto,  completionHander: { (httpCode, error) in
+                    WS.newOrcamentoProdutos(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/cadprodorcamento/".appending(codOrc), produto: self.produtosCarrinho[i].codProduto as Int, value: self.produtosCarrinho[i].valorProduto,  completionHander: { (httpCode, error) in
                         if error != nil {
                             print("Erro")
                         } else {
-                            httpCode
                             
                         }
                     })
@@ -100,9 +99,23 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
                 OperationQueue.main.addOperation {
                     let addAlerta = UIAlertController(title: "Carrinho", message: "Um novo orçamento foi gerado com sucesso!", preferredStyle: UIAlertControllerStyle.alert)
                     
-                    addAlerta.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                    
+                    addAlerta.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+                        self.produtosCarrinho.removeAll()
+                        self.tableCarrinho.reloadData()
+                        self.principalController?.produtosCarrinho.removeAll()
+                        
+                        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+                        
+                        let viewController = UIStoryboard(name: "Principal", bundle: nil).instantiateViewController(withIdentifier: "principalID") as! PrincipalController
+                        
+                        appDelegate.window?.rootViewController = viewController
+                        appDelegate.window?.makeKeyAndVisible()
+                        
+                    }))
                     self.present(addAlerta, animated: true, completion: nil)
+                    
+                    
+                    
                 }
             }
         })
