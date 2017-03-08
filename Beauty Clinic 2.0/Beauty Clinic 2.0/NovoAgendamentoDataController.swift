@@ -16,10 +16,17 @@ class NovoAgendamentoDataController: UIViewController, UITableViewDelegate, UITa
     var novoAgendamento : NovoAgendamento!
     var horarios: Array<Horario> = []
     var mainController : AgendamentosController!
+//    
+//    let images = [#imageLiteral(resourceName: "avatar_son.png"), #imageLiteral(resourceName: "avatar_mother.png"), #imageLiteral(resourceName: "avatar_father.png"), #imageLiteral(resourceName: "avatar_mother.png")]
+//    let names : Array<String> = ["Mother","Son", "Catty", "Susam"]
     
     override func viewDidLoad() {
         tableHorarios.delegate = self
         tableHorarios.dataSource = self
+        
+//        collectionHorarios.delegate = self
+//        collectionHorarios.dataSource = self
+        
         tableHorarios.separatorStyle = UITableViewCellSeparatorStyle.none
    
         let dateFormatter = DateFormatter()
@@ -42,7 +49,29 @@ class NovoAgendamentoDataController: UIViewController, UITableViewDelegate, UITa
         
         loadHorarios(codeProc: String(describing: code!), data: date)
     }
-
+    
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 4
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        
+//        
+//        print("Name : " + names[indexPath.item])
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        
+//        let cell: ProfileCell = collectionDependents.dequeueReusableCell(withReuseIdentifier: "profileCell", for: indexPath as IndexPath) as!
+//        
+//        cell.nameDependent.text = names[indexPath.item]
+//        cell.imageDependent.image = images[indexPath.item]
+//        
+//        Util.roundedImage(image: cell.imageDependent, cornerRadius: 20, borderWidth: 2)
+//        
+//        return cell
+//        
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return horarios.count

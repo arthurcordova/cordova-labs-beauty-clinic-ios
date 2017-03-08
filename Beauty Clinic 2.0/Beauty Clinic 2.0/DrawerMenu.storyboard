@@ -328,6 +328,7 @@
                     </view>
                     <connections>
                         <outlet property="labelNome" destination="uWi-kJ-31j" id="uOm-nM-xAd"/>
+                        <outlet property="mainView" destination="JSR-TM-fNl" id="awo-cU-aS1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l8V-xc-8no" userLabel="First Responder" sceneMemberID="firstResponder"/>

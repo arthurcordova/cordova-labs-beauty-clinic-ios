@@ -8,16 +8,72 @@
 
 import UIKit
 
-class DrawerMenuController: UIViewController {
+class DrawerMenuController: UIViewController /*, UIGestureRecognizerDelegate */ {
     
     @IBOutlet var labelNome: UILabel!
+    @IBOutlet var mainView: UIView!
     
     var pessoa : Pessoa? = nil
     var principalController: PrincipalController?
+    var centerX : CGFloat!
     
     override func viewDidLoad() {
         
         labelNome.text = pessoa?.nome
+        
+//        //Left Close View
+//        centerX = CGFloat()
+//        centerX = self.view.center.x - 10
+//        
+//        let edgeLeftGesture =  UIPanGestureRecognizer(target:self, action: #selector(self.leftCloseView(sender:)))
+//        edgeLeftGesture.delegate = self
+//        self.mainView.addGestureRecognizer(edgeLeftGesture)
+
+    }
+    
+    func leftCloseView (sender : UIPanGestureRecognizer) {
+        
+        let startPoint = sender.location(in: mainView)
+        let point = sender.translation(in: mainView)
+        let velocity = sender.velocity(in: mainView)
+        
+        if ((velocity.x <  0) || (velocity.y != 0  && velocity.x < 0)) {
+            
+            if  (sender.state == UIGestureRecognizerState.began ||
+                sender.state == UIGestureRecognizerState.changed) {
+                mainView.center = CGPoint(x: centerX + CGFloat(point.x), y: self.mainView.center.y)
+                
+                
+            } else  if sender.state == UIGestureRecognizerState.ended {
+                
+                let distance =  startPoint.x + point.x
+                
+                if  velocity.x < (-1500) {
+                    UIView.animate(withDuration: 3, animations: {
+                        self.dismiss(animated: false, completion: nil)
+                    })
+                    
+                } else if (distance < 30 && startPoint.x > (self.mainView.frame.width / 2) )  {
+                    
+                    UIView.animate(withDuration: 0.3, animations: {
+                        self.dismiss(animated: false, completion: nil)
+                    })
+                }
+                
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.mainView.center = CGPoint(x: self.centerX, y: self.mainView.center.y)
+                })
+                
+            }
+        } else {
+            if sender.state == UIGestureRecognizerState.ended {
+                
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.mainView.center = CGPoint(x: self.centerX, y: self.mainView.center.y)
+                })
+            }
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
