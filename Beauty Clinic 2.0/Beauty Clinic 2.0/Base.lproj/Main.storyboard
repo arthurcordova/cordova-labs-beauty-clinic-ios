@@ -11,7 +11,7 @@
         <!--Login Controller-->
         <scene sceneID="hbv-Xy-ecv">
             <objects>
-                <viewController id="ieC-oB-doa" customClass="LoginController" customModule="Beauty_Clinic_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginID" id="ieC-oB-doa" customClass="LoginController" customModule="Beauty_Clinic_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zVt-rK-dEn"/>
                         <viewControllerLayoutGuide type="bottom" id="eyG-Dh-fhr"/>

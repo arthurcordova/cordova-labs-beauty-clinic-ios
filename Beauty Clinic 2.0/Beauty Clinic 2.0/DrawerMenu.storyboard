@@ -235,6 +235,9 @@
                                         <state key="normal" title="Sair">
                                             <color key="titleColor" red="1" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="logOutAction:" destination="6K8-bs-gfv" eventType="touchUpInside" id="1mU-sD-erf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9l-wx-4k8">
                                         <rect key="frame" x="198" y="441" width="54" height="38"/>

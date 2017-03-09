@@ -108,4 +108,19 @@ class DrawerMenuController: UIViewController /*, UIGestureRecognizerDelegate */ 
         }
     }
     
+    @IBAction func logOutAction(_ sender: Any) {
+        OperationQueue.main.addOperation {
+            let mainNavigator = UINavigationController()
+            
+            let principal: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = principal.instantiateViewController(withIdentifier: "loginID") as! LoginController
+            
+            mainNavigator.setNavigationBarHidden(true, animated: false)
+            mainNavigator.pushViewController(controller, animated: true)
+            
+            let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+            appDelegate.window!.rootViewController = mainNavigator
+        }
+    }
+    
 }
