@@ -28,53 +28,65 @@ class LoginController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func backToLogin(segue:UIStoryboardSegue) {
-    
+        
     }
     
     @IBAction func doLogin(_ sender: UIButton) {
         
-        let usuario = Usuario()
-        usuario.cpf = inputLogin.text!
-        usuario.senha = inputSenha.text!
-        
-        
-        WS.getRequestLogin(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/login", user: usuario, completionHander: { (dic, msg, error) in
-            if error != nil {
-                print(dic)
-            } else {
-                
-                if msg != "" {
-                    OperationQueue.main.addOperation {
-                        let addAlerta = UIAlertController(title: "Erro", message: msg, preferredStyle: UIAlertControllerStyle.alert)
-                        addAlerta.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
-                        self.present(addAlerta, animated: true, completion: nil)
-                        
-                    }
- 
+        if inputLogin.text != "" && inputSenha.text != "" {
+            let usuario = Usuario()
+            usuario.cpf = inputLogin.text!
+            usuario.senha = inputSenha.text!
+            
+            
+            WS.getRequestLogin(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/login", user: usuario, completionHander: { (dic, msg, error) in
+                if error != nil {
+                    print(dic)
                 } else {
-                    let pessoa = Pessoa()
-                    pessoa.nome = dic["fantasia"] as! String
-                    pessoa.cpf = dic["cpfcnpj"] as! String
-                    pessoa.code = dic["codcliente"] as! Int
                     
-                    OperationQueue.main.addOperation {
-                        let mainNavigator = UINavigationController()
+                    if msg != "" {
+                        OperationQueue.main.addOperation {
+                            let addAlerta = UIAlertController(title: "Erro", message: msg, preferredStyle: UIAlertControllerStyle.alert)
+                            addAlerta.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+                            self.present(addAlerta, animated: true, completion: nil)
+                            
+                        }
                         
-                        let principal: UIStoryboard = UIStoryboard(name: "Principal", bundle: nil)
-                        let controller = principal.instantiateViewController(withIdentifier: "principalID") as! PrincipalController
-                        controller.pessoa = pessoa
+                    } else {
+                        let pessoa = Pessoa()
+                        pessoa.nome = dic["fantasia"] as! String
+                        pessoa.cpf = dic["cpfcnpj"] as! String
+                        pessoa.code = dic["codcliente"] as! Int
                         
-                        mainNavigator.setNavigationBarHidden(true, animated: false)
-                        
-                        mainNavigator.pushViewController(controller, animated: true)
-                        
-                        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
-                        appDelegate.window!.rootViewController = mainNavigator
-                        
+                        OperationQueue.main.addOperation {
+                            let mainNavigator = UINavigationController()
+                            
+                            let principal: UIStoryboard = UIStoryboard(name: "Principal", bundle: nil)
+                            let controller = principal.instantiateViewController(withIdentifier: "principalID") as! PrincipalController
+                            controller.pessoa = pessoa
+                            
+                            mainNavigator.setNavigationBarHidden(true, animated: false)
+                            
+                            mainNavigator.pushViewController(controller, animated: true)
+                            
+                            let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+                            appDelegate.window!.rootViewController = mainNavigator
+                            
+                        }
                     }
                 }
+            })
+        } else {
+            OperationQueue.main.addOperation {
+                let addAlerta = UIAlertController(title: "Erro", message: "Por favor, informe seu login e senha para continuar.", preferredStyle: UIAlertControllerStyle.alert)
+                addAlerta.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+                self.present(addAlerta, animated: true, completion: nil)
+                
             }
-        })
+
+        }
+        
+        
     }
     
     @IBAction func backView(segue:UIStoryboardSegue) {

@@ -442,7 +442,7 @@
                   moduleName = "Beauty Clinic 2.0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/acstapassoli/Mobile/IOS/cordova-labs-beauty-clinic-ios/Beauty%20Clinic%202.0/Beauty%20Clinic%202.0/WS.swift"
-                  timestampString = "510724169.566795"
+                  timestampString = "510724570.032938"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "256"
@@ -457,7 +457,7 @@
                   moduleName = "Beauty Clinic 2.0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/acstapassoli/Mobile/IOS/cordova-labs-beauty-clinic-ios/Beauty%20Clinic%202.0/Beauty%20Clinic%202.0/WS.swift"
-                  timestampString = "510724169.56885"
+                  timestampString = "510724570.035346"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "256"
@@ -505,22 +505,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Beauty Clinic 2.0/LoginController.swift"
-            timestampString = "510720220.767002"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "doLogin(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Beauty Clinic 2.0/WS.swift"
             timestampString = "510723986.364276"
             startingColumnNumber = "9223372036854775807"
@@ -550,7 +534,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Beauty Clinic 2.0/UsuarioService.swift"
@@ -563,7 +547,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Beauty_Clinic_2_0.UsuarioService.(novo (usuario : Beauty_Clinic_2_0.Usuario) -&gt; ()).(closure #1)"
@@ -578,7 +562,7 @@
                   offsetFromSymbolStart = "32">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Beauty_Clinic_2_0.UsuarioService.(novo (usuario : Beauty_Clinic_2_0.Usuario) -&gt; ()).(closure #1)"
@@ -598,7 +582,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Beauty Clinic 2.0/UsuarioService.swift"
@@ -611,7 +595,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Beauty_Clinic_2_0.UsuarioService.(novo (usuario : Beauty_Clinic_2_0.Usuario) -&gt; ()).(closure #1)"
@@ -626,7 +610,7 @@
                   offsetFromSymbolStart = "216">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Beauty_Clinic_2_0.UsuarioService.(novo (usuario : Beauty_Clinic_2_0.Usuario) -&gt; ()).(closure #1)"
