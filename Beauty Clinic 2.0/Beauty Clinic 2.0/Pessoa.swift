@@ -13,5 +13,6 @@ class Pessoa {
     var nome :String = ""
     var code : Int = 0
     var cpf : String = ""
+    var erro : String!
     
 }

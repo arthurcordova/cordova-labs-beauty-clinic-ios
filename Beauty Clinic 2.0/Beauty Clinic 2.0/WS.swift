@@ -11,7 +11,7 @@ import Foundation
 class WS: NSObject {
     
     
-    static func getRequestLogin(urlBase:String, user : Usuario, completionHander: @escaping (Dictionary<String,AnyObject>, Error?) -> Void) {
+    static func getRequestLogin(urlBase:String, user : Usuario, completionHander: @escaping (Dictionary<String,AnyObject>, String, Error?) -> Void) {
         
         let url     = URL(string: urlBase)
         var request = URLRequest(url:url!)
@@ -33,12 +33,23 @@ class WS: NSObject {
                 
                 do {
                     
-                    let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options:.allowFragments) as! Dictionary<String,AnyObject>
+                    let nullUser = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) as! String
+                    print("Uuario nulo:" + nullUser)
                     
-                    print(jsonResult)
-                    
-                    completionHander(jsonResult as Dictionary<String,AnyObject >,nil)
-                    
+                    if nullUser != "null" {
+                        let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options:.allowFragments) as! Dictionary<String,AnyObject>
+                        
+                        print(jsonResult)
+                        
+                        completionHander(jsonResult as Dictionary<String,AnyObject >, "" ,nil)
+                    } else {
+                        var postDict = Dictionary<String,AnyObject>()
+                        postDict["fantasia"]=NSNull()
+                        postDict["cpfcnpj"]=NSNull()
+                        postDict["codcliente"]=NSNull()
+                        
+                        completionHander(postDict, "Usuário ou senha inválidos.",nil)
+                    }
                     
                 } catch {
                     if let httpResponse = response as? HTTPURLResponse {
