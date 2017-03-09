@@ -68,12 +68,43 @@ class CadastroController: UIViewController, UITextFieldDelegate {
     }
     
     func enviar() -> Void {
-        let service = UsuarioService(viewController: self)
+//        let service = UsuarioService(viewController: self)
         let usuario = Usuario()
         usuario.cpf = inputCpf.text!
         usuario.senha = inputSenha.text!
         usuario.nome = inputNome.text!
-        let httpStatus = service.novo(usuario: usuario)
-        print("HTTP STATUS \(httpStatus)")
+        WS.newUser(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/cadcliente", user: usuario, completionHander: { (httpCode, error) in
+            if error != nil {
+                print(httpCode)
+            } else {
+                if httpCode == 200 {
+                    OperationQueue.main.addOperation {
+                        let addAlerta = UIAlertController(title: "Cadastro", message: "Cadastro realizado com sucesso!", preferredStyle: UIAlertControllerStyle.alert)
+                        
+                        addAlerta.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+                            let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+                            
+                            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginID") as! LoginController
+                        
+                            appDelegate.window?.rootViewController = viewController
+                            appDelegate.window?.makeKeyAndVisible()
+                            
+                        }))
+                        self.present(addAlerta, animated: true, completion: nil)
+                    }
+                    
+                } else {
+                    OperationQueue.main.addOperation {
+                        let addAlerta = UIAlertController(title: "Cadastro", message: "Erro. Não foi possível realizar o cadastro!", preferredStyle: UIAlertControllerStyle.alert)
+                        
+                        addAlerta.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+                        self.present(addAlerta, animated: true, completion: nil)
+                    }
+                }
+            }
+        })
+        
+//        let httpStatus = service.novo(usuario: usuario)
+//        print("HTTP STATUS \(httpStatus)")
     }
 }

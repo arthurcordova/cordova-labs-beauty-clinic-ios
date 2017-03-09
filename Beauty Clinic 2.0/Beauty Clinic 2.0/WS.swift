@@ -10,6 +10,38 @@ import Foundation
 
 class WS: NSObject {
     
+    static func newUser(urlBase:String, user : Usuario, completionHander: @escaping (_ httpCode: Int , Error?) -> Void) {
+        
+        let url     = URL(string: urlBase)
+        var request = URLRequest(url:url!)
+      
+        let params = ["cpfcnpj":user.cpf as AnyObject,
+                      "senha":user.senha as AnyObject,
+                      "nome":user.nome as AnyObject,
+                      "opcad":user.opcao as AnyObject,
+                      "tipopessoa":user.tipoPessoa as AnyObject,
+                      "codFilial":3 as AnyObject] as Dictionary<String, AnyObject>
+        
+        do {
+            request.httpMethod = "POST"
+            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue("application/json", forHTTPHeaderField: "Accept")
+        } catch let error as NSError {
+            print("erro ao inicializar json: \(error.localizedDescription)")
+        }
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
+            
+            if let httpResponse = response as? HTTPURLResponse {
+                print(httpResponse.statusCode)
+                completionHander(httpResponse.statusCode as Int, nil)
+            }
+
+            
+        }
+        task.resume()
+    }
     
     static func getRequestLogin(urlBase:String, user : Usuario, completionHander: @escaping (Dictionary<String,AnyObject>, String, Error?) -> Void) {
         
