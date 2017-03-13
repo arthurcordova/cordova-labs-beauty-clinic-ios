@@ -10,6 +10,7 @@
 		F42136C81E6E354300A636DC /* InformacaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42136C71E6E354300A636DC /* InformacaoController.swift */; };
 		F450E8CD1E66222700C6E47B /* WS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450E8CC1E66222700C6E47B /* WS.swift */; };
 		F450E8D11E664F0900C6E47B /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450E8D01E664F0900C6E47B /* Pessoa.swift */; };
+		F451A1B11E77511900C451B1 /* RedefinirSenhaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451A1B01E77511900C451B1 /* RedefinirSenhaController.swift */; };
 		F460E3C61E678367007924C5 /* DetalheMensagemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E3C51E678367007924C5 /* DetalheMensagemController.swift */; };
 		F460E3C81E679590007924C5 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E3C71E679590007924C5 /* Produto.swift */; };
 		F460E3CA1E679623007924C5 /* ProdutosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E3C91E679623007924C5 /* ProdutosController.swift */; };
@@ -71,6 +72,7 @@
 		F42136C71E6E354300A636DC /* InformacaoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacaoController.swift; sourceTree = "<group>"; };
 		F450E8CC1E66222700C6E47B /* WS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WS.swift; sourceTree = "<group>"; };
 		F450E8D01E664F0900C6E47B /* Pessoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
+		F451A1B01E77511900C451B1 /* RedefinirSenhaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedefinirSenhaController.swift; sourceTree = "<group>"; };
 		F460E3C51E678367007924C5 /* DetalheMensagemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalheMensagemController.swift; sourceTree = "<group>"; };
 		F460E3C71E679590007924C5 /* Produto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
 		F460E3C91E679623007924C5 /* ProdutosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdutosController.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				F4ECCB901E6C9A9E00CE97BE /* NovoAgendamentoDataController.swift */,
 				F4ECCB941E6D0E2000CE97BE /* NovoAgendamentoConcluirController.swift */,
 				F42136C71E6E354300A636DC /* InformacaoController.swift */,
+				F451A1B01E77511900C451B1 /* RedefinirSenhaController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				F4ECCB7F1E6A1EEE00CE97BE /* CarrinhoController.swift in Sources */,
 				F4ECCB931E6D026F00CE97BE /* Horario.swift in Sources */,
 				F460E3C61E678367007924C5 /* DetalheMensagemController.swift in Sources */,
+				F451A1B11E77511900C451B1 /* RedefinirSenhaController.swift in Sources */,
 				F460E3CA1E679623007924C5 /* ProdutosController.swift in Sources */,
 				F46944551E5D2BC900AA9F2E /* ServiceConfig.swift in Sources */,
 				F460E3C81E679590007924C5 /* Produto.swift in Sources */,

@@ -19,6 +19,52 @@ class CadastroController: UIViewController, UITextFieldDelegate {
     
     var httpStatusCode = 0
     
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        if (textField == inputCpf) {
+            //strSenha.becomeFirstResponder()
+            textField.resignFirstResponder()
+            return true
+        }
+        return false
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        if (textField == inputCpf) {
+            
+            let strCpf = textField.text!
+            
+            if (textField.text!.isEmpty) {
+                return true
+            }
+            
+            switch strCpf.characters.count {
+            case 3,6:
+                if (string != "") && (!textField.text!.hasSuffix(".")) {
+                    textField.text = textField.text!+"."
+                }
+                return true
+            case 9:
+                if (string != "") && (!textField.text!.hasSuffix("-")){
+                    textField.text = textField.text!+"-"
+                }
+                return true
+            case 12:
+                if (string != "") {
+                    return false
+                } else {
+                    return true
+                }
+                
+            default: true
+            }
+            return true
+        } else {
+            return true
+        }
+    }
+    
     override func viewDidLoad() {
         progress.stopAnimating()
         viewMsg.layer.isHidden = true
@@ -63,9 +109,25 @@ class CadastroController: UIViewController, UITextFieldDelegate {
         // Do not add a line break
         return false
     }
+    
     @IBAction func btnEnviarAction(_ sender: UIBarButtonItem) {
         enviar()
     }
+    
+    @IBAction func check(_ sender: UITextField) {
+        let max = 11
+        var text : String!
+        text = sender.text
+        let editLenght = text.characters.count
+        if (editLenght <= max){
+            print("OK")
+        } else {
+            self.view.endEditing(true)
+        }
+
+    }
+    @IBAction func checkLenght(_ sender: UITextField) {
+           }
     
     func enviar() -> Void {
 //        let service = UsuarioService(viewController: self)

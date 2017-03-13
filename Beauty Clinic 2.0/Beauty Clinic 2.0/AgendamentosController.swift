@@ -96,6 +96,11 @@ class AgendamentosController: UIViewController, UITableViewDelegate, UITableView
         
     }
 
-    
+    @IBAction func backView(_ sender: Any) {
+        OperationQueue.main.addOperation {
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+    }
     
 }
