@@ -33,7 +33,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="ic_arrow_left" id="BaN-bc-Ubc">
                                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <segue destination="frF-Ui-OFw" kind="unwind" unwindAction="backToPrincipalWithSegue:" id="HKP-Wh-8Z8"/>
+                                                <action selector="backView:" destination="Uc0-t4-sjk" id="KMj-hb-LXR"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Finalizar" style="done" id="ajS-Rm-QYO">
@@ -114,7 +114,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIk-MK-uir" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="frF-Ui-OFw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-314.39999999999998" y="168.6656671664168"/>
         </scene>

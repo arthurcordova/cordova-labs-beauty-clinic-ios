@@ -15,6 +15,7 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
     @IBOutlet var buttonFinalizar: UIBarButtonItem!
     
     var produtosCarrinho: Array<Produto> = []
+    var groupProducts: Array<Produto> = []
     var pessoa : Pessoa!
     var totalValue: NSNumber!
     var principalController: PrincipalController!
@@ -24,23 +25,61 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
         tableCarrinho.dataSource = self
         tableCarrinho.separatorStyle = UITableViewCellSeparatorStyle.none
         
+        groupProducts.removeAll()
+        
+        self.loadTotal()
+        var sum :Float = 0
+        var position : Int = 0
+        var newProd : Produto!
+        var contains = false
+        for prod : Produto in produtosCarrinho {
+            
+            sum = 0
+            for var i in 0..<produtosCarrinho.count {
+                if (prod.codProduto == produtosCarrinho[i].codProduto){
+                    sum += produtosCarrinho[i].valorProduto as Float!
+                }
+            }
+            
+            
+            for var i in 0..<groupProducts.count {
+                if (prod.codProduto == groupProducts[i].codProduto){
+                    contains = true
+                    position = i
+                    break
+                }
+            }
+            
+            if (!contains){
+                newProd = Produto()
+                newProd.codProduto = prod.codProduto
+                newProd.descricao = prod.descricao
+                newProd.tipoExame = prod.tipoExame
+                newProd.valorProduto = sum as NSNumber!
+                groupProducts.append(newProd)
+            } else {
+//                groupProducts.remove(at: position)
+                groupProducts[position].valorProduto = sum as NSNumber!
+            }
+            contains = false
+        }
+        sum = 0
         tableCarrinho.register(UITableViewCell.self, forCellReuseIdentifier: "cellCarrinho")
         let xib = UINib(nibName: "MensagemCellTableViewCell", bundle: nil)
         tableCarrinho.register(xib, forCellReuseIdentifier: "cellCarrinho")
         
-        self.loadTotal()
+        
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return produtosCarrinho.count
+        return groupProducts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
+        
         let cell:MensagemCellTableViewCell = self.tableCarrinho.dequeueReusableCell(withIdentifier: "cellCarrinho") as! MensagemCellTableViewCell
         cell.selectionStyle = UITableViewCellSelectionStyle.none
-        let produto = produtosCarrinho[indexPath.row]
+        let produto = groupProducts[indexPath.row]
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.locale = NSLocale(localeIdentifier: "pt_BR") as Locale!
@@ -52,17 +91,17 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-//        OperationQueue.main.addOperation {
-//            let addAlerta = UIAlertController(title: "Carrinho", message: "Deseja adicionar o item \(self.produtos[indexPath.row].descricao!) ao carrinho ?", preferredStyle: UIAlertControllerStyle.alert)
-//            
-//            addAlerta.addAction(UIAlertAction(title: "Sim", style: .default, handler: { (action: UIAlertAction!) in
-//                self.produtosCarrinho.append(self.produtos[indexPath.row])
-//            }))
-//            
-//            addAlerta.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
-//            self.present(addAlerta, animated: true, completion: nil)
-//            self.produtosCarrinho.deselectRow(at: indexPath, animated:true)
-//        }
+        //        OperationQueue.main.addOperation {
+        //            let addAlerta = UIAlertController(title: "Carrinho", message: "Deseja adicionar o item \(self.produtos[indexPath.row].descricao!) ao carrinho ?", preferredStyle: UIAlertControllerStyle.alert)
+        //
+        //            addAlerta.addAction(UIAlertAction(title: "Sim", style: .default, handler: { (action: UIAlertAction!) in
+        //                self.produtosCarrinho.append(self.produtos[indexPath.row])
+        //            }))
+        //
+        //            addAlerta.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
+        //            self.present(addAlerta, animated: true, completion: nil)
+        //            self.produtosCarrinho.deselectRow(at: indexPath, animated:true)
+        //        }
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -122,11 +161,17 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
                 }
             }
         })
-
+        
+    }
+    
+    @IBAction func backView(_ sender: UIBarButtonItem) {
+        self.groupProducts.removeAll()
+        self.produtosCarrinho.removeAll()
+        self.dismiss(animated: true, completion: nil)
     }
     
     func loadTotal(){
-       
+        
         var value :Float = 0
         for var i in 0..<produtosCarrinho.count {
             value += produtosCarrinho[i].valorProduto as Float!
