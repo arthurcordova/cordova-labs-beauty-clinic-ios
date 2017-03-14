@@ -16,6 +16,7 @@ class NovoAgendamentoDataController: UIViewController, UITableViewDelegate, UITa
     var novoAgendamento : NovoAgendamento!
     var horarios: Array<Horario> = []
     var mainController : AgendamentosController!
+    var primeiroController : NovoAgendamentoProcedimentoController!
 //    
 //    let images = [#imageLiteral(resourceName: "avatar_son.png"), #imageLiteral(resourceName: "avatar_mother.png"), #imageLiteral(resourceName: "avatar_father.png"), #imageLiteral(resourceName: "avatar_mother.png")]
 //    let names : Array<String> = ["Mother","Son", "Catty", "Susam"]
@@ -103,6 +104,8 @@ class NovoAgendamentoDataController: UIViewController, UITableViewDelegate, UITa
             let novoAgendamentoConcluir = segue.destination as! NovoAgendamentoConcluirController
             novoAgendamentoConcluir.novoAgendamento = self.novoAgendamento
             novoAgendamentoConcluir.mainController = self.mainController
+            novoAgendamentoConcluir.primeiroController = self.primeiroController
+            novoAgendamentoConcluir.segundoController = self
         }
     }
    

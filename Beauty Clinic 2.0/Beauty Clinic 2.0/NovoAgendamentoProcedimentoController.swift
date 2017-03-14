@@ -61,6 +61,7 @@ class NovoAgendamentoProcedimentoController: UIViewController, UITableViewDelega
             let novoAgendamentoData = segue.destination as! NovoAgendamentoDataController
             novoAgendamentoData.novoAgendamento = self.novoAgendamento
             novoAgendamentoData.mainController = self.mainController
+            novoAgendamentoData.primeiroController = self
 
         }
     }
@@ -88,4 +89,10 @@ class NovoAgendamentoProcedimentoController: UIViewController, UITableViewDelega
             }
         }
     }
+    
+    
+    func closeView() {
+        dismiss(animated: false, completion: nil)
+    }
+    
 }

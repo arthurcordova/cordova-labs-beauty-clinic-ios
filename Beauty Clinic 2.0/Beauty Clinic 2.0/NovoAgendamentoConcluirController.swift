@@ -16,6 +16,8 @@ class NovoAgendamentoConcluirController: UIViewController {
     
     var novoAgendamento : NovoAgendamento!
     var mainController : AgendamentosController!
+    var primeiroController : NovoAgendamentoProcedimentoController!
+    var segundoController : NovoAgendamentoDataController!
     
     override func viewDidLoad() {
         labelProcedimento.text = novoAgendamento.produto.descricao
@@ -34,14 +36,16 @@ class NovoAgendamentoConcluirController: UIViewController {
                         let addAlerta = UIAlertController(title: "Agendamento", message: "Agendamento realizado com sucesso!", preferredStyle: UIAlertControllerStyle.alert)
                         
                         addAlerta.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
-                            let appDelegate = UIApplication.shared.delegate! as! AppDelegate
-                            
                             let viewController = UIStoryboard(name: "Agendamentos", bundle: nil).instantiateViewController(withIdentifier: "agendamentosID") as! AgendamentosController
                             
                             viewController.pessoa = self.mainController.pessoa
-                            
-                            appDelegate.window?.rootViewController = viewController
-                            appDelegate.window?.makeKeyAndVisible()
+     
+                                self.dismiss(animated: false, completion: {
+                                    self.segundoController.dismiss(animated: false, completion: {
+                                        self.primeiroController.dismiss(animated: false, completion: nil)
+                                    })
+                                })
+
 
                         }))
                         self.present(addAlerta, animated: true, completion: nil)
