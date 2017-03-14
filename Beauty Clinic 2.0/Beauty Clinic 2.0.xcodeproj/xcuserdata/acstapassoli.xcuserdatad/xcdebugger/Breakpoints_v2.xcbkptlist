@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Beauty Clinic 2.0/PrincipalController.swift"
-            timestampString = "510550617.733025"
+            timestampString = "511145846.446315"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "loadMensagens(index:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -688,22 +688,6 @@
             startingLineNumber = "119"
             endingLineNumber = "119"
             landmarkName = "check(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Beauty Clinic 2.0/AgendamentosController.swift"
-            timestampString = "510955497.609445"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "backView(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

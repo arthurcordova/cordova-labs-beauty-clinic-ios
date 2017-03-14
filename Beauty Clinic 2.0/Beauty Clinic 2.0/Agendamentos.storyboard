@@ -365,6 +365,7 @@
                                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="backView:" destination="fZm-of-icu" id="TOr-5a-TuI"/>
+                                                <segue destination="IpQ-GS-oJ4" kind="unwind" unwindAction="backToPrincipalWithSegue:" id="UOj-eJ-3Ob"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="TEj-3G-u9E">
@@ -413,6 +414,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3y-YR-mia" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="IpQ-GS-oJ4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-234.40000000000001" y="-69.715142428785612"/>
         </scene>

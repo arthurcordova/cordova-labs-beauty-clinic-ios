@@ -108,6 +108,7 @@ class PrincipalController: UIViewController  {
     }
     
     func loadMensagens(index: Int){
+        self.mensagens.removeAll()
         let code = String(describing: pessoa!.code)
         WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/msgsporcliente/\(code)") { (dic, error) in
             if (error != nil){
@@ -138,6 +139,7 @@ class PrincipalController: UIViewController  {
     }
     
     func loadOrcamentos(index: Int){
+        self.orcamentos.removeAll()
         let code = String(describing: pessoa!.code)
         WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/orcporcliente/\(code)") { (dic, error) in
             if (error != nil){
