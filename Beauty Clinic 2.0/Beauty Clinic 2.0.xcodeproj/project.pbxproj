@@ -40,6 +40,7 @@
 		F48150DA1E63042E00CEE75B /* MensagemCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48150D81E63042E00CEE75B /* MensagemCellTableViewCell.swift */; };
 		F48150DB1E63042E00CEE75B /* MensagemCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48150D91E63042E00CEE75B /* MensagemCellTableViewCell.xib */; };
 		F48150DD1E6314AB00CEE75B /* Mensagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48150DC1E6314AB00CEE75B /* Mensagem.swift */; };
+		F49208451E78DD2500FA0FFC /* DetalheCarrinhoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49208441E78DD2500FA0FFC /* DetalheCarrinhoController.swift */; };
 		F49B475D1E61C0D400D207AE /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49B475C1E61C0D400D207AE /* Image.xcassets */; };
 		F4B4593F1E5FCB130059C247 /* ic_check_circle.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */; };
 		F4D7014B1E611ECC006C47AB /* Principal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D7014A1E611ECC006C47AB /* Principal.storyboard */; };
@@ -102,6 +103,7 @@
 		F48150D81E63042E00CEE75B /* MensagemCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MensagemCellTableViewCell.swift; sourceTree = "<group>"; };
 		F48150D91E63042E00CEE75B /* MensagemCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MensagemCellTableViewCell.xib; sourceTree = "<group>"; };
 		F48150DC1E6314AB00CEE75B /* Mensagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mensagem.swift; sourceTree = "<group>"; };
+		F49208441E78DD2500FA0FFC /* DetalheCarrinhoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalheCarrinhoController.swift; sourceTree = "<group>"; };
 		F49B475C1E61C0D400D207AE /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		F4B4593E1E5FCB130059C247 /* ic_check_circle.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_check_circle.imageset; sourceTree = "<group>"; };
 		F4D7014A1E611ECC006C47AB /* Principal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Principal.storyboard; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				F4ECCB941E6D0E2000CE97BE /* NovoAgendamentoConcluirController.swift */,
 				F42136C71E6E354300A636DC /* InformacaoController.swift */,
 				F451A1B01E77511900C451B1 /* RedefinirSenhaController.swift */,
+				F49208441E78DD2500FA0FFC /* DetalheCarrinhoController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				F460E3D51E67B2B7007924C5 /* OrcamentoTableViewCell.swift in Sources */,
 				F460E3D21E67AF9A007924C5 /* Orcamento.swift in Sources */,
 				F4D701591E612D14006C47AB /* DrawerMenuController.swift in Sources */,
+				F49208451E78DD2500FA0FFC /* DetalheCarrinhoController.swift in Sources */,
 				F460E3D01E67AE36007924C5 /* OrcamentoController.swift in Sources */,
 				F4ECCB881E6C7AEF00CE97BE /* AgendamentoTableViewCell.swift in Sources */,
 				F46944581E5D2F0400AA9F2E /* Usuario.swift in Sources */,

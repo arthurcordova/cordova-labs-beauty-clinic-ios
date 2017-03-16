@@ -14,6 +14,7 @@ class Produto: NSObject {
     var descricao: String!
     var valorProduto: NSNumber!
     var tipoExame: String!
+    var qtd: Int!
     
     init(json: NSDictionary) {
         super.init()

@@ -12,6 +12,7 @@ class MensagemCellTableViewCell: UITableViewCell {
     
     @IBOutlet var labelTitulo: UILabel!
     @IBOutlet var labelMensagem: UILabel!
+    @IBOutlet var labelQtd: UILabel!
     
 
     override func awakeFromNib() {

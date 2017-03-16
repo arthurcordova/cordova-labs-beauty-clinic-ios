@@ -19,6 +19,7 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
     var pessoa : Pessoa!
     var totalValue: NSNumber!
     var principalController: PrincipalController!
+    var productSelected : Produto!
     
     override func viewDidLoad() {
         tableCarrinho.delegate = self
@@ -28,42 +29,48 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
         groupProducts.removeAll()
         
         self.loadTotal()
-        var sum :Float = 0
-        var position : Int = 0
-        var newProd : Produto!
-        var contains = false
-        for prod : Produto in produtosCarrinho {
-            
-            sum = 0
-            for var i in 0..<produtosCarrinho.count {
-                if (prod.codProduto == produtosCarrinho[i].codProduto){
-                    sum += produtosCarrinho[i].valorProduto as Float!
-                }
-            }
-            
-            
-            for var i in 0..<groupProducts.count {
-                if (prod.codProduto == groupProducts[i].codProduto){
-                    contains = true
-                    position = i
-                    break
-                }
-            }
-            
-            if (!contains){
-                newProd = Produto()
-                newProd.codProduto = prod.codProduto
-                newProd.descricao = prod.descricao
-                newProd.tipoExame = prod.tipoExame
-                newProd.valorProduto = sum as NSNumber!
-                groupProducts.append(newProd)
-            } else {
-//                groupProducts.remove(at: position)
-                groupProducts[position].valorProduto = sum as NSNumber!
-            }
-            contains = false
-        }
-        sum = 0
+        self.group()
+//        var sum :Float = 0
+//        var count :Int = 0
+//        var position : Int = 0
+//        var newProd : Produto!
+//        var contains = false
+//        for prod : Produto in produtosCarrinho {
+//            
+//            sum = 0
+//            count = 0
+//            for var i in 0..<produtosCarrinho.count {
+//                if (prod.codProduto == produtosCarrinho[i].codProduto){
+//                    sum += produtosCarrinho[i].valorProduto as Float!
+//                    count += 1
+//                }
+//            }
+//            
+//            
+//            for var i in 0..<groupProducts.count {
+//                if (prod.codProduto == groupProducts[i].codProduto){
+//                    contains = true
+//                    position = i
+//                    break
+//                }
+//            }
+//            
+//            if (!contains){
+//                newProd = Produto()
+//                newProd.codProduto = prod.codProduto
+//                newProd.descricao = prod.descricao
+//                newProd.tipoExame = prod.tipoExame
+//                newProd.valorProduto = sum as NSNumber!
+//                newProd.qtd = count
+//                groupProducts.append(newProd)
+//            } else {
+////                groupProducts.remove(at: position)
+//                groupProducts[position].valorProduto = sum as NSNumber!
+//                groupProducts[position].qtd = count
+//            }
+//            contains = false
+//        }
+//        sum = 0
         tableCarrinho.register(UITableViewCell.self, forCellReuseIdentifier: "cellCarrinho")
         let xib = UINib(nibName: "MensagemCellTableViewCell", bundle: nil)
         tableCarrinho.register(xib, forCellReuseIdentifier: "cellCarrinho")
@@ -86,34 +93,65 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
         
         cell.labelTitulo.text = produto.descricao
         cell.labelMensagem.text = formatter.string(from: (produto.valorProduto)!)!
+        cell.labelQtd.text = "Quantidade: " + String(produto.qtd!)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        //        OperationQueue.main.addOperation {
-        //            let addAlerta = UIAlertController(title: "Carrinho", message: "Deseja adicionar o item \(self.produtos[indexPath.row].descricao!) ao carrinho ?", preferredStyle: UIAlertControllerStyle.alert)
-        //
-        //            addAlerta.addAction(UIAlertAction(title: "Sim", style: .default, handler: { (action: UIAlertAction!) in
-        //                self.produtosCarrinho.append(self.produtos[indexPath.row])
-        //            }))
-        //
-        //            addAlerta.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
-        //            self.present(addAlerta, animated: true, completion: nil)
-        //            self.produtosCarrinho.deselectRow(at: indexPath, animated:true)
-        //        }
+        self.productSelected = self.groupProducts[indexPath.row]
+        self.performSegue(withIdentifier: "segueTeste", sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "segueTeste" {
+            let detail = segue.destination as! DetalheCarrinhoController
+            detail.groupProd = self.productSelected
+            detail.controllerCarrinho = self
+        }
+        
+    }
+
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            self.produtosCarrinho.remove(at: indexPath.row)
-            self.principalController.produtosCarrinho.remove(at: indexPath.row)
+            
+            var indexes : Array<Int> = [];
+            let prod : Produto = groupProducts[indexPath.row]
+            
+            for var x in 0..<self.produtosCarrinho.count {
+                if (prod.codProduto == self.produtosCarrinho[x].codProduto){
+                    indexes.append(x)
+                }
+            }
+//            for ind : Int in indexes {
+//                self.produtosCarrinho.remove(at: ind)
+//            }
+//
+//            indexes.removeAll()
+//            for var x in 0..<self.principalController.produtosCarrinho.count {
+//                if (prod.codProduto == self.principalController.produtosCarrinho[x].codProduto){
+//                    indexes.append(x)
+//                }
+//            }
+//            for ind : Int in indexes {
+//                self.principalController.produtosCarrinho.remove(at: ind)
+//            }
+
+            self.groupProducts.remove(at: indexPath.row)
+            
+            
+//            self.produtosCarrinho.remove(at: indexPath.row)
+//            self.principalController.produtosCarrinho.remove(at: indexPath.row)
             self.tableCarrinho.deleteRows(at: [indexPath], with: .automatic)
+            
             OperationQueue.main.addOperation {
                 self.loadTotal()
             }
         }
     }
+    
+    
     
     @IBAction func finalizarAction(_ sender: Any) {
         let date = Date()
@@ -143,15 +181,16 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
                         self.tableCarrinho.reloadData()
                         self.principalController?.produtosCarrinho.removeAll()
                         
-                        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
-                        
-                        let viewController = UIStoryboard(name: "Principal", bundle: nil).instantiateViewController(withIdentifier: "principalID") as! PrincipalController
-                        
-                        viewController.pessoa = self.principalController.pessoa
-                        viewController.produtosCarrinho = self.principalController.produtosCarrinho
-                        
-                        appDelegate.window?.rootViewController = viewController
-                        appDelegate.window?.makeKeyAndVisible()
+//                        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+//                        
+//                        let viewController = UIStoryboard(name: "Principal", bundle: nil).instantiateViewController(withIdentifier: "principalID") as! PrincipalController
+//                        
+//                        viewController.pessoa = self.principalController.pessoa
+//                        viewController.produtosCarrinho = self.principalController.produtosCarrinho
+//                        
+//                        appDelegate.window?.rootViewController = viewController
+//                        appDelegate.window?.makeKeyAndVisible()
+                        self.dismiss(animated: true, completion: nil)
                         
                     }))
                     self.present(addAlerta, animated: true, completion: nil)
@@ -190,5 +229,49 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
         } else {
             buttonFinalizar.isEnabled = false
         }
+    }
+    
+    func group(){
+        var sum :Float = 0
+        var count :Int = 0
+        var position : Int = 0
+        var newProd : Produto!
+        var contains = false
+        for prod : Produto in produtosCarrinho {
+            
+            sum = 0
+            count = 0
+            for var i in 0..<produtosCarrinho.count {
+                if (prod.codProduto == produtosCarrinho[i].codProduto){
+                    sum += produtosCarrinho[i].valorProduto as Float!
+                    count += 1
+                }
+            }
+            
+            
+            for var i in 0..<groupProducts.count {
+                if (prod.codProduto == groupProducts[i].codProduto){
+                    contains = true
+                    position = i
+                    break
+                }
+            }
+            
+            if (!contains){
+                newProd = Produto()
+                newProd.codProduto = prod.codProduto
+                newProd.descricao = prod.descricao
+                newProd.tipoExame = prod.tipoExame
+                newProd.valorProduto = sum as NSNumber!
+                newProd.qtd = count
+                groupProducts.append(newProd)
+            } else {
+                //                groupProducts.remove(at: position)
+                groupProducts[position].valorProduto = sum as NSNumber!
+                groupProducts[position].qtd = count
+            }
+            contains = false
+        }
+        sum = 0
     }
 }
