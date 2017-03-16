@@ -27,6 +27,14 @@ class LoginController: UIViewController, UITextFieldDelegate {
         inputSenha.delegate = self
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let maxLength = 11
+        guard let text = textField.text else { return true }
+        let newLength = text.characters.count + string.characters.count - range.length
+        return newLength <= maxLength
+    }
+
+    
     @IBAction func backToLogin(segue:UIStoryboardSegue) {
         
     }
@@ -85,7 +93,6 @@ class LoginController: UIViewController, UITextFieldDelegate {
             }
 
         }
-        
         
     }
     

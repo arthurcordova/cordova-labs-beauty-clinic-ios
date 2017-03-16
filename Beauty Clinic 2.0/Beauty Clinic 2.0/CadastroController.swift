@@ -29,51 +29,59 @@ class CadastroController: UIViewController, UITextFieldDelegate {
         return false
     }
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        
-        if (textField == inputCpf) {
-            
-            let strCpf = textField.text!
-            
-            if (textField.text!.isEmpty) {
-                return true
-            }
-            
-            switch strCpf.characters.count {
-            case 3,6:
-                if (string != "") && (!textField.text!.hasSuffix(".")) {
-                    textField.text = textField.text!+"."
-                }
-                return true
-            case 9:
-                if (string != "") && (!textField.text!.hasSuffix("-")){
-                    textField.text = textField.text!+"-"
-                }
-                return true
-            case 12:
-                if (string != "") {
-                    return false
-                } else {
-                    return true
-                }
-                
-            default: true
-            }
-            return true
-        } else {
-            return true
-        }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let maxLength = 11
+        guard let text = textField.text else { return true }
+        let newLength = text.characters.count + string.characters.count - range.length
+        return newLength <= maxLength
     }
+    
+    
+//    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+//        
+//        if (textField == inputCpf) {
+//            
+//            let strCpf = textField.text!
+//            
+//            if (textField.text!.isEmpty) {
+//                return true
+//            }
+//            
+//            switch strCpf.characters.count {
+//            case 3,6:
+//                if (string != "") && (!textField.text!.hasSuffix(".")) {
+//                    textField.text = textField.text!+"."
+//                }
+//                return true
+//            case 9:
+//                if (string != "") && (!textField.text!.hasSuffix("-")){
+//                    textField.text = textField.text!+"-"
+//                }
+//                return true
+//            case 12:
+//                if (string != "") {
+//                    return false
+//                } else {
+//                    return true
+//                }
+//                
+//            default: true
+//            }
+//            return true
+//        } else {
+//            return true
+//        }
+//    }
     
     override func viewDidLoad() {
         progress.stopAnimating()
         viewMsg.layer.isHidden = true
         
-        inputNome.delegate = self
+//        inputNome.delegate = self
         inputNome.tag = 0
-        inputCpf.delegate = self
+//        inputCpf.delegate = self
         inputCpf.tag = 1
-        inputSenha.delegate = self
+//        inputSenha.delegate = self
         inputSenha.tag = 2
         
         designTextField(textField: inputNome)
@@ -113,21 +121,6 @@ class CadastroController: UIViewController, UITextFieldDelegate {
     @IBAction func btnEnviarAction(_ sender: UIBarButtonItem) {
         enviar()
     }
-    
-    @IBAction func check(_ sender: UITextField) {
-        let max = 11
-        var text : String!
-        text = sender.text
-        let editLenght = text.characters.count
-        if (editLenght <= max){
-            print("OK")
-        } else {
-            self.view.endEditing(true)
-        }
-
-    }
-    @IBAction func checkLenght(_ sender: UITextField) {
-           }
     
     func enviar() -> Void {
 //        let service = UsuarioService(viewController: self)
