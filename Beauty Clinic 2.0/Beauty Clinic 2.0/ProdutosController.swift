@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ProdutosController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate {
     
@@ -19,8 +20,11 @@ class ProdutosController: UIViewController, UITableViewDelegate, UITableViewData
     var model: Produto?
     var principalController: PrincipalController?
     var searchController :UISearchController!
+    var appDelegate : AppDelegate!
     
     override func viewDidLoad() {
+        appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
         tableProdutos.delegate = self
         tableProdutos.dataSource = self
         tableProdutos.separatorStyle = UITableViewCellSeparatorStyle.none
@@ -102,7 +106,35 @@ class ProdutosController: UIViewController, UITableViewDelegate, UITableViewData
             let addAlerta = UIAlertController(title: "Carrinho", message: "Deseja adicionar o item \(pro.descricao!) ao carrinho ?", preferredStyle: UIAlertControllerStyle.alert)
             
             addAlerta.addAction(UIAlertAction(title: "Sim", style: .default, handler: { (action: UIAlertAction!) in
+                
+                if #available(iOS 10.0, *) {
+                    let context = self.appDelegate.persistentContainer.viewContext
+                    let addProduct = NSEntityDescription.insertNewObject(forEntityName: "Carrinho", into: context)
+                    
+                    addProduct.setValue(pro.codProduto.description, forKey: "id")
+                    addProduct.setValue(pro.descricao, forKey: "desc")
+                    addProduct.setValue(pro.valorProduto.description, forKey: "value")
+                    addProduct.setValue(pro.tipoExame.description, forKey: "type")
+                    addProduct.setValue("1", forKey: "qtd")
+                    
+                    do {
+                        try context.save()
+                        print("Saved")
+                        
+                    } catch {
+                        print("ERROR Saved")
+                    }
+                    
+                    
+                    
+                } else {
+                    // Fallback on earlier versions
+                }
+
+                
+                
                 self.principalController?.produtosCarrinho.append(pro)
+                
             }))
             
             addAlerta.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))

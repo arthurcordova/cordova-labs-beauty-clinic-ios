@@ -433,6 +433,38 @@
             endingLineNumber = "256"
             landmarkName = "cancelAgendamento(id:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Beauty_Clinic_2_0.WS.(cancelAgendamento (id : __ObjC.NSNumber) -&gt; ()).(closure #1)"
+                  moduleName = "Beauty Clinic 2.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acstapassoli/Mobile/IOS/cordova-labs-beauty-clinic-ios/Beauty%20Clinic%202.0/Beauty%20Clinic%202.0/WS.swift"
+                  timestampString = "511829895.039829"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "256"
+                  endingLineNumber = "256"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Beauty_Clinic_2_0.WS.(cancelAgendamento (id : __ObjC.NSNumber) -&gt; ()).(closure #1)"
+                  moduleName = "Beauty Clinic 2.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acstapassoli/Mobile/IOS/cordova-labs-beauty-clinic-ios/Beauty%20Clinic%202.0/Beauty%20Clinic%202.0/WS.swift"
+                  timestampString = "511829895.041953"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "256"
+                  endingLineNumber = "256"
+                  offsetFromSymbolStart = "196">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -442,11 +474,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Beauty Clinic 2.0/ProdutosController.swift"
-            timestampString = "510638476.8008"
+            timestampString = "511756806.073659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -848,6 +880,22 @@
             startingLineNumber = "24"
             endingLineNumber = "24"
             landmarkName = "textFieldShouldClear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Beauty Clinic 2.0/ProdutosController.swift"
+            timestampString = "511756576.662063"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

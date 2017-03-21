@@ -16,7 +16,7 @@ class DetalheCarrinhoController: UIViewController {
     
     var groupProd : Produto!
     var controllerCarrinho : CarrinhoController!
-    var valor: Int!
+    var valor: Int = 0
     
     
     override func viewDidLoad() {
@@ -25,6 +25,11 @@ class DetalheCarrinhoController: UIViewController {
     
     @IBAction func stepperAction(_ sender: UIStepper) {
         let value = groupProd.qtd + Int(sender.value)
+//        if valor > value {
+//            controllerCarrinho.produtosCarrinho.removeLast()
+//        } else {
+//            controllerCarrinho
+//        }
         
         loadValues(value: value)
     }
