@@ -21,7 +21,7 @@ class ExecucoesController: UIViewController, UITableViewDelegate, UITableViewDat
         tableExecucoes.separatorStyle = UITableViewCellSeparatorStyle.none
         
         tableExecucoes.register(UITableViewCell.self, forCellReuseIdentifier: "cellExec")
-        let xib = UINib(nibName: "MensagemCellTableViewCell", bundle: nil)
+        let xib = UINib(nibName: "ExecucoesTableViewCell", bundle: nil)
         tableExecucoes.register(xib, forCellReuseIdentifier: "cellExec")
         
         loadExecucoes()
@@ -34,11 +34,12 @@ class ExecucoesController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell:MensagemCellTableViewCell = self.tableExecucoes.dequeueReusableCell(withIdentifier: "cellExec") as! MensagemCellTableViewCell
+        let cell:ExecucoesTableViewCell = self.tableExecucoes.dequeueReusableCell(withIdentifier: "cellExec") as! ExecucoesTableViewCell
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         
-        cell.labelTitulo.text = execucoes[indexPath.row].produto
-        cell.labelMensagem.text = execucoes[indexPath.row].executor
+        cell.labelProcedimento.text = execucoes[indexPath.row].produto
+        cell.labelExecutor.text = execucoes[indexPath.row].executor
+        cell.labelData.text = execucoes[indexPath.row].data
         return cell
     }
     
@@ -53,8 +54,8 @@ class ExecucoesController: UIViewController, UITableViewDelegate, UITableViewDat
 
     
     func loadExecucoes(){
-//        self.mensagens.removeAll()
-//        self.tableMensagens.reloadData()
+        self.execucoes.removeAll()
+        self.tableExecucoes.reloadData()
         
         let code = String(describing: pessoa!.code)
 //        WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/execucoes/\(code)") { (dic, error) in

@@ -12,6 +12,8 @@
 		F42B1A181E81E8CA00CB7CC0 /* Execucoes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42B1A171E81E8CA00CB7CC0 /* Execucoes.storyboard */; };
 		F42B1A1A1E81E9ED00CB7CC0 /* ExecucoesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B1A191E81E9ED00CB7CC0 /* ExecucoesController.swift */; };
 		F42B1A1C1E81ECE600CB7CC0 /* Execucao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B1A1B1E81ECE600CB7CC0 /* Execucao.swift */; };
+		F42B1A1F1E81F93700CB7CC0 /* ExecucoesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B1A1D1E81F93700CB7CC0 /* ExecucoesTableViewCell.swift */; };
+		F42B1A201E81F93700CB7CC0 /* ExecucoesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42B1A1E1E81F93700CB7CC0 /* ExecucoesTableViewCell.xib */; };
 		F450E8CD1E66222700C6E47B /* WS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450E8CC1E66222700C6E47B /* WS.swift */; };
 		F450E8D11E664F0900C6E47B /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450E8D01E664F0900C6E47B /* Pessoa.swift */; };
 		F451A1B11E77511900C451B1 /* RedefinirSenhaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451A1B01E77511900C451B1 /* RedefinirSenhaController.swift */; };
@@ -79,6 +81,8 @@
 		F42B1A171E81E8CA00CB7CC0 /* Execucoes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Execucoes.storyboard; sourceTree = "<group>"; };
 		F42B1A191E81E9ED00CB7CC0 /* ExecucoesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecucoesController.swift; sourceTree = "<group>"; };
 		F42B1A1B1E81ECE600CB7CC0 /* Execucao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Execucao.swift; sourceTree = "<group>"; };
+		F42B1A1D1E81F93700CB7CC0 /* ExecucoesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecucoesTableViewCell.swift; sourceTree = "<group>"; };
+		F42B1A1E1E81F93700CB7CC0 /* ExecucoesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExecucoesTableViewCell.xib; sourceTree = "<group>"; };
 		F450E8CC1E66222700C6E47B /* WS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WS.swift; sourceTree = "<group>"; };
 		F450E8D01E664F0900C6E47B /* Pessoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
 		F451A1B01E77511900C451B1 /* RedefinirSenhaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedefinirSenhaController.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				F460E3D41E67B2B7007924C5 /* OrcamentoTableViewCell.xib */,
 				F4ECCB861E6C7AEF00CE97BE /* AgendamentoTableViewCell.swift */,
 				F4ECCB871E6C7AEF00CE97BE /* AgendamentoTableViewCell.xib */,
+				F42B1A1D1E81F93700CB7CC0 /* ExecucoesTableViewCell.swift */,
+				F42B1A1E1E81F93700CB7CC0 /* ExecucoesTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 				F460E3DE1E67CA69007924C5 /* ic_local_atm.imageset in Resources */,
 				F48150C21E621AE200CEE75B /* Mensagens.storyboard in Resources */,
 				F4D7014F1E6123C0006C47AB /* ic_shopping_cart.imageset in Resources */,
+				F42B1A201E81F93700CB7CC0 /* ExecucoesTableViewCell.xib in Resources */,
 				F460E3D61E67B2B7007924C5 /* OrcamentoTableViewCell.xib in Resources */,
 				F4D701531E6128DA006C47AB /* DrawerMenu.storyboard in Resources */,
 				F42B1A181E81E8CA00CB7CC0 /* Execucoes.storyboard in Resources */,
@@ -400,6 +407,7 @@
 				F4ECCB7F1E6A1EEE00CE97BE /* CarrinhoController.swift in Sources */,
 				F4ECCB931E6D026F00CE97BE /* Horario.swift in Sources */,
 				F460E3C61E678367007924C5 /* DetalheMensagemController.swift in Sources */,
+				F42B1A1F1E81F93700CB7CC0 /* ExecucoesTableViewCell.swift in Sources */,
 				F451A1B11E77511900C451B1 /* RedefinirSenhaController.swift in Sources */,
 				F41B29471E80C14500D13406 /* Database.xcdatamodeld in Sources */,
 				F460E3CA1E679623007924C5 /* ProdutosController.swift in Sources */,
