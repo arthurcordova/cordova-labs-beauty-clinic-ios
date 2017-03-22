@@ -150,6 +150,9 @@
                                         <state key="normal" title="Execuções">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Ef7-N1-XGE" kind="showDetail" identifier="segueExecucoes" id="c4P-KQ-5OF"/>
+                                        </connections>
                                     </button>
                                     <view alpha="0.11999999731779099" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0fh-6o-JFN">
                                         <rect key="frame" x="0.0" y="323" width="307" height="2"/>
@@ -338,6 +341,14 @@
                 <exit id="kDp-3O-tz7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="151.875" y="48.75"/>
+        </scene>
+        <!--Execucoes-->
+        <scene sceneID="oZB-GZ-TGJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Execucoes" id="Ef7-N1-XGE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PIx-mg-w08" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="-314"/>
         </scene>
         <!--Mensagens-->
         <scene sceneID="3IC-HE-UoX">

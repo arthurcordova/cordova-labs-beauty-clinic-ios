@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F41B29471E80C14500D13406 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F41B29451E80C14500D13406 /* Database.xcdatamodeld */; };
 		F42136C81E6E354300A636DC /* InformacaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42136C71E6E354300A636DC /* InformacaoController.swift */; };
+		F42B1A181E81E8CA00CB7CC0 /* Execucoes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42B1A171E81E8CA00CB7CC0 /* Execucoes.storyboard */; };
+		F42B1A1A1E81E9ED00CB7CC0 /* ExecucoesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B1A191E81E9ED00CB7CC0 /* ExecucoesController.swift */; };
+		F42B1A1C1E81ECE600CB7CC0 /* Execucao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B1A1B1E81ECE600CB7CC0 /* Execucao.swift */; };
 		F450E8CD1E66222700C6E47B /* WS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450E8CC1E66222700C6E47B /* WS.swift */; };
 		F450E8D11E664F0900C6E47B /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450E8D01E664F0900C6E47B /* Pessoa.swift */; };
 		F451A1B11E77511900C451B1 /* RedefinirSenhaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451A1B01E77511900C451B1 /* RedefinirSenhaController.swift */; };
@@ -73,6 +76,9 @@
 /* Begin PBXFileReference section */
 		F41B29461E80C14500D13406 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
 		F42136C71E6E354300A636DC /* InformacaoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacaoController.swift; sourceTree = "<group>"; };
+		F42B1A171E81E8CA00CB7CC0 /* Execucoes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Execucoes.storyboard; sourceTree = "<group>"; };
+		F42B1A191E81E9ED00CB7CC0 /* ExecucoesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecucoesController.swift; sourceTree = "<group>"; };
+		F42B1A1B1E81ECE600CB7CC0 /* Execucao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Execucao.swift; sourceTree = "<group>"; };
 		F450E8CC1E66222700C6E47B /* WS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WS.swift; sourceTree = "<group>"; };
 		F450E8D01E664F0900C6E47B /* Pessoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
 		F451A1B01E77511900C451B1 /* RedefinirSenhaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedefinirSenhaController.swift; sourceTree = "<group>"; };
@@ -168,6 +174,7 @@
 				F4ECCB841E6C787400CE97BE /* Agendamento.swift */,
 				F4ECCB8E1E6C99BC00CE97BE /* NovoAgendamento.swift */,
 				F4ECCB921E6D026F00CE97BE /* Horario.swift */,
+				F42B1A1B1E81ECE600CB7CC0 /* Execucao.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -240,6 +247,7 @@
 				F48150C91E62254300CEE75B /* Orcamentos.storyboard */,
 				F48150CB1E62269100CEE75B /* Informacao.storyboard */,
 				F48150CD1E62281800CEE75B /* Carrinho.storyboard */,
+				F42B1A171E81E8CA00CB7CC0 /* Execucoes.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 				F451A1B01E77511900C451B1 /* RedefinirSenhaController.swift */,
 				F49208441E78DD2500FA0FFC /* DetalheCarrinhoController.swift */,
 				F41B29451E80C14500D13406 /* Database.xcdatamodeld */,
+				F42B1A191E81E9ED00CB7CC0 /* ExecucoesController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -356,6 +365,7 @@
 				F4D7014F1E6123C0006C47AB /* ic_shopping_cart.imageset in Resources */,
 				F460E3D61E67B2B7007924C5 /* OrcamentoTableViewCell.xib in Resources */,
 				F4D701531E6128DA006C47AB /* DrawerMenu.storyboard in Resources */,
+				F42B1A181E81E8CA00CB7CC0 /* Execucoes.storyboard in Resources */,
 				F48150C81E62241B00CEE75B /* Produtos.storyboard in Resources */,
 				F4B4593F1E5FCB130059C247 /* ic_check_circle.imageset in Resources */,
 			);
@@ -378,12 +388,14 @@
 				F49208451E78DD2500FA0FFC /* DetalheCarrinhoController.swift in Sources */,
 				F460E3D01E67AE36007924C5 /* OrcamentoController.swift in Sources */,
 				F4ECCB881E6C7AEF00CE97BE /* AgendamentoTableViewCell.swift in Sources */,
+				F42B1A1C1E81ECE600CB7CC0 /* Execucao.swift in Sources */,
 				F46944581E5D2F0400AA9F2E /* Usuario.swift in Sources */,
 				F469444C1E5BD27400AA9F2E /* LoginController.swift in Sources */,
 				F4ECCB951E6D0E2000CE97BE /* NovoAgendamentoConcluirController.swift in Sources */,
 				F4ECCB851E6C787400CE97BE /* Agendamento.swift in Sources */,
 				F48150D21E62FF1B00CEE75B /* MensagensController.swift in Sources */,
 				F4D7014D1E611F97006C47AB /* PrincipalController.swift in Sources */,
+				F42B1A1A1E81E9ED00CB7CC0 /* ExecucoesController.swift in Sources */,
 				F4F2A35D1E5BCD54009C1167 /* AppDelegate.swift in Sources */,
 				F4ECCB7F1E6A1EEE00CE97BE /* CarrinhoController.swift in Sources */,
 				F4ECCB931E6D026F00CE97BE /* Horario.swift in Sources */,

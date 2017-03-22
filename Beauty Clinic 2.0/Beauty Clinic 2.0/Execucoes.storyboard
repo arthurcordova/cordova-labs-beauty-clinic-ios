@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BUT-4U-mRt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Execucoes Controller-->
+        <scene sceneID="wzX-1b-mK1">
+            <objects>
+                <viewController id="BUT-4U-mRt" customClass="ExecucoesController" customModule="Beauty_Clinic_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="njk-lp-u0f"/>
+                        <viewControllerLayoutGuide type="bottom" id="Otr-EQ-pdv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mwj-7c-B9A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwM-2I-Ohr">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="af1-P1-cxJ"/>
+                                </constraints>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Execuções" id="dBy-n3-D7k">
+                                        <barButtonItem key="leftBarButtonItem" image="ic_arrow_left" id="Xgs-S6-89X">
+                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="LZz-9X-r23" kind="unwind" unwindAction="backToPrincipalWithSegue:" id="B0a-mN-R6u"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I4u-A9-LEc">
+                                <rect key="frame" x="0.0" y="65" width="375" height="603"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tyd-Ez-gHh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellExec" id="P6p-IO-Ggh">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P6p-IO-Ggh" id="PWb-VX-DvR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tyd-Ez-gHh" secondAttribute="trailing" id="NlF-Nq-Bw1"/>
+                                    <constraint firstItem="tyd-Ez-gHh" firstAttribute="top" secondItem="I4u-A9-LEc" secondAttribute="top" id="OqS-uQ-n7i"/>
+                                    <constraint firstItem="tyd-Ez-gHh" firstAttribute="leading" secondItem="I4u-A9-LEc" secondAttribute="leading" id="Qgg-Ll-ert"/>
+                                    <constraint firstAttribute="bottom" secondItem="tyd-Ez-gHh" secondAttribute="bottom" id="Qou-PZ-SOv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="I4u-A9-LEc" firstAttribute="leading" secondItem="mwj-7c-B9A" secondAttribute="leading" id="1mG-BM-hkN"/>
+                            <constraint firstAttribute="trailing" secondItem="bwM-2I-Ohr" secondAttribute="trailing" id="3sy-Ba-Bqu"/>
+                            <constraint firstItem="Otr-EQ-pdv" firstAttribute="top" secondItem="I4u-A9-LEc" secondAttribute="bottom" id="6Vz-tt-k8H"/>
+                            <constraint firstAttribute="trailing" secondItem="I4u-A9-LEc" secondAttribute="trailing" id="VYT-3n-sur"/>
+                            <constraint firstItem="bwM-2I-Ohr" firstAttribute="leading" secondItem="mwj-7c-B9A" secondAttribute="leading" id="fiZ-RH-PIb"/>
+                            <constraint firstItem="bwM-2I-Ohr" firstAttribute="top" secondItem="njk-lp-u0f" secondAttribute="bottom" id="gNd-8i-MdV"/>
+                            <constraint firstItem="I4u-A9-LEc" firstAttribute="top" secondItem="bwM-2I-Ohr" secondAttribute="bottom" constant="1" id="zXy-Zq-bv9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableExecucoes" destination="tyd-Ez-gHh" id="BVs-7I-YAm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmL-1K-fzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LZz-9X-r23" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="152.80000000000001" y="144.3778110944528"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_arrow_left" width="24" height="24"/>
+    </resources>
+</document>

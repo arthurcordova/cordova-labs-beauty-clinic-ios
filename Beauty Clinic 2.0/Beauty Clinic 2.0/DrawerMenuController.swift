@@ -106,6 +106,13 @@ class DrawerMenuController: UIViewController /*, UIGestureRecognizerDelegate */ 
                 
             }
         }
+        
+        if segue.identifier == "segueExecucoes" {
+            
+            if let toViewController = segue.destination as? ExecucoesController {
+                toViewController.pessoa = pessoa
+            }
+        }
     }
     
     @IBAction func logOutAction(_ sender: Any) {
