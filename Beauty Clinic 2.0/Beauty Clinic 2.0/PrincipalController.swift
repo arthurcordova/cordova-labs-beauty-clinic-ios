@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class PrincipalController: UIViewController  {
     
@@ -21,8 +22,11 @@ class PrincipalController: UIViewController  {
     var produtosCarrinho: Array<Produto> = []
     var mensagens : Array<Mensagem> = []
     var orcamentos : Array<Orcamento> = []
+    var appDelegate : AppDelegate!
     
     override func viewDidLoad() {
+        appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
         labelBadge.layer.cornerRadius = labelBadge.bounds.size.width / 2.0
         labelBadge.layer.borderColor = UIColor.lightGray.cgColor
         labelBadge.layer.borderWidth = CGFloat(0)
@@ -99,12 +103,34 @@ class PrincipalController: UIViewController  {
     }
     
     func updateBadge(){
-        if produtosCarrinho.count > 0 {
-            labelBadge.isHidden = false
-            labelBadge.text = String(produtosCarrinho.count)
+        
+        if #available(iOS 10.0, *) {
+            let context = self.appDelegate.persistentContainer.viewContext
+            let entityProduct = NSFetchRequest<NSFetchRequestResult>(entityName: "Carrinho")
+            var counter = 0
+            do {
+                counter = try context.count(for: entityProduct)
+            } catch {
+                print("ERROR counter")
+            }
+            
+            if counter > 0 {
+                labelBadge.isHidden = false
+                labelBadge.text = String(counter)
+            } else {
+                labelBadge.isHidden = true
+            }
+            print("\(counter)")
         } else {
-            labelBadge.isHidden = true
+            // Fallback on earlier versions
         }
+        
+        //        if produtosCarrinho.count > 0 {
+        //            labelBadge.isHidden = false
+        //            labelBadge.text = String(produtosCarrinho.count)
+        //        } else {
+        //            labelBadge.isHidden = true
+        //        }
     }
     
     func loadMensagens(index: Int){

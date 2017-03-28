@@ -133,7 +133,7 @@ class ProdutosController: UIViewController, UITableViewDelegate, UITableViewData
 
                 
                 
-                self.principalController?.produtosCarrinho.append(pro)
+//                self.principalController?.produtosCarrinho.append(pro)
                 
             }))
             
