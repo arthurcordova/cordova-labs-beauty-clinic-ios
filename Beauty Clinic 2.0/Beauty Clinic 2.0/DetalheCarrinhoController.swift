@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DetalheCarrinhoController: UIViewController {
     
@@ -17,20 +18,74 @@ class DetalheCarrinhoController: UIViewController {
     var groupProd : Produto!
     var controllerCarrinho : CarrinhoController!
     var valor: Int = 0
+    var appDelegate : AppDelegate!
+    var somador: Int = 0
+    var valorUnit: NSNumber!
+    var valorTotal: NSNumber!
     
     
     override func viewDidLoad() {
+        appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        valorUnit = groupProd.valorProduto.floatValue / Float(groupProd.qtd) as! NSNumber
+        valorTotal = groupProd.valorProduto
+        
         loadValues(value: groupProd.qtd!)
     }
     
     @IBAction func stepperAction(_ sender: UIStepper) {
-        let value = groupProd.qtd + Int(sender.value)
-//        if valor > value {
-//            controllerCarrinho.produtosCarrinho.removeLast()
-//        } else {
-//            controllerCarrinho
-//        }
         
+        let value = groupProd.qtd + Int(sender.value)
+        if (somador > value) {
+            print("Menos")
+//            if #available(iOS 10.0, *) {
+//                let context = self.appDelegate.persistentContainer.viewContext
+//                let entity = NSEntityDescription.insertNewObject(forEntityName: "Carrinho", into: context)
+//                entity.setValue(self.groupProd.codProduto.description, forKey: "id")
+//                entity.setValue(self.groupProd.descricao, forKey: "desc")
+//                entity.setValue(self.valorUnit.description, forKey: "value")
+//                entity.setValue(self.groupProd.tipoExame.description, forKey: "type")
+//                entity.setValue("1", forKey: "qtd")
+//                
+//                do {
+//                    try context.delete(<#T##object: NSManagedObject##NSManagedObject#>)()
+//                    print("Saved")
+//                    valorTotal = valorTotal.floatValue + valorUnit.floatValue as NSNumber
+//                    
+//                } catch {
+//                    print("ERROR Saved")
+//                }
+//            } else {
+//                // Fallback on earlier versions
+//            }
+            valorTotal = valorTotal.floatValue + valorUnit.floatValue as NSNumber
+            loadValues(value: value)
+
+        } else {
+            print("Mais")
+            if #available(iOS 10.0, *) {
+                let context = self.appDelegate.persistentContainer.viewContext
+                let entity = NSEntityDescription.insertNewObject(forEntityName: "Carrinho", into: context)
+                entity.setValue(self.groupProd.codProduto.description, forKey: "id")
+                entity.setValue(self.groupProd.descricao, forKey: "desc")
+                entity.setValue(self.valorUnit.description, forKey: "value")
+                entity.setValue(self.groupProd.tipoExame.description, forKey: "type")
+                entity.setValue("1", forKey: "qtd")
+                
+                do {
+                    try context.save()
+                    print("Saved")
+                    valorTotal = valorTotal.floatValue + valorUnit.floatValue as NSNumber
+                    
+                } catch {
+                    print("ERROR Saved")
+                }
+            } else {
+                // Fallback on earlier versions
+            }
+            loadValues(value: value)
+
+        }
         loadValues(value: value)
     }
     
@@ -43,7 +98,8 @@ class DetalheCarrinhoController: UIViewController {
         formatter.numberStyle = .currency
         formatter.locale = NSLocale(localeIdentifier: "pt_BR") as Locale!
         navBar.topItem?.title = groupProd.descricao
-        labelValor.text = formatter.string(from: (groupProd.valorProduto))!
+        labelValor.text = formatter.string(from: (valorTotal))!
         labelQuantidade.text = String(describing: value)
+        somador = value
     }
 }

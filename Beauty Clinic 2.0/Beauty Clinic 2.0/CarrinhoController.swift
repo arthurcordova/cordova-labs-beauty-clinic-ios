@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDataSource {
     
@@ -20,8 +21,11 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
     var totalValue: NSNumber!
     var principalController: PrincipalController!
     var productSelected : Produto!
+    var appDelegate : AppDelegate!
     
     override func viewDidLoad() {
+        appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
         tableCarrinho.delegate = self
         tableCarrinho.dataSource = self
         tableCarrinho.separatorStyle = UITableViewCellSeparatorStyle.none
@@ -76,6 +80,14 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
         tableCarrinho.register(xib, forCellReuseIdentifier: "cellCarrinho")
         
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        groupProducts.removeAll()
+        produtosCarrinho.removeAll()
+        self.loadTotal()
+        self.group()
+        tableCarrinho.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -195,8 +207,6 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
                     }))
                     self.present(addAlerta, animated: true, completion: nil)
                     
-                    
-                    
                 }
             }
         })
@@ -210,6 +220,52 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
     }
     
     func loadTotal(){
+        
+        if #available(iOS 10.0, *) {
+            let managedObjectContext = self.appDelegate.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Carrinho")
+            var record = [NSManagedObject]()
+            
+            do {
+                // Execute Fetch Request
+                let records = try managedObjectContext.fetch(fetchRequest)
+                
+                
+                for record in (records as? [NSManagedObject])! {
+                    //get the Key Value pairs (although there may be a better way to do that...
+                    
+                    
+                    var value : Float = Float(record.value(forKey: "value") as! String)!
+                    var code : Int = Int(record.value(forKey: "id") as! String)!
+                    
+                    var prod = Produto()
+                    prod.descricao = record.value(forKey: "desc") as! String
+                    prod.qtd = Int(record.value(forKey: "qtd") as! String)
+                    prod.tipoExame = record.value(forKey: "type") as! String
+                    prod.valorProduto = value as NSNumber!
+                    prod.codProduto = code as NSNumber!
+                    
+                    produtosCarrinho.append(prod)
+                    
+                    print("\(record.value(forKey: "id") as! String)")
+                    
+                }
+                
+//                if let records = records as? [NSManagedObject] {
+//                    result = records
+//                    
+//                }
+                
+            } catch {
+                print("Unable to fetch managed objects for entity.")
+            }
+           
+        } else {
+            // Fallback on earlier versions
+        }
+
+        
+        
         
         var value :Float = 0
         for var i in 0..<produtosCarrinho.count {
