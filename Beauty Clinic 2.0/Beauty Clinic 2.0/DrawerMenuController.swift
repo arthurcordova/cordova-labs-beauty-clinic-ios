@@ -43,7 +43,6 @@ class DrawerMenuController: UIViewController /*, UIGestureRecognizerDelegate */ 
                 sender.state == UIGestureRecognizerState.changed) {
                 mainView.center = CGPoint(x: centerX + CGFloat(point.x), y: self.mainView.center.y)
                 
-                
             } else  if sender.state == UIGestureRecognizerState.ended {
                 
                 let distance =  startPoint.x + point.x

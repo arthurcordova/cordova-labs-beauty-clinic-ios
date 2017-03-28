@@ -130,9 +130,6 @@ class ProdutosController: UIViewController, UITableViewDelegate, UITableViewData
                 } else {
                     // Fallback on earlier versions
                 }
-
-                
-                
 //                self.principalController?.produtosCarrinho.append(pro)
                 
             }))
