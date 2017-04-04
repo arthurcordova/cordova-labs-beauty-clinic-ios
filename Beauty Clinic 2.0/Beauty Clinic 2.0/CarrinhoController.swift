@@ -34,47 +34,47 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
         
         self.loadTotal()
         self.group()
-//        var sum :Float = 0
-//        var count :Int = 0
-//        var position : Int = 0
-//        var newProd : Produto!
-//        var contains = false
-//        for prod : Produto in produtosCarrinho {
-//            
-//            sum = 0
-//            count = 0
-//            for var i in 0..<produtosCarrinho.count {
-//                if (prod.codProduto == produtosCarrinho[i].codProduto){
-//                    sum += produtosCarrinho[i].valorProduto as Float!
-//                    count += 1
-//                }
-//            }
-//            
-//            
-//            for var i in 0..<groupProducts.count {
-//                if (prod.codProduto == groupProducts[i].codProduto){
-//                    contains = true
-//                    position = i
-//                    break
-//                }
-//            }
-//            
-//            if (!contains){
-//                newProd = Produto()
-//                newProd.codProduto = prod.codProduto
-//                newProd.descricao = prod.descricao
-//                newProd.tipoExame = prod.tipoExame
-//                newProd.valorProduto = sum as NSNumber!
-//                newProd.qtd = count
-//                groupProducts.append(newProd)
-//            } else {
-////                groupProducts.remove(at: position)
-//                groupProducts[position].valorProduto = sum as NSNumber!
-//                groupProducts[position].qtd = count
-//            }
-//            contains = false
-//        }
-//        sum = 0
+        //        var sum :Float = 0
+        //        var count :Int = 0
+        //        var position : Int = 0
+        //        var newProd : Produto!
+        //        var contains = false
+        //        for prod : Produto in produtosCarrinho {
+        //
+        //            sum = 0
+        //            count = 0
+        //            for var i in 0..<produtosCarrinho.count {
+        //                if (prod.codProduto == produtosCarrinho[i].codProduto){
+        //                    sum += produtosCarrinho[i].valorProduto as Float!
+        //                    count += 1
+        //                }
+        //            }
+        //
+        //
+        //            for var i in 0..<groupProducts.count {
+        //                if (prod.codProduto == groupProducts[i].codProduto){
+        //                    contains = true
+        //                    position = i
+        //                    break
+        //                }
+        //            }
+        //
+        //            if (!contains){
+        //                newProd = Produto()
+        //                newProd.codProduto = prod.codProduto
+        //                newProd.descricao = prod.descricao
+        //                newProd.tipoExame = prod.tipoExame
+        //                newProd.valorProduto = sum as NSNumber!
+        //                newProd.qtd = count
+        //                groupProducts.append(newProd)
+        //            } else {
+        ////                groupProducts.remove(at: position)
+        //                groupProducts[position].valorProduto = sum as NSNumber!
+        //                groupProducts[position].qtd = count
+        //            }
+        //            contains = false
+        //        }
+        //        sum = 0
         tableCarrinho.register(UITableViewCell.self, forCellReuseIdentifier: "cellCarrinho")
         let xib = UINib(nibName: "MensagemCellTableViewCell", bundle: nil)
         tableCarrinho.register(xib, forCellReuseIdentifier: "cellCarrinho")
@@ -123,43 +123,44 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
         }
         
     }
-
+    
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
-            var indexes : Array<Int> = [];
-            let prod : Produto = groupProducts[indexPath.row]
-            
-            for var x in 0..<self.produtosCarrinho.count {
-                if (prod.codProduto == self.produtosCarrinho[x].codProduto){
-                    indexes.append(x)
+            if #available(iOS 10.0, *) {
+                let managedObjectContext = self.appDelegate.persistentContainer.viewContext
+                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Carrinho")
+                var record = [NSManagedObject]()
+                var codeProd = Int( self.groupProducts[indexPath.row].codProduto )
+                
+                do {
+                    // Execute Fetch Request
+                    let records = try managedObjectContext.fetch(fetchRequest)
+                    for record in (records as? [NSManagedObject])! {
+                        
+                        var code : Int = Int(record.value(forKey: "id") as! String)!
+                        if (codeProd == code) {
+                            managedObjectContext.delete(record)
+                            print("\(record.value(forKey: "id") as! String)" + "Deleted")
+                        }
+                        
+                    }
+                    
+                } catch {
+                    print("Unable to fetch managed objects for entity.")
                 }
+                
+            } else {
+                // Fallback on earlier versions
             }
-//            for ind : Int in indexes {
-//                self.produtosCarrinho.remove(at: ind)
-//            }
-//
-//            indexes.removeAll()
-//            for var x in 0..<self.principalController.produtosCarrinho.count {
-//                if (prod.codProduto == self.principalController.produtosCarrinho[x].codProduto){
-//                    indexes.append(x)
-//                }
-//            }
-//            for ind : Int in indexes {
-//                self.principalController.produtosCarrinho.remove(at: ind)
-//            }
-
+            
             self.groupProducts.remove(at: indexPath.row)
-            
-            
-//            self.produtosCarrinho.remove(at: indexPath.row)
-//            self.principalController.produtosCarrinho.remove(at: indexPath.row)
             self.tableCarrinho.deleteRows(at: [indexPath], with: .automatic)
-            
             OperationQueue.main.addOperation {
                 self.loadTotal()
             }
+            
         }
     }
     
@@ -193,15 +194,25 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
                         self.tableCarrinho.reloadData()
                         self.principalController?.produtosCarrinho.removeAll()
                         
-//                        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
-//                        
-//                        let viewController = UIStoryboard(name: "Principal", bundle: nil).instantiateViewController(withIdentifier: "principalID") as! PrincipalController
-//                        
-//                        viewController.pessoa = self.principalController.pessoa
-//                        viewController.produtosCarrinho = self.principalController.produtosCarrinho
-//                        
-//                        appDelegate.window?.rootViewController = viewController
-//                        appDelegate.window?.makeKeyAndVisible()
+                        if #available(iOS 10.0, *) {
+                            let managedObjectContext = self.appDelegate.persistentContainer.viewContext
+                            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Carrinho")
+                            var record = [NSManagedObject]()
+                            
+                            do {
+                                let records = try managedObjectContext.fetch(fetchRequest)
+                                for record in (records as? [NSManagedObject])! {
+                                    managedObjectContext.delete(record)
+                                    print("All deleted...")
+                                }
+                            } catch {
+                                print("Unable to fetch managed objects for entity.")
+                            }
+                            
+                        } else {
+                            
+                        }
+                        self.principalController.updateBadge()
                         self.dismiss(animated: true, completion: nil)
                         
                     }))
@@ -220,6 +231,9 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
     }
     
     func loadTotal(){
+        
+        self.produtosCarrinho.removeAll()
+//        self.groupProducts.removeAll()
         
         if #available(iOS 10.0, *) {
             let managedObjectContext = self.appDelegate.persistentContainer.viewContext
@@ -251,21 +265,18 @@ class CarrinhoController: UIViewController,  UITableViewDelegate, UITableViewDat
                     
                 }
                 
-//                if let records = records as? [NSManagedObject] {
-//                    result = records
-//                    
-//                }
+                //                if let records = records as? [NSManagedObject] {
+                //                    result = records
+                //
+                //                }
                 
             } catch {
                 print("Unable to fetch managed objects for entity.")
             }
-           
+            
         } else {
             // Fallback on earlier versions
         }
-
-        
-        
         
         var value :Float = 0
         for var i in 0..<produtosCarrinho.count {

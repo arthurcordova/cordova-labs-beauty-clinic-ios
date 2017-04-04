@@ -45,6 +45,9 @@ class PrincipalController: UIViewController  {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        updateBadge()
+    }
     
     @IBAction func backToPrincipal(segue:UIStoryboardSegue) {
         updateBadge()
