@@ -58,8 +58,8 @@ class ExecucoesController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableExecucoes.reloadData()
         
         let code = String(describing: pessoa!.code)
-//        WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/execucoes/\(code)") { (dic, error) in
-         WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/execucoes/3819") { (dic, error) in
+        WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/execucoes/\(code)") { (dic, error) in
+//         WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/execucoes/3819") { (dic, error) in
             if (error != nil){
                 
             } else {
