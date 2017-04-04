@@ -36,6 +36,12 @@
                                                 <segue destination="Lvb-e1-RLi" kind="unwind" unwindAction="backToPrincipalWithSegue:" id="iNB-SC-79e"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tYe-jN-5bs">
+                                            <color key="tintColor" red="0.91372549020000005" green="0.1529411765" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="LXQ-Zs-IUM" kind="show" identifier="segueNovoOrcamento" id="MFQ-AY-w2m"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -74,7 +80,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mte-7s-nVK" id="rhG-e2-ZGU">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -106,6 +112,14 @@
                 <exit id="Lvb-e1-RLi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-56.25" y="42.5"/>
+        </scene>
+        <!--Produtos-->
+        <scene sceneID="jMv-2S-RpG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Produtos" id="LXQ-Zs-IUM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KsO-gK-HxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="601" y="-503"/>
         </scene>
         <!--Detalhe Orcamento Controller-->
         <scene sceneID="1YM-xf-bKH">

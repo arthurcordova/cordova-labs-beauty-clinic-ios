@@ -95,6 +95,7 @@ class DrawerMenuController: UIViewController /*, UIGestureRecognizerDelegate */ 
             
             if let toViewController = segue.destination as? OrcamentoController {
                 toViewController.pessoa = pessoa
+                toViewController.principalController = self.principalController
             }
         }
         

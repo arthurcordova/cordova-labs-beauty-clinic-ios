@@ -15,6 +15,7 @@ class OrcamentoController: UIViewController, UITableViewDelegate, UITableViewDat
     var orcamentos : Array<Orcamento> = []
     var pessoa : Pessoa? = nil
     var model: Orcamento?
+    var principalController: PrincipalController!
     
     override func viewDidLoad() {
         tableOrcamentos.delegate = self
@@ -25,6 +26,9 @@ class OrcamentoController: UIViewController, UITableViewDelegate, UITableViewDat
         let xib = UINib(nibName: "OrcamentoTableViewCell", bundle: nil)
         tableOrcamentos.register(xib, forCellReuseIdentifier: "cellOrcamento")
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         loadOrcamentos(index: 0)
     }
     
@@ -69,8 +73,13 @@ class OrcamentoController: UIViewController, UITableViewDelegate, UITableViewDat
             let detalheOrcamento = segue.destination as! DetalheOrcamentoController
             detalheOrcamento.orcamento = self.model
         }
+        if segue.identifier == "segueNovoOrcamento" {
+            if let toViewController = segue.destination as? ProdutosController {
+                toViewController.principalController = self.principalController
+            }
+        }
     }
-
+    
     func loadOrcamentos(index: Int){
         self.orcamentos.removeAll()
         self.tableOrcamentos.reloadData()
