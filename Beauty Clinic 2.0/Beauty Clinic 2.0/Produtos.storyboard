@@ -33,7 +33,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="ic_arrow_left" id="1Fa-fj-3k3">
                                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <segue destination="ANC-JU-aYo" kind="unwind" unwindAction="backToPrincipalWithSegue:" id="9ks-oh-ld0"/>
+                                                <action selector="closeView:" destination="gRD-yG-QzU" id="6g0-vg-eGn"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -71,7 +71,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1L-XP-T9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="ANC-JU-aYo" userLabel="Exit" sceneMemberID="exit"/>
                 <searchDisplayController id="nRH-tl-Vfw">
                     <connections>
                         <outlet property="delegate" destination="gRD-yG-QzU" id="rDq-Qe-x3J"/>

@@ -141,6 +141,9 @@ class ProdutosController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    @IBAction func closeView(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     func loadProdutos(){
         WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/procedimentos/3") { (dic, error) in
