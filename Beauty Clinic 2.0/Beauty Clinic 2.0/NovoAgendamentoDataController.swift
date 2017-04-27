@@ -31,7 +31,7 @@ class NovoAgendamentoDataController: UIViewController, UITableViewDelegate, UITa
         tableHorarios.separatorStyle = UITableViewCellSeparatorStyle.none
    
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-M-yyyy"
+        dateFormatter.dateFormat = "dd-mm-yyyy"
         let date = dateFormatter.string(from: self.pickerData.date)
         var code : NSNumber!
         code = novoAgendamento.produto.codProduto!
@@ -43,7 +43,7 @@ class NovoAgendamentoDataController: UIViewController, UITableViewDelegate, UITa
     
     @IBAction func pickerCahngedAction(_ sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-M-yyyy"
+        dateFormatter.dateFormat = "dd-mm-yyyy"
         let date = dateFormatter.string(from: sender.date)
         var code : NSNumber!
         code = novoAgendamento.produto.codProduto!
