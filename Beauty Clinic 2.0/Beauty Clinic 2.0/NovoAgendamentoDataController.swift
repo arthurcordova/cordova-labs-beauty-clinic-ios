@@ -11,7 +11,7 @@ import UIKit
 class NovoAgendamentoDataController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource /*UITableViewDelegate, UITableViewDataSource*/ {
     
     @IBOutlet var pickerData: UIDatePicker!
-//    @IBOutlet var tableHorarios: UITableView!
+    //    @IBOutlet var tableHorarios: UITableView!
     
     @IBOutlet var collectionHorarios: UICollectionView!
     
@@ -23,13 +23,13 @@ class NovoAgendamentoDataController: UIViewController, UICollectionViewDelegate,
     var teste = ["arthur, aaaa, aaaa, bbb, ccc"]
     
     override func viewDidLoad() {
-//        tableHorarios.delegate = self
-//        tableHorarios.dataSource = self
-//        tableHorarios.separatorStyle = UITableViewCellSeparatorStyle.none
+        //        tableHorarios.delegate = self
+        //        tableHorarios.dataSource = self
+        //        tableHorarios.separatorStyle = UITableViewCellSeparatorStyle.none
         
         collectionHorarios.delegate = self
         collectionHorarios.dataSource = self
-   
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-mm-yyyy"
         let date = dateFormatter.string(from: self.pickerData.date)
@@ -52,7 +52,7 @@ class NovoAgendamentoDataController: UIViewController, UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return teste.count
+        //        return teste.count
         return horarios.count
     }
     
@@ -64,43 +64,65 @@ class NovoAgendamentoDataController: UIViewController, UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gridHorarioItem", for: indexPath) as! HorarioCollectionCellCollectionViewCell
-    
         
-            cell.labelTime?.text = horarios[indexPath.row].horarioInicial
-//        cell.labelTime?.text = teste[indexPath.row]
+        
+        cell.labelTime?.text = horarios[indexPath.row].horarioInicial
+        //        cell.labelTime?.text = teste[indexPath.row]
         
         // Configure the cell
         return cell
         
     }
     
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return horarios.count
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        
-//        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-//        cell.textLabel?.text = horarios[indexPath.row].horarioInicial
-//        
-//        return cell
-//    }
-//    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "dd-M-yyyy"
-//        let date = dateFormatter.string(from: self.pickerData.date)
-//        
-//        self.novoAgendamento.data = date
-//        self.novoAgendamento.hora = self.horarios[indexPath.row].horarioInicial
-//        self.performSegue(withIdentifier: "segueAgendamentoFinal", sender: self.novoAgendamento)
-//        
-//    }
+    //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    //        return horarios.count
+    //    }
+    //
+    //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    //
+    //        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+    //        cell.textLabel?.text = horarios[indexPath.row].horarioInicial
+    //
+    //        return cell
+    //    }
+    //
+    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //
+    //        let dateFormatter = DateFormatter()
+    //        dateFormatter.dateFormat = "dd-M-yyyy"
+    //        let date = dateFormatter.string(from: self.pickerData.date)
+    //
+    //        self.novoAgendamento.data = date
+    //        self.novoAgendamento.hora = self.horarios[indexPath.row].horarioInicial
+    //        self.performSegue(withIdentifier: "segueAgendamentoFinal", sender: self.novoAgendamento)
+    //
+    //    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-M-yyyy"
+        let date = dateFormatter.string(from: self.pickerData.date)
+        
+        self.novoAgendamento.data = date
+        self.novoAgendamento.hora = self.horarios[indexPath.row].horarioInicial
+        self.performSegue(withIdentifier: "segueAgendamentoFinal", sender: self.novoAgendamento)
+        
+    }
     
     // This function is called before the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueAgendamentoFinal" {
+            
+            let cell = sender as! UICollectionViewCell
+            let indexPath = self.collectionHorarios!.indexPath(for: cell)
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd-M-yyyy"
+            let date = dateFormatter.string(from: self.pickerData.date)
+            
+            self.novoAgendamento.data = date
+            self.novoAgendamento.hora = self.horarios[(indexPath?.row)!].horarioInicial
+            
             let novoAgendamentoConcluir = segue.destination as! NovoAgendamentoConcluirController
             novoAgendamentoConcluir.novoAgendamento = self.novoAgendamento
             novoAgendamentoConcluir.mainController = self.mainController
@@ -108,7 +130,7 @@ class NovoAgendamentoDataController: UIViewController, UICollectionViewDelegate,
             novoAgendamentoConcluir.segundoController = self
         }
     }
-   
+    
     @IBAction func backAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -132,6 +154,6 @@ class NovoAgendamentoDataController: UIViewController, UICollectionViewDelegate,
             }
         }
     }
-
+    
     
 }
