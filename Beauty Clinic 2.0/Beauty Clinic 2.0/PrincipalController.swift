@@ -13,8 +13,10 @@ class PrincipalController: UIViewController  {
     
     @IBOutlet var viewCard1: UIView!
     @IBOutlet var viewCard2: UIView!
+    @IBOutlet var viewCard3: UIView!
     @IBOutlet var labelBadge: UILabel!
-    
+    @IBOutlet var labelNextProcedure: UILabel!
+    @IBOutlet var labelNextTime: UILabel!
     @IBOutlet var labelMessage: UILabel!
     @IBOutlet var labelTxtOrcamento: UILabel!
     
@@ -22,6 +24,7 @@ class PrincipalController: UIViewController  {
     var produtosCarrinho: Array<Produto> = []
     var mensagens : Array<Mensagem> = []
     var orcamentos : Array<Orcamento> = []
+    var agendamentos : Array<Agendamento> = []
     var appDelegate : AppDelegate!
     
     override func viewDidLoad() {
@@ -34,7 +37,9 @@ class PrincipalController: UIViewController  {
         
         createCardEffect(view: viewCard1)
         createCardEffect(view: viewCard2)
+        createCardEffect(view: viewCard3)
         updateBadge()
+        loadAgendamentos()
         
     }
     
@@ -42,6 +47,7 @@ class PrincipalController: UIViewController  {
         updateBadge()
         loadMensagens(index: 0)
         loadOrcamentos(index: 0)
+        loadAgendamentos()
         
     }
     
@@ -166,6 +172,36 @@ class PrincipalController: UIViewController  {
             }
         }
     }
+    
+    func loadAgendamentos(){
+        agendamentos.removeAll()
+        
+        let code = String(describing: pessoa!.code)
+        WS.jsonToArrayObjects(urlBase: "http://www2.beautyclinic.com.br/clinwebservice2/servidor/agendamentos/\(code)") { (dic, error) in
+            if (error != nil){
+                
+            } else {
+                for dictionary:NSDictionary in dic! {
+                    
+                    let age =  Agendamento(json: dictionary)
+                    self.agendamentos.append(age)
+                    
+                }
+                if (self.agendamentos.count > 0) {
+                    OperationQueue.main.addOperation {
+                        let agenda : Agendamento = self.agendamentos.last!
+                        self.labelNextProcedure.text = agenda.descProcedimento
+                        self.labelNextTime.text = "Data: " + agenda.data + " Horário: " + agenda.horario
+                        
+                    }
+                } else {
+                    self.labelNextProcedure.text = "Nenhum agendamento próximo"
+                    self.labelNextTime.text = " "
+                }
+            }
+        }
+    }
+
     
     func loadOrcamentos(index: Int){
         self.orcamentos.removeAll()
