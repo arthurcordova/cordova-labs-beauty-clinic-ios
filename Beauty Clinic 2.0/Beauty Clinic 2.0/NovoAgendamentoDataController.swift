@@ -8,27 +8,27 @@
 
 import UIKit
 
-class NovoAgendamentoDataController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NovoAgendamentoDataController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource /*UITableViewDelegate, UITableViewDataSource*/ {
     
     @IBOutlet var pickerData: UIDatePicker!
-    @IBOutlet var tableHorarios: UITableView!
+//    @IBOutlet var tableHorarios: UITableView!
+    
+    @IBOutlet var collectionHorarios: UICollectionView!
+    
     
     var novoAgendamento : NovoAgendamento!
     var horarios: Array<Horario> = []
     var mainController : AgendamentosController!
     var primeiroController : NovoAgendamentoProcedimentoController!
-//    
-//    let images = [#imageLiteral(resourceName: "avatar_son.png"), #imageLiteral(resourceName: "avatar_mother.png"), #imageLiteral(resourceName: "avatar_father.png"), #imageLiteral(resourceName: "avatar_mother.png")]
-//    let names : Array<String> = ["Mother","Son", "Catty", "Susam"]
+    var teste = ["arthur, aaaa, aaaa, bbb, ccc"]
     
     override func viewDidLoad() {
-        tableHorarios.delegate = self
-        tableHorarios.dataSource = self
+//        tableHorarios.delegate = self
+//        tableHorarios.dataSource = self
+//        tableHorarios.separatorStyle = UITableViewCellSeparatorStyle.none
         
-//        collectionHorarios.delegate = self
-//        collectionHorarios.dataSource = self
-        
-        tableHorarios.separatorStyle = UITableViewCellSeparatorStyle.none
+        collectionHorarios.delegate = self
+        collectionHorarios.dataSource = self
    
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-mm-yyyy"
@@ -51,52 +51,52 @@ class NovoAgendamentoDataController: UIViewController, UITableViewDelegate, UITa
         loadHorarios(codeProc: String(describing: code!), data: date)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 4
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        
-//        
-//        print("Name : " + names[indexPath.item])
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        
-//        let cell: ProfileCell = collectionDependents.dequeueReusableCell(withReuseIdentifier: "profileCell", for: indexPath as IndexPath) as!
-//        
-//        cell.nameDependent.text = names[indexPath.item]
-//        cell.imageDependent.image = images[indexPath.item]
-//        
-//        Util.roundedImage(image: cell.imageDependent, cornerRadius: 20, borderWidth: 2)
-//        
-//        return cell
-//        
-//    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return teste.count
         return horarios.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = horarios[indexPath.row].horarioInicial
-        
-        return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-M-yyyy"
-        let date = dateFormatter.string(from: self.pickerData.date)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gridHorarioItem", for: indexPath) as! HorarioCollectionCellCollectionViewCell
+    
         
-        self.novoAgendamento.data = date
-        self.novoAgendamento.hora = self.horarios[indexPath.row].horarioInicial
-        self.performSegue(withIdentifier: "segueAgendamentoFinal", sender: self.novoAgendamento)
+            cell.labelTime?.text = horarios[indexPath.row].horarioInicial
+//        cell.labelTime?.text = teste[indexPath.row]
+        
+        // Configure the cell
+        return cell
         
     }
+    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return horarios.count
+//    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        
+//        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+//        cell.textLabel?.text = horarios[indexPath.row].horarioInicial
+//        
+//        return cell
+//    }
+//    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "dd-M-yyyy"
+//        let date = dateFormatter.string(from: self.pickerData.date)
+//        
+//        self.novoAgendamento.data = date
+//        self.novoAgendamento.hora = self.horarios[indexPath.row].horarioInicial
+//        self.performSegue(withIdentifier: "segueAgendamentoFinal", sender: self.novoAgendamento)
+//        
+//    }
     
     // This function is called before the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -127,7 +127,7 @@ class NovoAgendamentoDataController: UIViewController, UITableViewDelegate, UITa
                     
                 }
                 OperationQueue.main.addOperation {
-                    self.tableHorarios.reloadData()
+                    self.collectionHorarios.reloadData()
                 }
             }
         }

@@ -14,6 +14,7 @@
 		F42B1A1C1E81ECE600CB7CC0 /* Execucao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B1A1B1E81ECE600CB7CC0 /* Execucao.swift */; };
 		F42B1A1F1E81F93700CB7CC0 /* ExecucoesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B1A1D1E81F93700CB7CC0 /* ExecucoesTableViewCell.swift */; };
 		F42B1A201E81F93700CB7CC0 /* ExecucoesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42B1A1E1E81F93700CB7CC0 /* ExecucoesTableViewCell.xib */; };
+		F436C4FF1EB19AD600CCBC6F /* HorarioCollectionCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F436C4FD1EB19AD600CCBC6F /* HorarioCollectionCellCollectionViewCell.swift */; };
 		F450E8CD1E66222700C6E47B /* WS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450E8CC1E66222700C6E47B /* WS.swift */; };
 		F450E8D11E664F0900C6E47B /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450E8D01E664F0900C6E47B /* Pessoa.swift */; };
 		F451A1B11E77511900C451B1 /* RedefinirSenhaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451A1B01E77511900C451B1 /* RedefinirSenhaController.swift */; };
@@ -83,6 +84,7 @@
 		F42B1A1B1E81ECE600CB7CC0 /* Execucao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Execucao.swift; sourceTree = "<group>"; };
 		F42B1A1D1E81F93700CB7CC0 /* ExecucoesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecucoesTableViewCell.swift; sourceTree = "<group>"; };
 		F42B1A1E1E81F93700CB7CC0 /* ExecucoesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExecucoesTableViewCell.xib; sourceTree = "<group>"; };
+		F436C4FD1EB19AD600CCBC6F /* HorarioCollectionCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorarioCollectionCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		F450E8CC1E66222700C6E47B /* WS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WS.swift; sourceTree = "<group>"; };
 		F450E8D01E664F0900C6E47B /* Pessoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
 		F451A1B01E77511900C451B1 /* RedefinirSenhaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedefinirSenhaController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				F4ECCB871E6C7AEF00CE97BE /* AgendamentoTableViewCell.xib */,
 				F42B1A1D1E81F93700CB7CC0 /* ExecucoesTableViewCell.swift */,
 				F42B1A1E1E81F93700CB7CC0 /* ExecucoesTableViewCell.xib */,
+				F436C4FD1EB19AD600CCBC6F /* HorarioCollectionCellCollectionViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				F4ECCB7F1E6A1EEE00CE97BE /* CarrinhoController.swift in Sources */,
 				F4ECCB931E6D026F00CE97BE /* Horario.swift in Sources */,
 				F460E3C61E678367007924C5 /* DetalheMensagemController.swift in Sources */,
+				F436C4FF1EB19AD600CCBC6F /* HorarioCollectionCellCollectionViewCell.swift in Sources */,
 				F42B1A1F1E81F93700CB7CC0 /* ExecucoesTableViewCell.swift in Sources */,
 				F451A1B11E77511900C451B1 /* RedefinirSenhaController.swift in Sources */,
 				F41B29471E80C14500D13406 /* Database.xcdatamodeld in Sources */,
