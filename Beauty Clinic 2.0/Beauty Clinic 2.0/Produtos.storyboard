@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gRD-yG-QzU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gRD-yG-QzU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,7 +33,8 @@
                                         <barButtonItem key="leftBarButtonItem" image="ic_arrow_left" id="1Fa-fj-3k3">
                                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <action selector="closeView:" destination="gRD-yG-QzU" id="6g0-vg-eGn"/>
+                                                <action selector="closeView:" destination="gRD-yG-QzU" id="igQ-jY-crF"/>
+                                                <segue destination="KAF-1K-q9n" kind="unwind" unwindAction="backToPrincipalWithSegue:" id="FLi-dr-1LL"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -71,6 +72,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1L-XP-T9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="KAF-1K-q9n" userLabel="Exit" sceneMemberID="exit"/>
                 <searchDisplayController id="nRH-tl-Vfw">
                     <connections>
                         <outlet property="delegate" destination="gRD-yG-QzU" id="rDq-Qe-x3J"/>
